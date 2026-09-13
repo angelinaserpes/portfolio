@@ -1,38 +1,32 @@
 export const projectOptions = {
   first: [
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/rpmf9egswyd8563mxe9t',
+      type: 'video',
+      source: '/aurevo-demo.mov',
+      title: 'Aurevo',
+      start: 2,
+      end: 10,
     },
     {
       type: 'video',
-      source: 'Dennis-Portfolio/videos/fldn3dntkusr22roeybr',
-    },
-    {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/k7bp2wbfmalpjfk3yk5q',
-    },
-    {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/x8w8sbohl5wkfuelmkhu',
-    },
-  ],
-  second: [
-    {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/r4kcbkvkl0djjt0mxmcw',
+      source: '/phantom-demo.mov',
+      title: 'Phantom',
+      start: 2,
+      end: 9,
     },
     {
       type: 'video',
-      source: 'Dennis-Portfolio/videos/q0yepc6dssbosmdk3isu',
-    },
-    {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/ffoc9zsoeusptc7jcid5',
+      source: '/inamigos-demo.mov',
+      title: 'InAmigos',
+      start: 12,
+      end: 21,
     },
     {
       type: 'video',
-      source: 'Dennis-Portfolio/videos/usiswniv5qhgu2vamhnx',
+      source: '/dakota-demo.mov',
+      title: 'Dakota Cafe',
+      start: 4,
+      end: 12,
     },
   ],
 };

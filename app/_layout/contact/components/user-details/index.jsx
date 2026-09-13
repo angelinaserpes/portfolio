@@ -1,13 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDownLeft } from 'lucide-react';
+import {
+  ArrowDownLeft,
+  ArrowUpRight,
+} from 'lucide-react';
 import Link from 'next/link';
-import { CldImage } from 'next-cloudinary';
 
 import { MagneticButton } from '@/components';
 
-import { Container, ImageWrapper, MainTitle, Row } from './index.styled';
+import {
+  Container,
+  MainTitle,
+  Row,
+} from './index.styled';
 
 /**
  * @param {Object} props
@@ -16,67 +22,87 @@ import { Container, ImageWrapper, MainTitle, Row } from './index.styled';
 export function UserDetails({ transformX }) {
   return (
     <Container>
+
       <Row>
-        <div className='flex items-center gap-8'>
-          <ImageWrapper>
-            <CldImage
-              src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
-              className='rounded-full object-cover'
-              fill={true}
-              alt='Dennis Snellenberg Profile Picture'
+
+        <div className='mb-6 flex items-center justify-between'>
+
+          <p className='text-[10px] uppercase tracking-[0.28em] opacity-40'>
+            Made it this far?
+          </p>
+
+          <motion.div
+            animate={{
+              y: [0, 5, 0],
+            }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          >
+            <ArrowDownLeft
+              size={24}
+              strokeWidth={1.1}
             />
-          </ImageWrapper>
-          <MainTitle>Let’s work</MainTitle>
+          </motion.div>
+
         </div>
+
+        <div className='flex items-center gap-8'>
+          <MainTitle>
+            Let&apos;s make
+          </MainTitle>
+        </div>
+
         <div className='flex items-center justify-between'>
-          <MainTitle>together</MainTitle>
-          <div>
-            <ArrowDownLeft size={28} strokeWidth={1.25} />
-          </div>
+
+          <MainTitle>
+            something.
+          </MainTitle>
+
         </div>
+
       </Row>
 
       <Row>
+
         <div className='relative w-full'>
+
           <div className='h-[1px] bg-muted-foreground' />
+
           <div className='absolute right-0 top-0 z-20 -translate-x-1/2 -translate-y-1/2'>
-            <motion.div style={{ x: transformX }}>
-              <Link href='/contact' passHref>
-                <MagneticButton variant='primary' size='lg'>
-                  Get in touch
+
+            <motion.div
+              style={{
+                x: transformX,
+              }}
+            >
+              <Link
+                href='/contact'
+                passHref
+              >
+                <MagneticButton
+                  variant='primary'
+                  size='lg'
+                >
+                  <span className='flex items-center gap-3'>
+                    Let&apos;s connect
+                    <ArrowUpRight
+                      size={16}
+                      strokeWidth={1.2}
+                    />
+                  </span>
                 </MagneticButton>
               </Link>
             </motion.div>
+
           </div>
+
         </div>
+
       </Row>
 
-      <Row>
-        <div className='flex w-full flex-col gap-4 lg:flex-row'>
-          <div>
-            <a href='mailto:info@dennissnellenberg.com'>
-              <MagneticButton
-                variant='outline'
-                size='md'
-                className='w-full border-muted-foreground'
-              >
-                info@dennissnellenberg.com
-              </MagneticButton>
-            </a>
-          </div>
-          <div>
-            <a href='tel:+31627847430'>
-              <MagneticButton
-                variant='outline'
-                size='md'
-                className='w-full border-muted-foreground'
-              >
-                +31 6 27 84 74 30
-              </MagneticButton>
-            </a>
-          </div>
-        </div>
-      </Row>
     </Container>
   );
 }

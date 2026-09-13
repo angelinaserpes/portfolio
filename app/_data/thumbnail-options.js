@@ -1,22 +1,26 @@
 export const thumbnailOptions = [
   {
-    href: '/fabric',
-    title: 'FABRIC™',
-    image: 'Dennis-Portfolio/images/hlz36eeb3ddfvqt9tex9',
+    href: '/aurevo',
+    title: 'Aurevo',
+    image: '/images/aurevo.png',
+    type: 'AI / Web Development',
   },
   {
-    href: '/aanstekelijk',
-    title: 'Aanstekelijk',
-    image: 'Dennis-Portfolio/images/aigt2q3xiqb8ovujzscc',
+    href: '/phantom',
+    title: 'Phantom',
+    image: '/images/phantom.png',
+    type: 'Web Design / Frontend',
   },
   {
-    href: '/base-create',
-    title: 'Base Create',
-    image: 'Dennis-Portfolio/images/ahuzarh793qmv9sdveyk',
+    href: '/inamigos',
+    title: 'InAmigos',
+    image: '/images/inamigos.png',
+    type: 'Web Design / Development',
   },
   {
-    href: '/avvr',
-    title: 'AVVR',
-    image: 'Dennis-Portfolio/images/pzychyr1ans60gqlevhg',
+    href: '/dakota',
+    title: 'Dakota Cafe',
+    image: '/images/dakota-customize.png',
+    type: 'Frontend / Interactive',
   },
 ];

@@ -2,63 +2,58 @@
 
 import { useRef } from 'react';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 import { projectOptions } from '@/data';
-import { useProjectSlider } from '@/hooks';
-import { randomId } from '@/utils';
 
 import { ProjectSlider } from './slider';
 
 export function Project() {
-  /** @type {import('react').MutableRefObject<HTMLElement>} */
-  const containerRef = useRef(null);
-  const { transformX1, transformX2, transformY } =
-    useProjectSlider(containerRef);
+  const container = useRef(null);
 
-  const firstSlider = projectOptions.first.map(({ type, source }) => {
-    const id = randomId();
-    return <ProjectSlider key={id} type={type} source={source} />;
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'end start'],
   });
 
-  const secondSlider = projectOptions.second.map(({ type, source }) => {
-    const id = randomId();
-    return <ProjectSlider key={id} type={type} source={source} />;
-  });
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['5%', '-5%'],
+  );
 
   return (
-    <section ref={containerRef} className='relative z-10 mt-14'>
-      <div className='grid items-center'>
-        <div className='bg-background'>
-          <motion.div
-            className='mb-10 flex gap-10'
-            style={{
-              width: '120vw',
-              x: transformX1,
-            }}
-          >
-            {firstSlider}
-          </motion.div>
+    <section
+      ref={container}
+      className='overflow-hidden py-24 md:py-32'
+    >
+      <div className='container mb-10 flex items-end justify-between'>
+        <div>
+          <p className='mb-3 text-[9px] uppercase tracking-[0.28em] opacity-40'>
+            Selected project films
+          </p>
 
-          <motion.div
-            className='mb-10 flex gap-10'
-            style={{
-              width: '120vw',
-              x: transformX2,
-            }}
-          >
-            {secondSlider}
-          </motion.div>
+          <h2 className='text-[clamp(2.5rem,5vw,5.5rem)] leading-[0.95] tracking-[-0.055em]'>
+            See them in motion.
+          </h2>
         </div>
 
-        <motion.div
-          className='w-screen bg-background'
-          style={{
-            height: transformY,
-            borderRadius: '0 0 50% 50%',
-          }}
-        />
+        <p className='hidden text-[9px] uppercase tracking-[0.22em] opacity-35 md:block'>
+          04 projects / 04 previews
+        </p>
       </div>
+
+      <motion.div
+        style={{ x }}
+        className='flex w-full gap-4 px-6 md:gap-5'
+      >
+        {projectOptions.first.map((project) => (
+          <ProjectSlider
+            key={project.title}
+            {...project}
+          />
+        ))}
+      </motion.div>
     </section>
   );
 }

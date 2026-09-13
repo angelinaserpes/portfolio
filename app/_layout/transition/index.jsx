@@ -9,12 +9,12 @@ import { useLenis, useTimeOut } from '@/hooks';
 
 import { Preloader } from './preloader';
 
-/** @param {import('react').PropsWithChildren<unknown>} */
 export function Transition({ children }) {
   const [isLoading, setLoading] = useState(true);
   const pathname = usePathname();
 
   useLenis();
+
   useTimeOut({
     callback: () => {
       setLoading(false);
@@ -25,10 +25,14 @@ export function Transition({ children }) {
   });
 
   return (
-    <div key={pathname} className='overflow-hidden'>
+    <div
+      key={pathname}
+      className='relative w-full max-w-full overflow-x-clip'
+    >
       <AnimatePresence mode='wait'>
         {isLoading ? <Preloader /> : null}
       </AnimatePresence>
+
       {children}
     </div>
   );

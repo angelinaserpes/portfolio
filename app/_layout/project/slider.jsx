@@ -1,48 +1,98 @@
 'use client';
 
-import { CldImage, CldVideoPlayer } from 'next-cloudinary';
+import { useRef, useState } from 'react';
 
 import { Center } from '@/components';
 
-/**
- * @param {Object} props
- * @param {'image' | 'video'} props.type
- * @param {string} props.source
- */
-export function ProjectSlider({ type, source }) {
-  const image =
-    type === 'image' ? (
-      <CldImage
-        src={source}
-        className='object-cover'
-        fill={true}
-        alt='project items'
-      />
-    ) : null;
-  const video =
-    type === 'video' ? (
-      <CldVideoPlayer
-        src={source}
-        loop={true}
-        controls={false}
-        muted={true}
-        autoPlay='always'
-        width='100%'
-        height='100%'
-        className='!static !bg-transparent'
-      />
-    ) : null;
+export function ProjectSlider({
+  type,
+  source,
+  title,
+  start = 0,
+  end,
+}) {
+  const videoRef = useRef(null);
+  const resetting = useRef(false);
+  const [fading, setFading] = useState(false);
+
+  const startVideo = (event) => {
+    const video = event.currentTarget;
+
+    video.currentTime = start;
+    video.play().catch(() => {});
+  };
+
+  const handleTimeUpdate = (event) => {
+    const video = event.currentTarget;
+
+    if (!end || resetting.current) return;
+
+    if (video.currentTime >= end - 0.35) {
+      resetting.current = true;
+      setFading(true);
+
+      setTimeout(() => {
+        video.currentTime = start;
+
+        const handleSeeked = () => {
+          video.play().catch(() => {});
+
+          requestAnimationFrame(() => {
+            setFading(false);
+            resetting.current = false;
+          });
+
+          video.removeEventListener('seeked', handleSeeked);
+        };
+
+        video.addEventListener('seeked', handleSeeked);
+      }, 250);
+    }
+  };
+
+  if (type !== 'video') return null;
 
   return (
     <Center
-      className='relative w-1/4 rounded'
+      className='group relative w-1/4 overflow-hidden rounded-[18px] bg-black'
       style={{
-        minWidth: '150px',
+        minWidth: '220px',
         height: '20vw',
+        minHeight: '280px',
+        maxHeight: '430px',
       }}
     >
-      {image}
-      {video}
+      <video
+        ref={videoRef}
+        src={source}
+        autoPlay
+        muted
+        playsInline
+        preload='metadata'
+        onLoadedMetadata={startVideo}
+        onTimeUpdate={handleTimeUpdate}
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
+          fading ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+
+      <div className='pointer-events-none absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-t from-black/65 via-black/15 to-transparent' />
+
+      <div className='pointer-events-none absolute bottom-5 left-5 right-5 flex items-end justify-between text-white'>
+        <div>
+          <p className='mb-2 text-[8px] uppercase tracking-[0.25em] opacity-55'>
+            Project film
+          </p>
+
+          <p className='text-[clamp(1rem,1.3vw,1.3rem)] tracking-[-0.025em]'>
+            {title}
+          </p>
+        </div>
+
+        <p className='text-[8px] uppercase tracking-[0.2em] opacity-45'>
+          Preview
+        </p>
+      </div>
     </Center>
   );
 }

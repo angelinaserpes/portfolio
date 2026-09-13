@@ -2,6 +2,7 @@ import {
   Contact,
   Description,
   Header,
+  Identity,
   Navbar,
   Project,
   Thumbnail,
@@ -10,21 +11,25 @@ import {
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Home | Dennis Snellenberg',
+  title: 'Angelina Serpes | Portfolio',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
+    'The personal portfolio of Angelina Serpes — projects, creative work, and digital experiences.',
 };
 
 export default function Home() {
   return (
     <Transition>
       <Navbar />
+
       <Header />
+
       <main>
         <Description />
+        <Identity />
         <Thumbnail />
         <Project />
       </main>
+
       <Contact />
     </Transition>
   );

@@ -1,49 +1,100 @@
 'use client';
 
+import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { MagneticButton } from '@/components';
 import { socialMedias } from '@/data';
-import { randomId } from '@/utils';
 
 import { ListTitle } from './index.styled';
 
 export function SocialInfo() {
-  const medias = socialMedias.map(({ href, title }) => {
-    const id = randomId();
-    return (
+  const medias = socialMedias.map(
+    ({ href, title }) => (
       <li
-        key={id}
+        key={title}
         className='border-b border-solid border-b-transparent transition-all duration-300 ease-in-expo hover:border-b-border'
       >
-        <Link href={href} target='_blank' rel='noopener' passHref>
-          <MagneticButton>{title}</MagneticButton>
+        <Link
+          href={href}
+          target='_blank'
+          rel='noopener noreferrer'
+          passHref
+        >
+          <MagneticButton>
+            <span className='flex items-center gap-2'>
+              {title}
+
+              <ArrowUpRight
+                size={12}
+                strokeWidth={1.2}
+              />
+            </span>
+          </MagneticButton>
         </Link>
       </li>
-    );
-  });
+    ),
+  );
 
   return (
-    <div className='px-12 pb-4 pt-10'>
-      <div className='flex flex-wrap items-stretch justify-between gap-5'>
-        <div className='flex gap-8'>
-          <div>
-            <ListTitle>Version</ListTitle>
-            <p className='mt-7'>2022 © Edition</p>
+    <div className='px-6 pb-4 pt-12 sm:px-10 md:px-12'>
+
+      <div className='border-t border-background/20 pt-8'>
+
+        <div className='flex flex-col gap-10 md:flex-row md:items-end md:justify-between'>
+
+          <div className='flex gap-12'>
+
+            <div>
+              <ListTitle>
+                Version
+              </ListTitle>
+
+              <p className='mt-7'>
+                2026 © Edition
+              </p>
+            </div>
+
+            <div>
+              <ListTitle>
+                Based in
+              </ListTitle>
+
+              <p className='mt-7'>
+                Mumbai, India
+              </p>
+            </div>
+
           </div>
-          <div>
-            <ListTitle>Local time</ListTitle>
-            <p className='mt-7'>
-              <time>04:01 PM GMT+2</time>
-            </p>
+
+          <div className='flex flex-col'>
+
+            <ListTitle>
+              Find me
+            </ListTitle>
+
+            <ul className='mt-5 flex flex-wrap gap-x-8 gap-y-3'>
+              {medias}
+            </ul>
+
           </div>
+
         </div>
 
-        <div className='flex flex-col'>
-          <ListTitle>Socials</ListTitle>
-          <ul className='flex gap-8'>{medias}</ul>
+        <div className='mt-12 flex items-center justify-between border-t border-background/10 pt-5'>
+
+          <p className='text-[9px] uppercase tracking-[0.22em] opacity-30'>
+            Designed &amp; developed by Angelina Serpes
+          </p>
+
+          <p className='hidden text-[9px] uppercase tracking-[0.22em] opacity-30 sm:block'>
+            Thanks for scrolling
+          </p>
+
         </div>
+
       </div>
+
     </div>
   );
 }

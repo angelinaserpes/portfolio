@@ -1,25 +1,26 @@
 'use client';
 
 import { Copyright } from 'lucide-react';
+import Link from 'next/link';
 
 export function NavbarBrand() {
   return (
-    <div className='group flex cursor-pointer pb-5'>
+    <Link href='/' className='group flex cursor-pointer items-center pb-5'>
       <div className='transition-transform duration-500 ease-in-expo group-hover:rotate-[360deg]'>
-        <Copyright />
+        <Copyright size={21} strokeWidth={1.5} />
       </div>
 
-      <div className='relative ms-2 flex overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-expo group-hover:pe-8'>
-        <h5 className='transition-transform duration-500 ease-in-expo group-hover:-translate-x-full'>
-          Code by
-        </h5>
-        <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
-          Dennis
-        </h5>
-        <h5 className='absolute left-28 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
-          Snellenberg
-        </h5>
+      <div className='ms-2 flex items-center whitespace-nowrap'>
+        <h5>Angelina</h5>
+
+        <div className='flex max-w-0 items-center overflow-hidden opacity-0 transition-all duration-500 ease-in-expo group-hover:max-w-40 group-hover:opacity-100'>
+          <h5 className='ps-1'>Serpes</h5>
+
+          <span className='ms-2 inline-block shrink-0 text-xs'>
+            ↗
+          </span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
