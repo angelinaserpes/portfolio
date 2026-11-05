@@ -8,7 +8,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Phone,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -284,41 +283,6 @@ export default function ContactClient() {
             icon={FileText}
             external
           />
-        </section>
-
-        {/* DIRECT CONTACT */}
-        <section className='bg-[#E4D9CF] px-6 py-20 sm:px-10 md:px-[5vw] md:py-28'>
-          <div className='grid gap-12 border-y border-[#332C28]/20 py-10 md:grid-cols-[0.8fr_1.2fr] md:py-14'>
-            <div>
-              <p className='text-[9px] uppercase tracking-[0.28em] opacity-40'>
-                03 / Direct
-              </p>
-            </div>
-
-            <div>
-              <a
-                href='tel:+919833394120'
-                className='group flex items-center justify-between gap-6'
-              >
-                <div>
-                  <p className='mb-3 text-[9px] uppercase tracking-[0.23em] opacity-40'>
-                    Phone
-                  </p>
-
-                  <p className='text-[clamp(1.8rem,3.5vw,4rem)] tracking-[-0.05em]'>
-                    +91 98333 94120
-                  </p>
-                </div>
-
-                <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#332C28]/20 transition-all duration-300 group-hover:bg-[#332C28] group-hover:text-[#F3EDE6] md:h-14 md:w-14'>
-                  <Phone
-                    size={17}
-                    strokeWidth={1}
-                  />
-                </div>
-              </a>
-            </div>
-          </div>
         </section>
 
         {/* FOOTER */}

@@ -717,7 +717,7 @@ export default function Evoltic() {
         </section>
 
         {/* NEXT PROJECT — loop back to aurevo */}
-        <Link href='/aurevo'>
+        <Link href='/airsense'>
           <motion.section
             whileHover='hover'
             className='group relative cursor-pointer overflow-hidden bg-[#1b1b1b] px-6 py-24 text-[#f3eee6] md:px-12 lg:px-[11vw] lg:py-36'
@@ -739,13 +739,13 @@ export default function Evoltic() {
                 duration: 0.7,
                 ease,
               }}
-              className='pointer-events-none absolute inset-0 bg-[url("/images/aurevo.png")] bg-cover bg-center blur-xl'
+              className='pointer-events-none absolute inset-0 bg-[url("/images/airsense.png")] bg-cover bg-center blur-xl'
             />
 
             <div className='relative z-10'>
               <div className='mb-16 flex items-center justify-between'>
                 <p className='text-[10px] uppercase tracking-[0.3em] text-[#f3eee6]/40'>
-                  Next project / 01
+                  Next project / 07
                 </p>
 
                 <motion.div
@@ -779,7 +779,7 @@ export default function Evoltic() {
                   }}
                   className='text-[16vw] leading-[0.8] tracking-[-0.07em]'
                 >
-                  Aurevo
+                  AirSense
                 </motion.h2>
               </div>
 

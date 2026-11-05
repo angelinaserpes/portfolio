@@ -55,12 +55,12 @@ export function Thumbnail() {
             </ThumbnailLabel>
 
             <p className='mt-4 max-w-sm text-sm opacity-40'>
-              Four projects. Four very different problems.
+              Seven projects. Seven very different problems.
             </p>
           </div>
 
           <p className='hidden text-[10px] uppercase tracking-[0.25em] opacity-35 md:block'>
-            01 — 04
+            01 — 07
           </p>
 
         </div>

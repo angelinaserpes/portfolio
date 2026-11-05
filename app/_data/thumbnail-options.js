@@ -35,4 +35,10 @@ export const thumbnailOptions = [
     image: '/images/evoltic.png',
     type: 'Sustainability / Web App',
   },
+  {
+    href: '/airsense',
+    title: 'AirSense',
+    image: '/images/airsense.png',
+    type: 'Data / Python / SQL',
+  },
 ];

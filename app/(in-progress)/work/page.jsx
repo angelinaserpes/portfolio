@@ -50,6 +50,36 @@ const projects = [
       'A playful coffee storefront combining product discovery with a bright, contemporary interface.',
     stack: ['Frontend', 'E-commerce', 'UI'],
   },
+  {
+    title: 'Revive',
+    category: 'Sustainability / E-commerce',
+    image: '/images/revive.png',
+    href: '/revive',
+    number: '05',
+    description:
+      'An eco-friendly shopping app for sustainable and recycled products, on the web and Android.',
+    stack: ['React', 'TypeScript', 'Android'],
+  },
+  {
+    title: 'Evoltic',
+    category: 'Sustainability / Web App',
+    image: '/images/evoltic.png',
+    href: '/evoltic',
+    number: '06',
+    description:
+      'An EV charging capacity planner for Mumbai housing societies, built for SPARK-A-THON 2026.',
+    stack: ['React', 'Data', 'Maps'],
+  },
+  {
+    title: 'AirSense',
+    category: 'Data / Python / SQL',
+    image: '/images/airsense.png',
+    href: '/airsense',
+    number: '07',
+    description:
+      'A desktop app that turns live pollution data into AQI trends, forecasts and the best time to go outside.',
+    stack: ['Python', 'MySQL', 'APIs'],
+  },
 ];
 
 export default function Work() {
@@ -88,7 +118,7 @@ export default function Work() {
               </p>
 
               <p className='text-xs uppercase tracking-[0.25em] opacity-50'>
-                04 Projects
+                07 Projects
               </p>
             </motion.div>
 

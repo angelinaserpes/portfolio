@@ -71,10 +71,12 @@ const skillGroups = [
     label: 'BUILD',
     caption: 'Languages & development',
     skills: [
+      'Python',
       'Java',
       'JavaScript',
-      'C',
+      'TypeScript',
       'SQL',
+      'C',
       'HTML / CSS',
       'PHP',
     ],
@@ -136,28 +138,28 @@ const certifications = [
 const securityLogs = [
   {
     time: '14:02:18',
-    status: 'ACCESS',
-    text: 'Authenticated user / role verified',
+    status: 'LOGIN',
+    text: 'Credentials checked against MySQL',
   },
   {
-    time: '14:02:21',
+    time: '14:02:19',
     status: 'RBAC',
-    text: 'Permission rules applied',
+    text: 'Role verified / Employee permissions applied',
+  },
+  {
+    time: '14:02:41',
+    status: 'DENY',
+    text: 'System logs blocked for this role',
   },
   {
     time: '14:03:07',
-    status: 'WATCH',
-    text: 'Monitoring authentication activity',
+    status: 'FAIL',
+    text: 'Invalid password / 2 attempts left',
   },
   {
     time: '14:03:42',
-    status: 'ALERT',
-    text: 'Failed login pattern detected',
-  },
-  {
-    time: '14:03:43',
-    status: 'LOG',
-    text: 'Security event written to audit trail',
+    status: 'LOCK',
+    text: 'Account locked after 3 failed attempts',
   },
 ];
 
@@ -1071,7 +1073,7 @@ export default function ExperiencePage() {
                 <br />
 
                 <span className='font-serif italic text-[#AAA297]'>
-                  Threat Monitoring.
+                  Role-Based Control.
                 </span>
               </h2>
             </div>
@@ -1101,11 +1103,11 @@ export default function ExperiencePage() {
                 </div>
 
                 <p className='max-w-md text-lg leading-[1.65] opacity-70'>
-                  A Java-based secure access
-                  management system implementing
-                  role-based access control,
-                  authentication monitoring and
-                  audit logging.
+                  A Java Swing and MySQL access
+                  system with database login,
+                  role-based permissions for Admin,
+                  Employee and Visitor, and account
+                  lockout after three failed attempts.
                 </p>
 
                 <div className='mt-10 grid grid-cols-2 gap-[1px] bg-white/10'>
@@ -1164,8 +1166,8 @@ export default function ExperiencePage() {
 
               <div className='font-mono'>
                 <p className='mb-8 text-[10px] opacity-35'>
-                  {'>'} monitoring authentication
-                  events...
+                  {'>'} replaying a login
+                  session...
                 </p>
 
                 {securityLogs.map(
@@ -1224,8 +1226,8 @@ export default function ExperiencePage() {
                     />
 
                     <p className='font-mono text-[9px] uppercase tracking-[0.15em]'>
-                      Event captured / audit trail
-                      updated
+                      Session complete / access rules
+                      enforced
                     </p>
                   </div>
                 </motion.div>
