@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+import { createPortal } from 'react-dom';
+
 import { cover, slots } from './data';
 import { FitFigure } from './figure';
 
@@ -45,6 +47,9 @@ export function FitCheck() {
   const [hint, setHint] = useState(false);
   const [picks, setPicks] = useState({ top: 0, bottom: 0, accessory: 0 });
   const closeRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const look = {
     top: slots[0].items[picks.top],
@@ -105,7 +110,9 @@ export function FitCheck() {
     link.click();
   };
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <>
       <div className='fc-trigger-wrap'>
         {hint && !open ? <span className='fc-hint'>psst, check my fit</span> : null}
@@ -241,6 +248,7 @@ export function FitCheck() {
           ) : null}
         </div>
       ) : null}
-    </>
+    </>,
+    document.body,
   );
 }
