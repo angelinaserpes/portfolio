@@ -182,7 +182,7 @@ export function FitCheck() {
                   Look {String(index + 1).padStart(2, '0')} / {String(looks.length).padStart(2, '0')}
                 </p>
                 <h2 className='fc-title' key={look.name}>
-                  {look.name.replace('The ', '')} <em>look.</em>
+                  {look.name.replace('The ', '').replace(' Look', '')} <em>look.</em>
                 </h2>
                 <p className='fc-sub'>{look.tagline} Every piece is one of my real skills.</p>
 
