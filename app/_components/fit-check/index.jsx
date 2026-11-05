@@ -37,13 +37,26 @@ async function drawCover(look) {
 
   ctx.fillStyle = '#F2EDE4';
   ctx.textAlign = 'center';
-  ctx.font = 'italic 700 300px Georgia, "Times New Roman", serif';
+  let size = 300;
+  ctx.font = `italic 700 ${size}px Georgia, "Times New Roman", serif`;
+  while (ctx.measureText(cover.masthead).width > W - 90 && size > 120) {
+    size -= 6;
+    ctx.font = `italic 700 ${size}px Georgia, "Times New Roman", serif`;
+  }
   ctx.fillText(cover.masthead, W / 2, 280);
   ctx.font = '500 22px Helvetica, Arial, sans-serif';
   ctx.fillText(cover.issue.toUpperCase(), W / 2, 330);
   ctx.textAlign = 'left';
   ctx.font = '22px Helvetica, Arial, sans-serif';
   [look.name, ...look.pieces.map(p => p.item)].forEach((t, i) => ctx.fillText(t.toUpperCase(), 60, 430 + i * 42));
+  ctx.font = '600 18px Helvetica, Arial, sans-serif';
+  ctx.globalAlpha = 0.7;
+  ctx.fillText('INSIDE THIS ISSUE', 60, 640);
+  ctx.globalAlpha = 1;
+  ctx.font = '22px Helvetica, Arial, sans-serif';
+  ['AirSense: the data app that tells you', 'when to breathe easy', 'Aurevo: designing stores with AI', '4 looks. 1 developer. Zero bugs*'].forEach(
+    (t, i) => ctx.fillText(t, 60, 676 + i * 32),
+  );
   ctx.font = 'italic 62px Georgia, serif';
   cover.headline.split('\n').forEach((line, i) => ctx.fillText(line, 60, 900 + i * 70));
   ctx.font = '20px Helvetica, Arial, sans-serif';
@@ -160,6 +173,13 @@ export function FitCheck() {
 
           {stage === 'rack' ? (
             <div className='fc-rack'>
+              <div className='fc-decor' aria-hidden='true'>
+                <span className='fc-watermark'>{look.name.replace('The ', '').replace(' Look', '')}</span>
+                <span className='fc-rail' />
+                <span className='fc-tag fc-tag-a'>SS / 26 · Collection</span>
+                <span className='fc-tag fc-tag-b'>Look {String(index + 1).padStart(2, '0')} · One of one</span>
+                <span className='fc-tape' />
+              </div>
               <div className='fc-stage'>
                 <button type='button' className='fc-arrow' onClick={() => step(-1)} aria-label='Previous look'>
                   ←
@@ -248,7 +268,24 @@ export function FitCheck() {
                     <li key={p.item}>{p.item}</li>
                   ))}
                 </ul>
+                <span className='fc-badge' aria-hidden='true'>
+                  Fashion
+                  <br />× Tech
+                </span>
+                <div className='fc-inside'>
+                  <p className='fc-inside-label'>Inside this issue</p>
+                  <p>
+                    <strong>AirSense:</strong> the data app that tells you when to breathe easy
+                  </p>
+                  <p>
+                    <strong>Aurevo:</strong> designing stores with AI
+                  </p>
+                  <p>
+                    <strong>4 looks.</strong> 1 developer. Zero bugs* <em>(*mostly)</em>
+                  </p>
+                </div>
                 <img className='fc-cover-figure' src={look.image} alt='' />
+                <span className='fc-barcode' aria-hidden='true' />
                 <h3 className='fc-headline'>
                   {cover.headline.split('\n').map(l => (
                     <span key={l}>{l}</span>
