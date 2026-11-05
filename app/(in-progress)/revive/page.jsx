@@ -1,6 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
+import {
+  useRef,
+} from 'react';
 
 import {
   motion,
@@ -10,14 +12,16 @@ import {
 import {
   ArrowDown,
   ArrowUpRight,
+  Leaf,
   MoveRight,
   Search,
   ShoppingBag,
-  Leaf,
 } from 'lucide-react';
 import Link from 'next/link';
 
-import { Transition } from '@/layout';
+import {
+  Transition,
+} from '@/layout';
 
 const ease = [0.22, 1, 0.36, 1];
 
