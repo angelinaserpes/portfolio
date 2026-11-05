@@ -1507,7 +1507,7 @@ export default function Phantom() {
         ========================================================= */}
         <section className='relative overflow-hidden px-6 pb-32 pt-20 md:px-12 lg:px-[8vw] lg:pb-48 lg:pt-28'>
 
-          <div className='pointer-events-none absolute right-[-2vw] top-8 select-none text-[26vw] font-medium leading-none tracking-[-0.09em] text-white/[0.018]'>
+          <div className='pointer-events-none absolute right-[4vw] top-8 select-none text-[22vw] font-medium leading-none tracking-[-0.09em] text-white/[0.03]'>
             P
           </div>
 
@@ -1536,14 +1536,14 @@ export default function Phantom() {
                 <motion.h2
                   variants={{ hidden: { y: '110%' }, show: { y: 0 } }}
                   transition={{ duration: 1, ease }}
-                  className='text-[clamp(4.2rem,10.5vw,10.5rem)] uppercase leading-[0.78] tracking-[-0.075em]'
+                  className='text-[clamp(3.6rem,9.2vw,9.5rem)] uppercase leading-[0.82] tracking-[-0.07em]'
                 >
                   Designed to
                 </motion.h2>
               </motion.div>
 
               <motion.div
-                className='overflow-hidden pb-3'
+                className='overflow-hidden pb-3 pr-[0.15em]'
                 initial='hidden'
                 whileInView='show'
                 viewport={{ once: true, amount: 0.1 }}
@@ -1551,7 +1551,7 @@ export default function Phantom() {
                 <motion.h2
                   variants={{ hidden: { y: '110%' }, show: { y: 0 } }}
                   transition={{ duration: 1, delay: 0.08, ease }}
-                  className='text-right text-[clamp(4.2rem,10.5vw,10.5rem)] uppercase italic leading-[0.78] tracking-[-0.075em] text-white/35'
+                  className='pr-[0.08em] text-right text-[clamp(3.6rem,9.2vw,9.5rem)] uppercase italic leading-[0.82] tracking-[-0.07em] text-white/35'
                 >
                   be experienced.
                 </motion.h2>
