@@ -36,7 +36,7 @@ export function OffcanvasBackdrop() {
   };
 
   return (
-    <motion.svg className='absolute right-[600px] top-0 h-full w-24 fill-foreground stroke-none'>
+    <motion.svg className='pointer-events-none absolute -left-[99px] top-0 h-full w-[100px] overflow-visible fill-foreground stroke-none'>
       <motion.path
         variants={curve}
         initial='initial'

@@ -35,7 +35,7 @@ export function OffcanvasLinks() {
         >
           <Dot size={36} />
         </motion.div>
-        <Link href={href} className='text-6xl capitalize'>
+        <Link href={href} className='text-5xl capitalize sm:text-6xl'>
           {title}
         </Link>
       </motion.li>
