@@ -11,9 +11,9 @@ import {
   ArrowDown,
   ArrowUpRight,
   MoveRight,
-  Zap,
-  RefreshCw,
-  TrendingUp,
+  Search,
+  ShoppingBag,
+  Leaf,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -43,45 +43,45 @@ const fadeUp = {
 const principles = [
   {
     number: '01',
-    title: 'Motivation',
+    title: 'Conscious',
     description:
-      'Turning daily habits into visible progress that actually keeps you going.',
+      'Making the sustainable choice feel like the easy, obvious one.',
   },
   {
     number: '02',
     title: 'Simplicity',
     description:
-      'A clean interface that gets out of the way and lets you focus on the work.',
+      'A clean shopping flow that keeps attention on the products, not the interface.',
   },
   {
     number: '03',
-    title: 'Momentum',
+    title: 'Impact',
     description:
-      'Building streaks and consistency that compound over time.',
+      'Small eco-friendly purchases that add up to a real difference.',
   },
 ];
 
 const features = [
   {
     number: '01',
-    title: 'Track',
+    title: 'Discover',
     description:
-      'Log workouts, habits and daily goals in seconds.',
-    icon: Zap,
+      'Browse eco-friendly and recycled products, organised by category.',
+    icon: Search,
   },
   {
     number: '02',
-    title: 'Review',
+    title: 'Choose',
     description:
-      'See your patterns clearly and understand what drives your progress.',
-    icon: RefreshCw,
+      'Compare products and add sustainable alternatives to your cart.',
+    icon: ShoppingBag,
   },
   {
     number: '03',
-    title: 'Grow',
+    title: 'Revive',
     description:
-      'Build on streaks, hit milestones and keep the momentum going.',
-    icon: TrendingUp,
+      'Check out on the web or the Android app and shop greener every time.',
+    icon: Leaf,
   },
 ];
 
@@ -90,7 +90,7 @@ const stack = [
   'TypeScript',
   'Vite',
   'Tailwind CSS',
-  'Framer Motion',
+  'Median (Android)',
   'Figma Make',
   'Frontend',
 ];
@@ -162,7 +162,7 @@ export default function Revive() {
             </p>
 
             <p className='text-[10px] uppercase tracking-[0.28em] text-[#1b1b1b]/50'>
-              Productivity / Web App
+              Sustainability / E-commerce
             </p>
           </motion.div>
 
@@ -176,7 +176,7 @@ export default function Revive() {
               }}
               className='mb-5 text-xs uppercase tracking-[0.3em] text-[#1b1b1b]/45'
             >
-              Habit tracking, reimagined
+              Sustainable shopping, simplified
             </motion.p>
 
             <div className='overflow-hidden pb-6'>
@@ -205,7 +205,7 @@ export default function Revive() {
                 {...fadeUp}
                 className='max-w-xl text-2xl leading-tight md:text-4xl'
               >
-                A productivity app that turns consistency into something worth celebrating.
+                An eco-friendly shopping app for sustainable and recycled products, on the web and Android.
               </motion.p>
 
               <motion.div
@@ -213,9 +213,9 @@ export default function Revive() {
                 className='flex items-end md:justify-end'
               >
                 <p className='max-w-sm text-sm leading-relaxed text-[#1b1b1b]/60 md:text-base'>
-                  Revive helps you build and maintain habits through clean
-                  tracking, streak motivation and a design that stays out of
-                  your way.
+                  Revive brings eco-friendly and recycled products together in
+                  one place, with a clean shopping experience on the web and
+                  as an Android app.
                 </p>
               </motion.div>
             </div>
@@ -288,7 +288,7 @@ export default function Revive() {
 
             <div className='absolute bottom-6 left-6 hidden md:block'>
               <span className='text-[9px] uppercase tracking-[0.25em] text-white/50'>
-                Revive / Productivity App
+                Revive / Eco Shopping App
               </span>
             </div>
           </motion.div>
@@ -314,7 +314,7 @@ export default function Revive() {
                 Focus
               </p>
               <p className='text-sm'>
-                Productivity / UX / React
+                Sustainability / UX / React
               </p>
             </div>
 
@@ -323,7 +323,7 @@ export default function Revive() {
                 Type
               </p>
               <p className='text-sm'>
-                Web Application
+                Web + Android App
               </p>
             </div>
 
@@ -352,19 +352,19 @@ export default function Revive() {
 
             <div>
               <h2 className='max-w-5xl text-5xl leading-[0.94] tracking-[-0.055em] md:text-7xl lg:text-[7vw]'>
-                What if staying consistent actually felt rewarding?
+                What if shopping sustainably was the easy choice?
               </h2>
 
               <div className='mt-14 grid gap-8 md:grid-cols-2'>
                 <p className='max-w-md text-base leading-relaxed text-[#f3eee6]/55 md:text-lg'>
-                  Revive rethinks habit tracking as something visual, motivating
-                  and genuinely satisfying to use day after day.
+                  Revive makes eco-friendly shopping simple: one place to find
+                  sustainable and recycled products without hunting across sites.
                 </p>
 
                 <p className='max-w-md text-base leading-relaxed text-[#f3eee6]/40'>
-                  Built with Figma Make and exported as a clean React + TypeScript
-                  app, it pairs an intentional interface with smooth interactions
-                  that make showing up feel worthwhile.
+                  Designed for the Product Design (HSSM301) course at FCRIT, it was
+                  built in Figma Make as a React + TypeScript web app, deployed on
+                  Vercel and packaged as an Android app with Median.
                 </p>
               </div>
             </div>
@@ -391,12 +391,12 @@ export default function Revive() {
             }}
           >
             <p className='mb-10 text-[10px] uppercase tracking-[0.3em] text-[#1b1b1b]/40'>
-              Habits that stick
+              Shop greener
             </p>
 
             <h2 className='text-[clamp(4rem,10vw,10rem)] leading-[0.82] tracking-[-0.07em]'>
               <span className='block'>
-                Small actions.
+                Small choices.
               </span>
 
               <motion.span
@@ -413,7 +413,7 @@ export default function Revive() {
               </motion.span>
 
               <span className='block text-right'>
-                Every day.
+                Every order.
               </span>
             </h2>
           </motion.div>
@@ -616,9 +616,9 @@ export default function Revive() {
 
             <div className='flex flex-col justify-end'>
               <p className='mb-10 max-w-lg text-base leading-relaxed text-[#1b1b1b]/55'>
-                Revive was designed in Figma Make and exported as a production-ready
-                React + TypeScript application, combining a deliberate visual
-                system with smooth Framer Motion interactions.
+                Revive was designed in Figma Make and exported as a React +
+                TypeScript web app, deployed on Vercel, then packaged into an
+                Android app (APK) with Median, so one codebase runs on both.
               </p>
 
               <div className='flex flex-wrap gap-2'>
@@ -677,6 +677,29 @@ export default function Revive() {
                   className='group flex items-center gap-7 rounded-full bg-[#1b1b1b] px-8 py-6 text-sm text-[#f3eee6]'
                 >
                   Live Site
+
+                  <ArrowUpRight
+                    size={17}
+                    className='transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1'
+                  />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{
+                  scale: 0.98,
+                }}
+              >
+                <Link
+                  href='https://median.co/share/krlnakm'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='group flex items-center gap-7 rounded-full border border-[#1b1b1b]/25 px-8 py-6 text-sm transition-colors duration-300 hover:bg-[#1b1b1b] hover:text-[#f3eee6]'
+                >
+                  Android App
 
                   <ArrowUpRight
                     size={17}

@@ -27,7 +27,7 @@ export const thumbnailOptions = [
     href: '/revive',
     title: 'Revive',
     image: '/images/revive.png',
-    type: 'Productivity / Web App',
+    type: 'Sustainability / E-commerce',
   },
   {
     href: '/evoltic',
