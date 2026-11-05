@@ -2,6 +2,9 @@
 
 import { useRef } from 'react';
 
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+
 import { useFollowPointer } from '@/hooks';
 
 import {
@@ -55,12 +58,12 @@ export function Thumbnail() {
             </ThumbnailLabel>
 
             <p className='mt-4 max-w-sm text-sm opacity-40'>
-              Seven projects. Seven very different problems.
+              Three featured projects. Seven in total.
             </p>
           </div>
 
           <p className='hidden text-[10px] uppercase tracking-[0.25em] opacity-35 md:block'>
-            01 — 07
+            01 — 03
           </p>
 
         </div>
@@ -70,6 +73,20 @@ export function Thumbnail() {
           handlePointerLeave={handlePointerLeave}
           moveItems={moveItems}
         />
+
+        <div className='flex justify-center pt-4'>
+          <Link
+            href='/work'
+            className='group flex items-center gap-4 rounded-full border border-current/25 px-8 py-5 text-sm transition-colors duration-300 hover:bg-foreground hover:text-background'
+          >
+            More work
+            <span className='text-xs opacity-50'>07</span>
+            <ArrowUpRight
+              size={16}
+              className='transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1'
+            />
+          </Link>
+        </div>
 
         <ThumbnailModal
           ref={modal}

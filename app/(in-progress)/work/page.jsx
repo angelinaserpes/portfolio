@@ -21,64 +21,64 @@ const projects = [
     stack: ['React', 'AI', 'Web Development'],
   },
   {
+    title: 'AirSense',
+    category: 'Data / Python / SQL',
+    image: '/images/airsense.png',
+    href: '/airsense',
+    number: '02',
+    description:
+      'A desktop app that turns live pollution data into AQI trends, forecasts and the best time to go outside.',
+    stack: ['Python', 'MySQL', 'APIs'],
+  },
+  {
     title: 'Phantom',
     category: 'Web Design / Frontend',
     image: '/images/phantom.png',
     href: '/phantom',
-    number: '02',
+    number: '03',
     description:
       'A cinematic luxury automotive experience built around motion, atmosphere and interaction.',
     stack: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    title: 'InAmigos',
-    category: 'Web Design / Development',
-    image: '/images/inamigos.png',
-    href: '/inamigos',
-    number: '03',
-    description:
-      'A digital experience created to communicate the work, purpose and impact of a non-profit organisation.',
-    stack: ['Web Design', 'Frontend', 'UI'],
-  },
-  {
-    title: 'Dakota Coffee',
-    category: 'Web Development / E-commerce',
-    image: '/images/dakota.png',
-    href: '/dakota',
-    number: '04',
-    description:
-      'A playful coffee storefront combining product discovery with a bright, contemporary interface.',
-    stack: ['Frontend', 'E-commerce', 'UI'],
-  },
-  {
-    title: 'Revive',
-    category: 'Sustainability / E-commerce',
-    image: '/images/revive.png',
-    href: '/revive',
-    number: '05',
-    description:
-      'An eco-friendly shopping app for sustainable and recycled products, on the web and Android.',
-    stack: ['React', 'TypeScript', 'Android'],
   },
   {
     title: 'Evoltic',
     category: 'Sustainability / Web App',
     image: '/images/evoltic.png',
     href: '/evoltic',
-    number: '06',
+    number: '04',
     description:
       'An EV charging capacity planner for Mumbai housing societies, built for SPARK-A-THON 2026.',
     stack: ['React', 'Data', 'Maps'],
   },
   {
-    title: 'AirSense',
-    category: 'Data / Python / SQL',
-    image: '/images/airsense.png',
-    href: '/airsense',
+    title: 'InAmigos',
+    category: 'Web Design / Development',
+    image: '/images/inamigos.png',
+    href: '/inamigos',
+    number: '05',
+    description:
+      'A digital experience created to communicate the work, purpose and impact of a non-profit organisation.',
+    stack: ['Web Design', 'Frontend', 'UI'],
+  },
+  {
+    title: 'Revive',
+    category: 'Sustainability / E-commerce',
+    image: '/images/revive.png',
+    href: '/revive',
+    number: '06',
+    description:
+      'An eco-friendly shopping app for sustainable and recycled products, on the web and Android.',
+    stack: ['React', 'TypeScript', 'Android'],
+  },
+  {
+    title: 'Dakota Coffee',
+    category: 'Web Development / E-commerce',
+    image: '/images/dakota.png',
+    href: '/dakota',
     number: '07',
     description:
-      'A desktop app that turns live pollution data into AQI trends, forecasts and the best time to go outside.',
-    stack: ['Python', 'MySQL', 'APIs'],
+      'A playful coffee storefront combining product discovery with a bright, contemporary interface.',
+    stack: ['Frontend', 'E-commerce', 'UI'],
   },
 ];
 

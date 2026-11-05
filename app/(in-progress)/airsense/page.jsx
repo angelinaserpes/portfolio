@@ -162,7 +162,7 @@ export default function AirSense() {
             className='flex items-center justify-between border-t border-[#1b1b1b]/20 pt-5'
           >
             <p className='text-[10px] uppercase tracking-[0.28em] text-[#1b1b1b]/50'>
-              Selected project / 07
+              Selected project / 02
             </p>
 
             <p className='text-[10px] uppercase tracking-[0.28em] text-[#1b1b1b]/50'>
@@ -694,7 +694,7 @@ export default function AirSense() {
         </section>
 
         {/* NEXT PROJECT */}
-        <Link href='/aurevo'>
+        <Link href='/phantom'>
           <motion.section
             whileHover='hover'
             className='group relative cursor-pointer overflow-hidden bg-[#1b1b1b] px-6 py-24 text-[#f3eee6] md:px-12 lg:px-[11vw] lg:py-36'
@@ -716,13 +716,13 @@ export default function AirSense() {
                 duration: 0.7,
                 ease,
               }}
-              className='pointer-events-none absolute inset-0 bg-[url("/images/aurevo.png")] bg-cover bg-center blur-xl'
+              className='pointer-events-none absolute inset-0 bg-[url("/images/phantom.png")] bg-cover bg-center blur-xl'
             />
 
             <div className='relative z-10'>
               <div className='mb-16 flex items-center justify-between'>
                 <p className='text-[10px] uppercase tracking-[0.3em] text-[#f3eee6]/40'>
-                  Next project / 01
+                  Next project / 03
                 </p>
 
                 <motion.div
@@ -756,7 +756,7 @@ export default function AirSense() {
                   }}
                   className='text-[16vw] leading-[0.8] tracking-[-0.07em]'
                 >
-                  Aurevo
+                  Phantom
                 </motion.h2>
               </div>
 

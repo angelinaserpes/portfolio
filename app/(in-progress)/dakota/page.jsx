@@ -206,7 +206,7 @@ export default function Dakota() {
               className='mt-5 flex items-center justify-between'
             >
               <p className='text-[9px] uppercase tracking-[0.32em] text-black/40'>
-                Selected Project / 04
+                Selected Project / 07
               </p>
 
               <p className='text-right text-[9px] uppercase tracking-[0.32em] text-black/40'>
@@ -1159,7 +1159,7 @@ export default function Dakota() {
               </p>
 
               <p className='hidden text-[9px] uppercase tracking-[0.32em] text-black/30 md:block'>
-                End of Case Study / 04
+                End of Case Study / 07
               </p>
             </motion.div>
 

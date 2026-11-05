@@ -881,7 +881,7 @@ export default function Aurevo() {
         </section>
 
         {/* NEXT PROJECT */}
-        <Link href='/phantom'>
+        <Link href='/airsense'>
           <motion.section
             whileHover='hover'
             className='group relative cursor-pointer overflow-hidden bg-[#1b1b1b] px-6 py-24 text-[#f3eee6] md:px-12 lg:px-[11vw] lg:py-36'
@@ -903,7 +903,7 @@ export default function Aurevo() {
                 duration: 0.7,
                 ease,
               }}
-              className='pointer-events-none absolute inset-0 bg-[url("/images/phantom.png")] bg-cover bg-center blur-xl'
+              className='pointer-events-none absolute inset-0 bg-[url("/images/airsense.png")] bg-cover bg-center blur-xl'
             />
 
             <div className='relative z-10'>
@@ -943,7 +943,7 @@ export default function Aurevo() {
                   }}
                   className='text-[16vw] leading-[0.8] tracking-[-0.07em]'
                 >
-                  Phantom
+                  AirSense
                 </motion.h2>
               </div>
 

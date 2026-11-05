@@ -212,7 +212,7 @@ export default function InAmigos() {
               className='mt-5 flex items-center justify-between'
             >
               <p className='text-[9px] uppercase tracking-[0.32em] text-[#173d32]/45'>
-                Selected Project / 03
+                Selected Project / 05
               </p>
 
               <p className='text-right text-[9px] uppercase tracking-[0.32em] text-[#173d32]/45'>
@@ -1126,7 +1126,7 @@ export default function InAmigos() {
               </p>
 
               <p className='hidden text-[9px] uppercase tracking-[0.32em] text-[#173d32]/30 md:block'>
-                End of Case Study / 03
+                End of Case Study / 05
               </p>
             </motion.div>
 
@@ -1217,7 +1217,7 @@ export default function InAmigos() {
         </section>
 
         {/* NEXT PROJECT — DAKOTA COFFEE */}
-        <Link href='/dakota' className='block'>
+        <Link href='/revive' className='block'>
           <motion.section
             initial='rest'
             whileHover='hover'
@@ -1241,7 +1241,7 @@ export default function InAmigos() {
                 duration: 0.9,
                 ease,
               }}
-              className='pointer-events-none absolute inset-0 bg-[url("/images/dakota.png")] bg-cover bg-center'
+              className='pointer-events-none absolute inset-0 bg-[url("/images/revive.png")] bg-cover bg-center'
             />
 
             {/* BOTTOM FADE */}
@@ -1264,7 +1264,7 @@ export default function InAmigos() {
             <div className='relative z-10 flex min-h-[72vh] flex-col px-5 py-10 sm:px-6 md:px-10 lg:px-[5vw] lg:py-14'>
               <div className='flex items-center justify-between border-t border-black/20 pt-6'>
                 <p className='text-[9px] uppercase tracking-[0.32em] text-black/45'>
-                  Next Project / 04
+                  Next Project / 06
                 </p>
 
                 <div className='flex items-center gap-3'>
@@ -1312,7 +1312,7 @@ export default function InAmigos() {
                       }}
                       className='w-full whitespace-nowrap text-[clamp(4.25rem,13.2vw,12.5rem)] leading-[0.8] tracking-[-0.075em] sm:text-[clamp(5rem,13vw,12.5rem)]'
                     >
-                      Dakota Coffee
+                      Revive
                     </motion.h2>
                   </div>
 
