@@ -139,7 +139,7 @@ export function FitCheck() {
       </div>
 
       {open ? (
-        <div className={`fc-overlay fc-${stage}`} role='dialog' aria-modal='true' aria-label='Fit Check' data-lenis-prevent>
+        <div className={`fc-overlay is-${stage}`} role='dialog' aria-modal='true' aria-label='Fit Check' data-lenis-prevent>
           <div className='fc-grain' aria-hidden='true' />
           <div className='fc-lights' aria-hidden='true' />
 
