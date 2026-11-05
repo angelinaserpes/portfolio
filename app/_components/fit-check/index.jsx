@@ -4,58 +4,66 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { createPortal } from 'react-dom';
 
-import { cover, slots } from './data';
-import { FitFigure } from './figure';
+import { cover, looks } from './data';
 
-function drawCover(picks) {
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const img = new window.Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
+}
+
+async function drawCover(look) {
   const W = 900;
   const H = 1200;
   const canvas = document.createElement('canvas');
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext('2d');
-  ctx.fillStyle = picks.top.color;
+  ctx.fillStyle = look.accent;
   ctx.fillRect(0, 0, W, H);
-  const glow = ctx.createRadialGradient(W / 2, H * 0.55, 40, W / 2, H * 0.55, 620);
+  const glow = ctx.createRadialGradient(W * 0.62, H * 0.6, 40, W * 0.62, H * 0.6, 640);
   glow.addColorStop(0, 'rgba(255,255,255,0.28)');
-  glow.addColorStop(1, 'rgba(0,0,0,0.25)');
+  glow.addColorStop(1, 'rgba(0,0,0,0.3)');
   ctx.fillStyle = glow;
   ctx.fillRect(0, 0, W, H);
+
+  const img = await loadImage(look.image);
+  const h = 900;
+  const w = (img.width / img.height) * h;
+  ctx.drawImage(img, W - w - 30, H - h - 20, w, h);
+
   ctx.fillStyle = '#F2EDE4';
   ctx.textAlign = 'center';
   ctx.font = 'italic 700 300px Georgia, "Times New Roman", serif';
-  ctx.fillText(cover.masthead, W / 2, 290);
+  ctx.fillText(cover.masthead, W / 2, 280);
   ctx.font = '500 22px Helvetica, Arial, sans-serif';
-  ctx.fillText(cover.issue.toUpperCase(), W / 2, 340);
+  ctx.fillText(cover.issue.toUpperCase(), W / 2, 330);
   ctx.textAlign = 'left';
-  ctx.font = 'italic 64px Georgia, serif';
-  cover.headline.split('\n').forEach((line, i) => ctx.fillText(line, 60, 820 + i * 72));
-  ctx.font = '24px Helvetica, Arial, sans-serif';
-  [`THE LOOK: ${picks.top.name}`, `STYLED WITH ${picks.bottom.name}`, `FINISHED WITH ${picks.accessory.name}`].forEach(
-    (line, i) => ctx.fillText(line.toUpperCase(), 60, 470 + i * 44),
-  );
+  ctx.font = '22px Helvetica, Arial, sans-serif';
+  [look.name, ...look.pieces.map(p => p.item)].forEach((t, i) => ctx.fillText(t.toUpperCase(), 60, 430 + i * 42));
+  ctx.font = 'italic 62px Georgia, serif';
+  cover.headline.split('\n').forEach((line, i) => ctx.fillText(line, 60, 900 + i * 70));
   ctx.font = '20px Helvetica, Arial, sans-serif';
-  ctx.globalAlpha = 0.7;
-  ctx.fillText('ANGELINA SERPES · PORTFOLIO', 60, H - 60);
+  ctx.globalAlpha = 0.75;
+  ctx.fillText('ANGELINA SERPES · PORTFOLIO', 60, H - 56);
   ctx.globalAlpha = 1;
   return canvas;
 }
 
 export function FitCheck() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [stage, setStage] = useState('rack');
   const [hint, setHint] = useState(false);
-  const [picks, setPicks] = useState({ top: 0, bottom: 0, accessory: 0 });
+  const [index, setIndex] = useState(0);
+  const [dir, setDir] = useState(1);
   const closeRef = useRef(null);
-  const [mounted, setMounted] = useState(false);
+  const look = looks[index];
 
   useEffect(() => setMounted(true), []);
-
-  const look = {
-    top: slots[0].items[picks.top],
-    bottom: slots[1].items[picks.bottom],
-    accessory: slots[2].items[picks.accessory],
-  };
 
   const close = useCallback(() => {
     setOpen(false);
@@ -77,36 +85,36 @@ export function FitCheck() {
     const prev = root.style.overflow;
     root.style.overflow = 'hidden';
     closeRef.current?.focus();
-    const onKey = e => e.key === 'Escape' && close();
+    looks.forEach(l => loadImage(l.image).catch(() => {}));
+    const onKey = e => {
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight') step(1);
+      if (e.key === 'ArrowLeft') step(-1);
+    };
     window.addEventListener('keydown', onKey);
     return () => {
       root.style.overflow = prev;
       window.removeEventListener('keydown', onKey);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, close]);
 
   useEffect(() => {
     if (stage !== 'runway') return undefined;
-    const t = setTimeout(() => setStage('cover'), 2600);
+    const t = setTimeout(() => setStage('cover'), 2800);
     return () => clearTimeout(t);
   }, [stage]);
 
-  const cycle = (key, dir) => {
-    const count = slots.find(s => s.key === key).items.length;
-    setPicks(p => ({ ...p, [key]: (p[key] + dir + count) % count }));
-  };
+  function step(d) {
+    setDir(d);
+    setIndex(i => (i + d + looks.length) % looks.length);
+  }
 
-  const shuffle = () =>
-    setPicks({
-      top: Math.floor(Math.random() * slots[0].items.length),
-      bottom: Math.floor(Math.random() * slots[1].items.length),
-      accessory: Math.floor(Math.random() * slots[2].items.length),
-    });
-
-  const download = () => {
+  const download = async () => {
+    const canvas = await drawCover(look);
     const link = document.createElement('a');
-    link.download = 'angy-fit-check-cover.png';
-    link.href = drawCover(look).toDataURL('image/png');
+    link.download = `angy-${look.name.toLowerCase().replace(/\s+/g, '-')}-cover.png`;
+    link.href = canvas.toDataURL('image/png');
     link.click();
   };
 
@@ -153,47 +161,63 @@ export function FitCheck() {
           {stage === 'rack' ? (
             <div className='fc-rack'>
               <div className='fc-stage'>
-                <FitFigure {...look} />
+                <button type='button' className='fc-arrow' onClick={() => step(-1)} aria-label='Previous look'>
+                  ←
+                </button>
+                <div className='fc-look-frame'>
+                  <img
+                    key={look.image}
+                    src={look.image}
+                    alt={`Illustration of Angy wearing ${look.name}`}
+                    className={`fc-look-img ${dir > 0 ? 'from-right' : 'from-left'}`}
+                  />
+                </div>
+                <button type='button' className='fc-arrow' onClick={() => step(1)} aria-label='Next look'>
+                  →
+                </button>
               </div>
+
               <div className='fc-panel'>
-                <h2 className='fc-title'>
-                  Style the <em>developer.</em>
+                <p className='fc-count'>
+                  Look {String(index + 1).padStart(2, '0')} / {String(looks.length).padStart(2, '0')}
+                </p>
+                <h2 className='fc-title' key={look.name}>
+                  {look.name.replace('The ', '')} <em>look.</em>
                 </h2>
-                <p className='fc-sub'>Every piece is one of my real skills. Build a look, then send it down the runway.</p>
-                {slots.map(slot => {
-                  const item = look[slot.key];
-                  return (
-                    <div key={slot.key} className='fc-slot'>
-                      <div className='fc-slot-head'>
-                        <span>
-                          {slot.label} · {slot.hint}
-                        </span>
-                        <span>
-                          {String(picks[slot.key] + 1).padStart(2, '0')} / {String(slot.items.length).padStart(2, '0')}
-                        </span>
+                <p className='fc-sub'>{look.tagline} Every piece is one of my real skills.</p>
+
+                <ul className='fc-pieces' key={`p-${look.name}`}>
+                  {look.pieces.map((p, i) => (
+                    <li key={p.item} style={{ animationDelay: `${i * 70}ms` }}>
+                      <span className='fc-swatch' style={{ background: look.accent }} />
+                      <div>
+                        <p className='fc-item-name'>{p.item}</p>
+                        <p className='fc-item-cap'>{p.note}</p>
                       </div>
-                      <div className='fc-slot-row'>
-                        <button type='button' onClick={() => cycle(slot.key, -1)} aria-label={`Previous ${slot.label}`}>
-                          ←
-                        </button>
-                        <div className='fc-item' key={item.name}>
-                          <span className='fc-swatch' style={{ background: item.color }} />
-                          <div>
-                            <p className='fc-item-name'>{item.name}</p>
-                            <p className='fc-item-cap'>{item.caption}</p>
-                          </div>
-                        </div>
-                        <button type='button' onClick={() => cycle(slot.key, 1)} aria-label={`Next ${slot.label}`}>
-                          →
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className='fc-thumbs' role='tablist' aria-label='Choose a look'>
+                  {looks.map((l, i) => (
+                    <button
+                      key={l.name}
+                      type='button'
+                      role='tab'
+                      aria-selected={i === index}
+                      aria-label={l.name}
+                      className={i === index ? 'is-active' : ''}
+                      onClick={() => {
+                        setDir(i > index ? 1 : -1);
+                        setIndex(i);
+                      }}
+                    >
+                      <img src={l.image} alt='' />
+                    </button>
+                  ))}
+                </div>
+
                 <div className='fc-actions'>
-                  <button type='button' className='fc-ghost' onClick={shuffle}>
-                    Shuffle
-                  </button>
                   <button type='button' className='fc-primary' onClick={() => setStage('runway')}>
                     Walk the runway →
                   </button>
@@ -205,9 +229,9 @@ export function FitCheck() {
           {stage === 'runway' ? (
             <div className='fc-runway' aria-live='polite'>
               <div className='fc-flash' />
-              <p className='fc-look-no'>Look 01</p>
+              <p className='fc-look-no'>Look {String(index + 1).padStart(2, '0')}</p>
               <div className='fc-walker'>
-                <FitFigure {...look} />
+                <img src={look.image} alt={look.name} />
               </div>
               <div className='fc-floor' />
             </div>
@@ -215,17 +239,16 @@ export function FitCheck() {
 
           {stage === 'cover' ? (
             <div className='fc-cover-wrap'>
-              <article className='fc-cover' style={{ background: look.top.color }}>
+              <article className='fc-cover' style={{ background: look.accent }}>
                 <p className='fc-masthead'>{cover.masthead}</p>
                 <p className='fc-issue'>{cover.issue}</p>
                 <ul className='fc-lines'>
-                  <li>The look: {look.top.name}</li>
-                  <li>Styled with {look.bottom.name}</li>
-                  <li>Finished with {look.accessory.name}</li>
+                  <li>{look.name}</li>
+                  {look.pieces.map(p => (
+                    <li key={p.item}>{p.item}</li>
+                  ))}
                 </ul>
-                <div className='fc-cover-figure'>
-                  <FitFigure {...look} />
-                </div>
+                <img className='fc-cover-figure' src={look.image} alt='' />
                 <h3 className='fc-headline'>
                   {cover.headline.split('\n').map(l => (
                     <span key={l}>{l}</span>
@@ -235,7 +258,7 @@ export function FitCheck() {
               </article>
               <div className='fc-actions fc-cover-actions'>
                 <button type='button' className='fc-ghost' onClick={() => setStage('rack')}>
-                  Restyle
+                  Try another look
                 </button>
                 <button type='button' className='fc-primary' onClick={download}>
                   Download cover ↓

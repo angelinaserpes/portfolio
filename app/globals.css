@@ -216,7 +216,7 @@
 .fc-cover::after { content: ''; position: absolute; inset: 0; background: radial-gradient(70% 60% at 50% 55%, rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.25)); pointer-events: none; }
 .fc-masthead { position: relative; z-index: 1; text-align: center; font: italic 700 clamp(5rem, 22vw, 9.5rem) / 0.8 Georgia, serif; letter-spacing: -0.04em; }
 .fc-issue { position: relative; z-index: 1; margin-top: 8px; text-align: center; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; }
-.fc-lines { position: relative; z-index: 2; margin-top: 18px; display: grid; gap: 6px; max-width: 52%; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
+.fc-lines { position: relative; z-index: 2; margin-top: 18px; padding: 0; list-style: none; display: grid; gap: 6px; max-width: 52%; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
 .fc-cover-figure { position: absolute; z-index: 1; right: -4%; bottom: 0; width: 58%; }
 .fc-cover-figure .fc-figure { width: 100%; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35)); }
 .fc-headline { position: absolute; z-index: 2; left: 26px; bottom: 74px; display: grid; font: italic clamp(1.6rem, 6vw, 2.4rem) / 1.05 Georgia, serif; }
@@ -233,4 +233,61 @@
 @media (prefers-reduced-motion: reduce) {
   .fc-hanger, .fc-grain, .fc-lights, .fc-overlay, .fc-item, .fc-cover { animation: none; }
   .fc-walker { animation-duration: 0.01s; }
+}
+
+/* Fit Check: illustrated looks */
+.fc-stage { display: flex; align-items: center; justify-content: center; gap: clamp(8px, 2vw, 24px); }
+.fc-look-frame { position: relative; display: flex; justify-content: center; align-items: flex-end; }
+.fc-look-frame::after { content: ''; position: absolute; bottom: -4px; left: 10%; right: 10%; height: 14px; border-radius: 50%; background: rgba(27, 27, 27, 0.12); filter: blur(4px); z-index: -1; }
+.fc-look-img { display: block; height: min(68vh, 620px); width: auto; max-width: 62vw; object-fit: contain; filter: drop-shadow(0 20px 26px rgba(0, 0, 0, 0.14)); }
+.fc-look-img.from-right { animation: fc-slide-r 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+.fc-look-img.from-left { animation: fc-slide-l 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+@keyframes fc-slide-r { from { opacity: 0; transform: translateX(40px) rotate(1.5deg); } }
+@keyframes fc-slide-l { from { opacity: 0; transform: translateX(-40px) rotate(-1.5deg); } }
+.fc-arrow {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(27, 27, 27, 0.25);
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.fc-arrow:hover,
+.fc-arrow:focus-visible { background: #1b1b1b; color: #f2ede4; }
+.fc-count { margin-bottom: 10px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; }
+.fc-title { animation: fc-item-in 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.fc-pieces { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.fc-pieces li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(27, 27, 27, 0.14);
+  animation: fc-item-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fc-thumbs { display: flex; gap: 10px; margin-top: 22px; }
+.fc-thumbs button {
+  display: block;
+  width: 58px;
+  height: 84px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 27, 27, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.fc-thumbs button img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 3%; }
+.fc-thumbs button:hover { transform: translateY(-2px); }
+.fc-thumbs button.is-active { border-color: #1b1b1b; box-shadow: 0 0 0 1px #1b1b1b; }
+.fc-walker img { display: block; height: min(70vh, 560px); width: auto; margin: 0 auto; filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.45)); }
+.fc-walker { width: auto; }
+img.fc-cover-figure { position: absolute; z-index: 1; right: 1%; bottom: -1%; width: auto; height: 71%; filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.35)); }
+@media (max-width: 760px) {
+  .fc-look-img { height: 50vh; }
+  .fc-stage { gap: 6px; }
+  .fc-arrow { width: 40px; height: 40px; }
+  .fc-thumbs button { width: 50px; height: 72px; }
 }

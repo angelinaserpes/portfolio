@@ -1,34 +1,47 @@
-// Every item is a real skill or project of Angy's, styled as clothing.
-export const slots = [
+// Four illustrated looks of Angy. Each piece is one of her real skills.
+export const looks = [
   {
-    key: 'top',
-    label: 'Top',
-    hint: 'Core skill',
-    items: [
-      { name: 'The Python Blazer', shape: 'blazer', color: '#2F3E46', caption: 'Tailored for data. AirSense runs on it.' },
-      { name: 'The SQL Knit', shape: 'knit', color: '#8C5E58', caption: 'Soft on the outside, joins on the inside.' },
-      { name: 'The Figma Crop', shape: 'crop', color: '#C08B5C', caption: 'Cut for interfaces. Every Aurevo screen started here.' },
-      { name: 'The Java Trench', shape: 'trench', color: '#6B705C', caption: 'Structured and role-based, like my Secure Access System.' },
+    name: 'The Python Look',
+    image: '/images/fitcheck/look-1.png',
+    accent: '#4B3A5C',
+    tagline: 'Layered like a data pipeline.',
+    pieces: [
+      { item: 'Sheer Python Layers', note: 'AirSense runs on it.' },
+      { item: 'Floral Data Denim', note: 'Pattern recognition, literally.' },
+      { item: 'Double-Belt Pipeline', note: 'Collect, analyse, recommend.' },
     ],
   },
   {
-    key: 'bottom',
-    label: 'Bottom',
-    hint: 'Build style',
-    items: [
-      { name: 'Clean-Code Cargos', shape: 'cargos', color: '#3D3A36', caption: 'Lots of pockets. Everything in its place.' },
-      { name: 'Pixel-Perfect Pleats', shape: 'pleats', color: '#B7A99A', caption: 'Every fold aligned to the grid.' },
-      { name: 'Motion-Blur Flares', shape: 'flares', color: '#1B1B1B', caption: 'Framer Motion and GSAP in every step.' },
+    name: 'The Frontend Look',
+    image: '/images/fitcheck/look-2.png',
+    accent: '#1F2A3A',
+    tagline: 'Plugged in and shipping.',
+    pieces: [
+      { item: 'React Layer Tee', note: 'Aurevo, Revive and Evoltic wear it.' },
+      { item: 'Responsive Flares', note: 'Fits every screen size.' },
+      { item: 'Debugging Earphones', note: 'Lo-fi on, console open.' },
     ],
   },
   {
-    key: 'accessory',
-    label: 'Accessory',
-    hint: 'Superpower',
-    items: [
-      { name: 'Data-Viz Earrings', shape: 'earrings', color: '#C9A227', caption: 'Turns numbers into something you would wear.' },
-      { name: 'Debugging Shades', shape: 'shades', color: '#111111', caption: 'Spot the bug before it spots you.' },
-      { name: 'Prompt-Engineered Tote', shape: 'tote', color: '#A0522D', caption: 'Carries my Google AI certificates everywhere.' },
+    name: 'The SQL Look',
+    image: '/images/fitcheck/look-3.png',
+    accent: '#3E5068',
+    tagline: 'Clean, structured, every join in place.',
+    pieces: [
+      { item: 'Structured Query Shirt', note: 'Pressed into neat rows.' },
+      { item: 'Normalised Mini', note: 'No redundancy, ever.' },
+      { item: 'Relational Knee-Highs', note: 'A matching pair, like a good JOIN.' },
+    ],
+  },
+  {
+    name: 'The Figma Look',
+    image: '/images/fitcheck/look-4.png',
+    accent: '#7A1F45',
+    tagline: 'Bold, visual, designed first.',
+    pieces: [
+      { item: 'Off-Grid Graphic Top', note: 'Every screen starts in Figma.' },
+      { item: 'Pixel-Embroidered Baggies', note: 'Detail down to the pixel.' },
+      { item: 'Studded Component Belt', note: 'Reusable, like a design system.' },
     ],
   },
 ];
