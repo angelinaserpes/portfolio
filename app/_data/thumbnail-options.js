@@ -23,4 +23,16 @@ export const thumbnailOptions = [
     image: '/images/dakota-customize.png',
     type: 'Frontend / Interactive',
   },
+  {
+    href: '/revive',
+    title: 'Revive',
+    image: '/images/revive.png',
+    type: 'Productivity / Web App',
+  },
+  {
+    href: '/evoltic',
+    title: 'Evoltic',
+    image: '/images/evoltic.png',
+    type: 'Sustainability / Web App',
+  },
 ];
