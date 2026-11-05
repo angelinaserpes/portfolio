@@ -1,3 +1,4 @@
+import { Blueprint } from '@/components';
 import { rootMetadata } from '@/config';
 import { neue_montreal } from '@/fonts';
 import { Offcanvas } from '@/layout';
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Offcanvas />
           {children}
+          <Blueprint />
         </Providers>
       </body>
     </html>

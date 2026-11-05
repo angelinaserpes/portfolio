@@ -44,3 +44,150 @@
     }
   }
 }
+
+/* ---------- Blueprint mode (creative feature) ---------- */
+.bp-trigger-wrap {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.bp-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 97, 255, 0.55);
+  background: rgba(10, 18, 40, 0.88);
+  color: #dbe4ff;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s, transform 0.3s;
+}
+.bp-trigger:hover,
+.bp-trigger:focus-visible {
+  background: #1c3fd6;
+  transform: translateY(-2px);
+}
+.bp-trigger:focus-visible { outline: 2px solid #8fa8ff; outline-offset: 3px; }
+.bp-trigger.is-on { background: #1c3fd6; }
+.bp-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6f8cff;
+  box-shadow: 0 0 0 0 rgba(111, 140, 255, 0.7);
+  animation: bp-pulse 2s infinite;
+}
+.bp-hint {
+  order: 2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #1b1b1b;
+  font-size: 11px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  animation: bp-bob 1.6s ease-in-out infinite;
+}
+@keyframes bp-pulse {
+  70% { box-shadow: 0 0 0 9px rgba(111, 140, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(111, 140, 255, 0); }
+}
+@keyframes bp-bob { 50% { transform: translateX(4px); } }
+
+.bp-on main section,
+.bp-on main h1,
+.bp-on main h2,
+.bp-on main h3,
+.bp-on main img,
+.bp-on main video,
+.bp-on main a,
+.bp-on main button {
+  outline: 1px dashed rgba(56, 97, 255, 0.6) !important;
+  outline-offset: -1px;
+}
+.bp-on main img,
+.bp-on main video { filter: grayscale(0.6) contrast(1.05); }
+
+.bp-layer { position: fixed; inset: 0; z-index: 55; pointer-events: none; }
+.bp-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 97, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 97, 255, 0.09) 1px, transparent 1px);
+  background-size: 24px 24px;
+  animation: bp-in 0.5s ease-out;
+}
+.bp-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 6px;
+  background: #1c3fd6;
+  color: #fff;
+  font: 500 10px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: nowrap;
+  border-radius: 2px;
+  animation: bp-in 0.35s ease-out;
+}
+@keyframes bp-in { from { opacity: 0; } }
+
+.bp-hud {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  width: min(340px, calc(100vw - 40px));
+  padding: 16px;
+  border: 1px solid rgba(111, 140, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(10, 18, 40, 0.94);
+  color: #dbe4ff;
+  font: 11px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+  backdrop-filter: blur(8px);
+  animation: bp-in 0.4s ease-out;
+}
+.bp-hud-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(111, 140, 255, 0.4);
+  letter-spacing: 0.12em;
+}
+.bp-hud-head button { color: #8fa8ff; cursor: pointer; }
+.bp-rows { display: grid; grid-template-columns: 74px 1fr; gap: 4px 10px; margin: 0; }
+.bp-rows dt { opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em; }
+.bp-rows dd { margin: 0; }
+.bp-swatches { display: flex; gap: 6px; }
+.bp-swatches span { width: 18px; height: 18px; border-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.25); }
+.bp-note { margin: 12px 0; color: #fff; font-style: italic; animation: bp-in 0.6s ease-out; }
+.bp-fact {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px dashed #6f8cff;
+  border-radius: 6px;
+  color: #b9c8ff;
+  text-align: left;
+  cursor: pointer;
+}
+.bp-fact:hover,
+.bp-fact:focus-visible { background: rgba(56, 97, 255, 0.18); }
+
+@media (max-width: 640px) {
+  .bp-trigger-wrap { left: 12px; bottom: 12px; }
+  .bp-hint { display: none; }
+  .bp-hud { right: 12px; left: 12px; bottom: 64px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bp-dot, .bp-hint, .bp-grid, .bp-tag, .bp-hud, .bp-note { animation: none; }
+}
