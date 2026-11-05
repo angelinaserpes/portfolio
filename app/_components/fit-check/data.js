@@ -4,6 +4,7 @@ export const looks = [
     name: 'The Python Look',
     image: '/images/fitcheck/look-1.png?v=3',
     accent: '#4B3A5C',
+    soft: '#DDD3E8',
     tagline: 'Layered like a data pipeline.',
     pieces: [
       { item: 'Sheer Python Layers', note: 'AirSense runs on it.' },
@@ -15,6 +16,7 @@ export const looks = [
     name: 'The Frontend Look',
     image: '/images/fitcheck/look-2.png?v=3',
     accent: '#1F2A3A',
+    soft: '#D6DCE5',
     tagline: 'Plugged in and shipping.',
     pieces: [
       { item: 'React Layer Tee', note: 'Aurevo, Revive and Evoltic wear it.' },
@@ -26,6 +28,7 @@ export const looks = [
     name: 'The SQL Look',
     image: '/images/fitcheck/look-3.png?v=3',
     accent: '#3E5068',
+    soft: '#D3DEEB',
     tagline: 'Clean, structured, every join in place.',
     pieces: [
       { item: 'Structured Query Shirt', note: 'Pressed into neat rows.' },
@@ -37,6 +40,7 @@ export const looks = [
     name: 'The Figma Look',
     image: '/images/fitcheck/look-4.png?v=3',
     accent: '#7A1F45',
+    soft: '#EED2DD',
     tagline: 'Bold, visual, designed first.',
     pieces: [
       { item: 'Off-Grid Graphic Top', note: 'Every screen starts in Figma.' },

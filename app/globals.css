@@ -424,3 +424,68 @@ img.fc-cover-figure { position: absolute; z-index: 1; right: 1%; bottom: -1%; wi
 .fc-tag-a { top: 24%; left: 5%; }
 .fc-tag-b { bottom: 9%; left: 6%; }
 .fc-badge { top: 37%; right: 30%; }
+
+/* Fit Check v4: full watermark, light covers, decorated cover page */
+.fc-watermark { top: 50%; bottom: auto; left: 1%; transform: translateY(-50%); font-size: clamp(6rem, 15vw, 15rem); line-height: 1; }
+.fc-cover { color: #1b1b1b; box-shadow: 0 30px 70px rgba(60, 40, 30, 0.22); }
+.fc-cover::after { background: radial-gradient(70% 60% at 55% 55%, rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.05)); }
+.fc-masthead { color: var(--fc-accent); }
+.fc-issue, .fc-lines, .fc-dek, .fc-inside { color: #1b1b1b; }
+.fc-headline { color: var(--fc-accent); }
+.fc-inside-label { border-bottom-color: rgba(27, 27, 27, 0.25); }
+.fc-badge { background: var(--fc-accent); color: #f2ede4; }
+img.fc-cover-figure { filter: drop-shadow(0 12px 18px rgba(40, 30, 25, 0.25)); }
+
+.fc-cover-wrap { isolation: isolate; min-height: calc(100vh - 70px); }
+.fc-cover-decor { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.fc-cover-word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: italic 400 clamp(7rem, 19vw, 19rem) / 1 Georgia, serif;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  color: rgba(27, 27, 27, 0.04);
+}
+.fc-polaroid {
+  position: absolute;
+  margin: 0;
+  width: clamp(120px, 11vw, 170px);
+  padding: 10px 10px 34px;
+  background: #fffdf8;
+  box-shadow: 0 14px 30px rgba(60, 40, 30, 0.16);
+  animation: fc-item-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fc-polaroid img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 8%; background: #efe8dd; }
+.fc-polaroid figcaption { position: absolute; left: 0; right: 0; bottom: 9px; text-align: center; font: italic 14px Georgia, serif; color: #5a4b44; }
+.fc-polaroid::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 56px;
+  height: 18px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(201, 162, 39, 0.35);
+}
+.fc-pol-0 { top: 14%; left: 9%; transform: rotate(-7deg); animation-delay: 0.15s; }
+.fc-pol-1 { bottom: 12%; left: 16%; transform: rotate(5deg); animation-delay: 0.3s; }
+.fc-pol-2 { top: 22%; right: 10%; transform: rotate(6deg); animation-delay: 0.45s; }
+.fc-stamp {
+  position: absolute;
+  bottom: 16%;
+  right: 12%;
+  padding: 10px 16px;
+  border: 2px solid rgba(140, 94, 88, 0.6);
+  border-radius: 6px;
+  color: rgba(140, 94, 88, 0.8);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  transform: rotate(-8deg);
+}
+@media (max-width: 1100px) {
+  .fc-polaroid, .fc-stamp { display: none; }
+}

@@ -22,11 +22,11 @@ async function drawCover(look) {
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext('2d');
-  ctx.fillStyle = look.accent;
+  ctx.fillStyle = look.soft;
   ctx.fillRect(0, 0, W, H);
   const glow = ctx.createRadialGradient(W * 0.62, H * 0.6, 40, W * 0.62, H * 0.6, 640);
-  glow.addColorStop(0, 'rgba(255,255,255,0.28)');
-  glow.addColorStop(1, 'rgba(0,0,0,0.3)');
+  glow.addColorStop(0, 'rgba(255,255,255,0.45)');
+  glow.addColorStop(1, 'rgba(0,0,0,0.06)');
   ctx.fillStyle = glow;
   ctx.fillRect(0, 0, W, H);
 
@@ -35,7 +35,7 @@ async function drawCover(look) {
   const w = (img.width / img.height) * h;
   ctx.drawImage(img, W - w - 30, H - h - 20, w, h);
 
-  ctx.fillStyle = '#F2EDE4';
+  ctx.fillStyle = look.accent;
   ctx.textAlign = 'center';
   let size = 300;
   ctx.font = `italic 700 ${size}px Georgia, "Times New Roman", serif`;
@@ -44,6 +44,7 @@ async function drawCover(look) {
     ctx.font = `italic 700 ${size}px Georgia, "Times New Roman", serif`;
   }
   ctx.fillText(cover.masthead, W / 2, 280);
+  ctx.fillStyle = '#1B1B1B';
   ctx.font = '500 22px Helvetica, Arial, sans-serif';
   ctx.fillText(cover.issue.toUpperCase(), W / 2, 330);
   ctx.textAlign = 'left';
@@ -259,7 +260,19 @@ export function FitCheck() {
 
           {stage === 'cover' ? (
             <div className='fc-cover-wrap'>
-              <article className='fc-cover' style={{ background: look.accent }}>
+              <div className='fc-cover-decor' aria-hidden='true'>
+                <span className='fc-cover-word'>Fit check</span>
+                {looks
+                  .filter(l => l.name !== look.name)
+                  .map((l, i) => (
+                    <figure key={l.name} className={`fc-polaroid fc-pol-${i}`}>
+                      <img src={l.image} alt='' />
+                      <figcaption>{l.name.replace('The ', '')}</figcaption>
+                    </figure>
+                  ))}
+                <span className='fc-stamp'>Issue 01 · Sold out</span>
+              </div>
+              <article className='fc-cover' style={{ background: look.soft, '--fc-accent': look.accent }}>
                 <p className='fc-masthead'>{cover.masthead}</p>
                 <p className='fc-issue'>{cover.issue}</p>
                 <ul className='fc-lines'>
