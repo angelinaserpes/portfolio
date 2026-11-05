@@ -1527,29 +1527,35 @@ export default function Phantom() {
             </div>
 
             <div className='pb-20 pt-20 md:pb-28 md:pt-28 lg:pb-36'>
-              <div className='overflow-hidden'>
+              <motion.div
+                className='overflow-hidden'
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: true, amount: 0.1 }}
+              >
                 <motion.h2
-                  initial={{ y: '110%' }}
-                  whileInView={{ y: 0 }}
-                  viewport={{ once: true }}
+                  variants={{ hidden: { y: '110%' }, show: { y: 0 } }}
                   transition={{ duration: 1, ease }}
                   className='text-[clamp(4.2rem,10.5vw,10.5rem)] uppercase leading-[0.78] tracking-[-0.075em]'
                 >
                   Designed to
                 </motion.h2>
-              </div>
+              </motion.div>
 
-              <div className='overflow-hidden pb-3'>
+              <motion.div
+                className='overflow-hidden pb-3'
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: true, amount: 0.1 }}
+              >
                 <motion.h2
-                  initial={{ y: '110%' }}
-                  whileInView={{ y: 0 }}
-                  viewport={{ once: true }}
+                  variants={{ hidden: { y: '110%' }, show: { y: 0 } }}
                   transition={{ duration: 1, delay: 0.08, ease }}
                   className='text-right text-[clamp(4.2rem,10.5vw,10.5rem)] uppercase italic leading-[0.78] tracking-[-0.075em] text-white/35'
                 >
                   be experienced.
                 </motion.h2>
-              </div>
+              </motion.div>
             </div>
 
             <div className='grid gap-12 border-t border-white/15 pt-8 md:grid-cols-2'>

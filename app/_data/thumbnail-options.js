@@ -8,10 +8,10 @@ export const thumbnailOptions = [
     type: 'AI / Web Development',
   },
   {
-    href: '/airsense',
-    title: 'AirSense',
-    image: '/images/airsense.png',
-    type: 'Data / Python / SQL',
+    href: '/evoltic',
+    title: 'Evoltic',
+    image: '/images/evoltic.png',
+    type: 'Sustainability / Web App',
   },
   {
     href: '/phantom',

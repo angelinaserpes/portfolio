@@ -2,7 +2,7 @@
 export const looks = [
   {
     name: 'The Python Look',
-    image: '/images/fitcheck/look-1.png',
+    image: '/images/fitcheck/look-1.png?v=3',
     accent: '#4B3A5C',
     tagline: 'Layered like a data pipeline.',
     pieces: [
@@ -13,7 +13,7 @@ export const looks = [
   },
   {
     name: 'The Frontend Look',
-    image: '/images/fitcheck/look-2.png',
+    image: '/images/fitcheck/look-2.png?v=3',
     accent: '#1F2A3A',
     tagline: 'Plugged in and shipping.',
     pieces: [
@@ -24,7 +24,7 @@ export const looks = [
   },
   {
     name: 'The SQL Look',
-    image: '/images/fitcheck/look-3.png',
+    image: '/images/fitcheck/look-3.png?v=3',
     accent: '#3E5068',
     tagline: 'Clean, structured, every join in place.',
     pieces: [
@@ -35,7 +35,7 @@ export const looks = [
   },
   {
     name: 'The Figma Look',
-    image: '/images/fitcheck/look-4.png',
+    image: '/images/fitcheck/look-4.png?v=3',
     accent: '#7A1F45',
     tagline: 'Bold, visual, designed first.',
     pieces: [
