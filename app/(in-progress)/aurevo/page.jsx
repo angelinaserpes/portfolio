@@ -86,13 +86,13 @@ const features = [
 ];
 
 const stack = [
-  'React',
   'JavaScript',
-  'AI',
-  '3D Interaction',
-  'Responsive UI',
+  'Three.js',
+  'Firebase',
+  'Tailwind CSS',
+  'Vercel Functions',
+  'Figma',
   'UX Design',
-  'Frontend',
 ];
 
 export default function Aurevo() {
@@ -214,9 +214,10 @@ export default function Aurevo() {
                 className='flex items-end md:justify-end'
               >
                 <p className='max-w-sm text-sm leading-relaxed text-[#1b1b1b]/60 md:text-base'>
-                  An AI-powered platform designed to help visualise store
-                  layouts, explore product placement and create more immersive
-                  retail experiences.
+                  A retail design platform with a 3D store designer: place
+                  shelves and fixtures, move, rotate and recolour them, and
+                  save the layout. Built during my AI internship at VH
+                  Consulting.
                 </p>
               </motion.div>
             </div>
@@ -288,7 +289,7 @@ export default function Aurevo() {
             <div className='pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-700 group-hover:bg-black/[0.04]' />
 
             <div className='absolute bottom-6 left-6 hidden md:block'>
-              <span className='text-[9px] uppercase tracking-[0.25em] text-white/50'>
+              <span className='text-[10px] uppercase tracking-[0.25em] text-white/50'>
                 Aurevo / Digital Experience
               </span>
             </div>
@@ -333,7 +334,7 @@ export default function Aurevo() {
                 Year
               </p>
               <p className='text-sm'>
-                2026
+                2025
               </p>
             </div>
           </motion.div>
@@ -359,15 +360,15 @@ export default function Aurevo() {
 
               <div className='mt-14 grid gap-8 md:grid-cols-2'>
                 <p className='max-w-md text-base leading-relaxed text-[#f3eee6]/55 md:text-lg'>
-                  Aurevo explores a more intuitive approach to retail planning,
-                  bringing visualisation, intelligent systems and design
-                  together in one experience.
+                  Store layouts usually live in floor plans and spreadsheets.
+                  Aurevo puts them in a 3D room instead, with a fixtures panel
+                  on the side and every item editable in place.
                 </p>
 
                 <p className='max-w-md text-base leading-relaxed text-[#f3eee6]/40'>
-                  Instead of asking users to imagine a space from abstract
-                  information, the experience lets them see it, manipulate it
-                  and understand it visually.
+                  I designed it in Figma and built it in JavaScript, with
+                  Three.js for the 3D room, Firebase to save designs and AI
+                  tools to iterate quickly along the way.
                 </p>
               </div>
             </div>
@@ -397,7 +398,7 @@ export default function Aurevo() {
                   className='h-1.5 w-1.5 rounded-full bg-[#f3eee6]'
                 />
 
-                <span className='text-[9px] uppercase tracking-[0.24em] text-[#f3eee6]/35'>
+                <span className='text-[10px] uppercase tracking-[0.24em] text-[#f3eee6]/50'>
                   Playing
                 </span>
               </div>
@@ -537,12 +538,12 @@ export default function Aurevo() {
               </motion.div>
 
               <div className='mt-5 flex items-center justify-between'>
-                <p className='text-[9px] uppercase tracking-[0.22em] text-[#1b1b1b]/35'>
+                <p className='text-[10px] uppercase tracking-[0.22em] text-[#1b1b1b]/50'>
                   Interactive store environment
                 </p>
 
-                <p className='text-[9px] uppercase tracking-[0.22em] text-[#1b1b1b]/35'>
-                  Aurevo / 2026
+                <p className='text-[10px] uppercase tracking-[0.22em] text-[#1b1b1b]/50'>
+                  Aurevo / 2025
                 </p>
               </div>
             </div>

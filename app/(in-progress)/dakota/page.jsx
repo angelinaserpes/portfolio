@@ -174,7 +174,7 @@ export default function Dakota() {
           className='relative min-h-[100svh] overflow-hidden bg-[#edf4f0]'
         >
           <div className='pointer-events-none absolute -bottom-[6vw] -right-[2vw] select-none text-[28vw] font-medium leading-none tracking-[-0.08em] text-[#171717]/[0.025]'>
-            04
+            07
           </div>
 
           <div className='relative z-10 flex min-h-[100svh] flex-col px-5 pb-7 pt-24 sm:px-6 sm:pt-28 md:px-12 md:pb-9 md:pt-32 lg:px-[7vw]'>
@@ -205,11 +205,11 @@ export default function Dakota() {
               }}
               className='mt-5 flex items-center justify-between'
             >
-              <p className='text-[9px] uppercase tracking-[0.32em] text-black/40'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-black/40'>
                 Selected Project / 07
               </p>
 
-              <p className='text-right text-[9px] uppercase tracking-[0.32em] text-black/40'>
+              <p className='text-right text-[10px] uppercase tracking-[0.32em] text-black/40'>
                 Cafe / Digital Experience
               </p>
             </motion.div>
@@ -233,7 +233,7 @@ export default function Dakota() {
               >
                 <span className='h-[1px] w-8 bg-[#efaaa5]' />
 
-                <span className='text-[9px] uppercase tracking-[0.35em] text-black/40'>
+                <span className='text-[10px] uppercase tracking-[0.35em] text-black/40'>
                   Dakota Coffee
                 </span>
               </motion.div>
@@ -314,7 +314,7 @@ export default function Dakota() {
               className='flex items-end justify-between border-t border-black/20 pt-5'
             >
               <div>
-                <p className='mb-2 text-[8px] uppercase tracking-[0.32em] text-black/30'>
+                <p className='mb-2 text-[10px] uppercase tracking-[0.32em] text-black/50'>
                   Designed & Developed
                 </p>
 
@@ -336,7 +336,7 @@ export default function Dakota() {
                 className='flex h-20 w-20 items-center justify-center rounded-full border border-black/25 md:h-24 md:w-24'
               >
                 <div className='flex flex-col items-center gap-2'>
-                  <span className='text-[9px] uppercase tracking-[0.25em]'>
+                  <span className='text-[10px] uppercase tracking-[0.25em]'>
                     Explore
                   </span>
 
@@ -381,7 +381,7 @@ export default function Dakota() {
               ['Project', 'Dakota Coffee'],
             ].map(([label, value]) => (
               <div key={label}>
-                <p className='mb-3 text-[9px] uppercase tracking-[0.28em] text-black/35'>
+                <p className='mb-3 text-[10px] uppercase tracking-[0.28em] text-black/50'>
                   {label}
                 </p>
 
@@ -397,7 +397,7 @@ export default function Dakota() {
         <section className='px-5 pb-28 pt-10 sm:px-6 md:px-12 md:pb-32 lg:px-[8vw]'>
           <div className='grid gap-12 lg:grid-cols-[0.4fr_1.6fr]'>
             <motion.div {...reveal}>
-              <p className='text-[9px] uppercase tracking-[0.32em] text-black/35'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-black/50'>
                 01 / The Concept
               </p>
             </motion.div>
@@ -421,7 +421,7 @@ export default function Dakota() {
                 }}
                 className='max-w-6xl pb-[0.1em] font-serif text-[clamp(3.6rem,7vw,7.5rem)] leading-[0.96] tracking-[-0.06em]'
               >
-                More than a menu<span className='ml-[0.14em]'>.</span>
+                More than a menu<span className='ml-[0.05em]'>.</span>
               </motion.h2>
 
               <motion.h2
@@ -443,7 +443,7 @@ export default function Dakota() {
                 }}
                 className='pb-[0.1em] text-right font-serif text-[clamp(3.4rem,6.7vw,7.2rem)] italic leading-[1] tracking-[-0.055em] text-[#d98782]'
               >
-                A digital flavour<span className='ml-[0.14em]'>.</span>
+                A digital flavour<span className='ml-[0.05em]'>.</span>
               </motion.h2>
 
               <motion.div
@@ -478,11 +478,11 @@ export default function Dakota() {
               {...reveal}
               className='flex items-center justify-between'
             >
-              <p className='text-[8px] uppercase tracking-[0.3em] text-black/30'>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
                 Dakota Coffee / Digital Experience
               </p>
 
-              <p className='hidden text-[8px] uppercase tracking-[0.3em] text-black/30 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.3em] text-black/50 md:block'>
                 Responsive / Interactive
               </p>
             </motion.div>
@@ -525,7 +525,7 @@ export default function Dakota() {
               className='flex items-end justify-between border-t border-white/15 pt-6'
             >
               <div>
-                <p className='mb-3 text-[9px] uppercase tracking-[0.32em] text-white/30'>
+                <p className='mb-3 text-[10px] uppercase tracking-[0.32em] text-white/50'>
                   Project Film
                 </p>
 
@@ -539,7 +539,7 @@ export default function Dakota() {
                 </h2>
               </div>
 
-              <p className='hidden text-[8px] uppercase tracking-[0.3em] text-white/25 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.3em] text-white/50 md:block'>
                 00:00 — 00:20
               </p>
             </motion.div>
@@ -578,14 +578,14 @@ export default function Dakota() {
             </div>
 
             <div className='mt-5 flex items-center justify-between'>
-              <p className='text-[8px] uppercase tracking-[0.28em] text-white/25'>
+              <p className='text-[10px] uppercase tracking-[0.28em] text-white/50'>
                 Interaction / Product / Responsive UI
               </p>
 
               <div className='flex items-center gap-2'>
                 <span className='h-1.5 w-1.5 rounded-full bg-[#efaaa5]' />
 
-                <span className='text-[8px] uppercase tracking-[0.28em] text-white/30'>
+                <span className='text-[10px] uppercase tracking-[0.28em] text-white/50'>
                   Playing
                 </span>
               </div>
@@ -597,7 +597,7 @@ export default function Dakota() {
         <section className='overflow-hidden bg-[#171717] px-5 pb-20 pt-12 text-[#edf4f0] sm:px-6 md:px-12 md:pb-24 md:pt-16 lg:px-[6vw]'>
           <motion.p
             {...reveal}
-            className='mb-10 text-[9px] uppercase tracking-[0.32em] text-white/35'
+            className='mb-10 text-[10px] uppercase tracking-[0.32em] text-white/50'
           >
             02 / The Experience
           </motion.p>
@@ -641,7 +641,7 @@ export default function Dakota() {
               }}
               className='block pb-[0.1em] text-right font-serif normal-case italic text-[#efaaa5]'
             >
-              feel refreshing<span className='ml-[0.14em]'>.</span>
+              feel refreshing<span className='ml-[0.05em]'>.</span>
             </motion.span>
           </motion.h2>
         </section>
@@ -779,12 +779,12 @@ export default function Dakota() {
               {...reveal}
               className='lg:col-span-5'
             >
-              <p className='mb-8 text-[9px] uppercase tracking-[0.32em] text-black/35'>
+              <p className='mb-8 text-[10px] uppercase tracking-[0.32em] text-black/50'>
                 Product / Customisation
               </p>
 
               <h2 className='pb-[0.12em] font-serif text-[clamp(3.5rem,6vw,6.7rem)] leading-[0.96] tracking-[-0.055em]'>
-                Built to order<span className='ml-[0.14em]'>.</span>
+                Built to order<span className='ml-[0.05em]'>.</span>
 
                 <span className='block italic text-[#b96f6a]'>
                   Made your way.
@@ -835,11 +835,11 @@ export default function Dakota() {
             {...reveal}
             className='mb-10 flex items-center justify-between'
           >
-            <p className='text-[9px] uppercase tracking-[0.3em] text-black/35'>
+            <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
               Design Language
             </p>
 
-            <p className='hidden text-[9px] uppercase tracking-[0.3em] text-black/25 md:block'>
+            <p className='hidden text-[10px] uppercase tracking-[0.3em] text-black/50 md:block'>
               Three Principles
             </p>
           </motion.div>
@@ -965,7 +965,7 @@ export default function Dakota() {
         {/* BEHIND THE BUILD */}
         <section className='relative overflow-hidden bg-[#171717] px-5 py-24 text-[#edf4f0] sm:px-6 md:px-12 md:py-28 lg:px-[8vw] lg:py-32'>
           <div className='pointer-events-none absolute -right-[2vw] top-8 select-none text-[24vw] font-medium leading-none tracking-[-0.08em] text-white/[0.018]'>
-            04
+            03
           </div>
 
           <div className='relative z-10'>
@@ -974,7 +974,7 @@ export default function Dakota() {
                 {...reveal}
                 className='lg:col-span-3'
               >
-                <p className='text-[9px] uppercase tracking-[0.32em] text-white/35'>
+                <p className='text-[10px] uppercase tracking-[0.32em] text-white/50'>
                   03 / Behind the Build
                 </p>
               </motion.div>
@@ -1001,7 +1001,7 @@ export default function Dakota() {
                   Built to
 
                   <span className='block pb-[0.1em] text-right font-serif normal-case italic text-[#efaaa5]'>
-                    feel alive<span className='ml-[0.14em]'>.</span>
+                    feel alive<span className='ml-[0.05em]'>.</span>
                   </span>
                 </motion.h2>
 
@@ -1072,7 +1072,7 @@ export default function Dakota() {
                       }}
                       className='col-span-10 md:col-span-5'
                     >
-                      <p className='mb-3 text-[8px] uppercase tracking-[0.3em] opacity-40'>
+                      <p className='mb-3 text-[10px] uppercase tracking-[0.3em] opacity-40'>
                         {item.kicker}
                       </p>
 
@@ -1119,7 +1119,7 @@ export default function Dakota() {
             </div>
 
             <div className='mt-7 flex flex-col gap-6 md:flex-row md:items-end md:justify-between'>
-              <p className='max-w-sm text-[9px] uppercase leading-[1.8] tracking-[0.27em] text-white/25'>
+              <p className='max-w-sm text-[10px] uppercase leading-[1.8] tracking-[0.27em] text-white/50'>
                 Interface design / frontend development / responsive
                 experience
               </p>
@@ -1133,7 +1133,7 @@ export default function Dakota() {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className='text-[9px] uppercase tracking-[0.25em] text-white/40'
+                    className='text-[10px] uppercase tracking-[0.25em] text-white/40'
                   >
                     {skill} ↗
                   </span>
@@ -1154,11 +1154,11 @@ export default function Dakota() {
               {...reveal}
               className='flex items-center justify-between'
             >
-              <p className='text-[9px] uppercase tracking-[0.32em] text-black/35'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-black/50'>
                 Dakota Coffee / 2026
               </p>
 
-              <p className='hidden text-[9px] uppercase tracking-[0.32em] text-black/30 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.32em] text-black/50 md:block'>
                 End of Case Study / 07
               </p>
             </motion.div>
@@ -1204,7 +1204,7 @@ export default function Dakota() {
                 }}
                 className='pb-[0.12em] text-right font-serif text-[clamp(4rem,9.5vw,10rem)] italic leading-[0.96] tracking-[-0.07em] text-[#d98782]'
               >
-                design<span className='ml-[0.14em]'>.</span>
+                design<span className='ml-[0.05em]'>.</span>
               </motion.h2>
             </div>
 
@@ -1294,11 +1294,11 @@ export default function Dakota() {
             <div className='relative z-10 flex min-h-[68vh] flex-col px-5 py-10 sm:px-6 md:px-10 lg:px-[5vw] lg:py-14'>
               <div className='flex items-center justify-between border-t border-black/20 pt-6'>
                 <div>
-                  <p className='mb-2 text-[9px] uppercase tracking-[0.32em] text-black/45'>
+                  <p className='mb-2 text-[10px] uppercase tracking-[0.32em] text-black/45'>
                     Continue Exploring
                   </p>
 
-                  <p className='text-[8px] uppercase tracking-[0.28em] text-black/30'>
+                  <p className='text-[10px] uppercase tracking-[0.28em] text-black/50'>
                     Experience / Engineering / Archive
                   </p>
                 </div>

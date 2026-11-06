@@ -47,11 +47,11 @@ export function SocialInfo() {
 
             <div>
               <ListTitle>
-                Version
+                Year
               </ListTitle>
 
               <p className='mt-7'>
-                2026 © Edition
+                © 2026
               </p>
             </div>
 
@@ -83,11 +83,11 @@ export function SocialInfo() {
 
         <div className='mt-12 flex items-center justify-between border-t border-background/10 pt-5'>
 
-          <p className='text-[9px] uppercase tracking-[0.22em] opacity-30'>
+          <p className='text-[10px] uppercase tracking-[0.22em] opacity-50'>
             Designed &amp; developed by Angelina Serpes
           </p>
 
-          <p className='hidden text-[9px] uppercase tracking-[0.22em] opacity-30 sm:block'>
+          <p className='hidden text-[10px] uppercase tracking-[0.22em] opacity-50 sm:block'>
             Thanks for scrolling
           </p>
 

@@ -194,7 +194,7 @@ export default function InAmigos() {
           className='relative min-h-[100svh] overflow-hidden bg-[#eee9df]'
         >
           <div className='pointer-events-none absolute -right-[3vw] bottom-[-5vw] select-none text-[27vw] font-medium leading-none tracking-[-0.08em] text-[#173d32]/[0.025]'>
-            03
+            05
           </div>
 
           <div className='relative z-10 flex min-h-[100svh] flex-col px-5 pb-7 pt-24 sm:px-6 sm:pt-28 md:px-12 md:pb-9 md:pt-32 lg:px-[7vw]'>
@@ -211,11 +211,11 @@ export default function InAmigos() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className='mt-5 flex items-center justify-between'
             >
-              <p className='text-[9px] uppercase tracking-[0.32em] text-[#173d32]/45'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-[#173d32]/45'>
                 Selected Project / 05
               </p>
 
-              <p className='text-right text-[9px] uppercase tracking-[0.32em] text-[#173d32]/45'>
+              <p className='text-right text-[10px] uppercase tracking-[0.32em] text-[#173d32]/45'>
                 Non-Profit / Digital Experience
               </p>
             </motion.div>
@@ -233,7 +233,7 @@ export default function InAmigos() {
               >
                 <span className='h-[1px] w-8 bg-[#b97868]' />
 
-                <span className='text-[9px] uppercase tracking-[0.35em] text-[#173d32]/45'>
+                <span className='text-[10px] uppercase tracking-[0.35em] text-[#173d32]/45'>
                   InAmigos Foundation
                 </span>
               </motion.div>
@@ -305,7 +305,7 @@ export default function InAmigos() {
               className='flex items-end justify-between border-t border-[#173d32]/20 pt-5'
             >
               <div>
-                <p className='mb-2 text-[8px] uppercase tracking-[0.32em] text-[#173d32]/30'>
+                <p className='mb-2 text-[10px] uppercase tracking-[0.32em] text-[#173d32]/50'>
                   Designed & Developed
                 </p>
 
@@ -321,7 +321,7 @@ export default function InAmigos() {
                 className='flex h-20 w-20 items-center justify-center rounded-full border border-[#173d32]/25 md:h-24 md:w-24'
               >
                 <div className='flex flex-col items-center gap-2'>
-                  <span className='text-[9px] uppercase tracking-[0.25em] text-[#173d32]/45'>
+                  <span className='text-[10px] uppercase tracking-[0.25em] text-[#173d32]/45'>
                     Explore
                   </span>
 
@@ -361,7 +361,7 @@ export default function InAmigos() {
               ['Project', 'InAmigos Foundation'],
             ].map(([label, value]) => (
               <div key={label}>
-                <p className='mb-3 text-[9px] uppercase tracking-[0.28em] text-[#173d32]/40'>
+                <p className='mb-3 text-[10px] uppercase tracking-[0.28em] text-[#173d32]/40'>
                   {label}
                 </p>
 
@@ -377,7 +377,7 @@ export default function InAmigos() {
         <section className='px-5 pb-24 pt-10 sm:px-6 md:px-12 md:pb-28 lg:px-[8vw] lg:pb-32'>
           <div className='grid gap-12 lg:grid-cols-[0.4fr_1.6fr]'>
             <motion.div {...reveal}>
-              <p className='text-[9px] uppercase tracking-[0.32em] text-[#173d32]/40'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-[#173d32]/40'>
                 01 / The Mission
               </p>
             </motion.div>
@@ -406,7 +406,7 @@ export default function InAmigos() {
                 }}
                 className='mt-1 pb-[0.1em] text-right font-serif text-[clamp(3.2rem,6.7vw,7.2rem)] italic leading-[1] tracking-[-0.055em] text-[#b97868]'
               >
-                So should the experience<span className='ml-[0.14em]'>.</span>
+                So should the experience<span className='ml-[0.05em]'>.</span>
               </motion.p>
 
               <motion.div
@@ -439,11 +439,11 @@ export default function InAmigos() {
               {...reveal}
               className='flex items-center justify-between border-t border-[#173d32]/20 pt-5'
             >
-              <p className='text-[9px] uppercase tracking-[0.3em] text-[#173d32]/40'>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-[#173d32]/40'>
                 InAmigos / Human First
               </p>
 
-              <p className='hidden text-[9px] uppercase tracking-[0.3em] text-[#173d32]/30 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.3em] text-[#173d32]/50 md:block'>
                 Foundation / India
               </p>
             </motion.div>
@@ -487,7 +487,7 @@ export default function InAmigos() {
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease }}
           >
-            <p className='mb-10 text-[9px] uppercase tracking-[0.32em] text-[#eee9df]/40'>
+            <p className='mb-10 text-[10px] uppercase tracking-[0.32em] text-[#eee9df]/40'>
               One Foundation / Many Causes
             </p>
 
@@ -507,7 +507,7 @@ export default function InAmigos() {
                 }}
                 className='block pb-[0.1em] text-right font-serif normal-case italic text-[#b97868]'
               >
-                One purpose<span className='ml-[0.14em]'>.</span>
+                One purpose<span className='ml-[0.05em]'>.</span>
               </motion.span>
             </h2>
           </motion.div>
@@ -686,11 +686,11 @@ export default function InAmigos() {
           </div>
 
           <div className='mt-5 hidden items-center justify-between md:flex'>
-            <p className='text-[8px] uppercase tracking-[0.3em] text-[#eee9df]/25'>
+            <p className='text-[10px] uppercase tracking-[0.3em] text-[#eee9df]/50'>
               Hover to explore
             </p>
 
-            <p className='text-[8px] uppercase tracking-[0.3em] text-[#eee9df]/25'>
+            <p className='text-[10px] uppercase tracking-[0.3em] text-[#eee9df]/50'>
               InAmigos / Impact
             </p>
           </div>
@@ -699,11 +699,11 @@ export default function InAmigos() {
         {/* THE EXPERIENCE */}
         <section className='bg-[#eee9df] px-5 pb-14 pt-24 text-[#173d32] sm:px-6 md:px-12 md:pb-16 md:pt-28 lg:px-[7vw] lg:pt-32'>
           <div className='flex items-center justify-between border-t border-[#173d32]/20 pt-5'>
-            <p className='text-[9px] uppercase tracking-[0.32em] text-[#173d32]/40'>
+            <p className='text-[10px] uppercase tracking-[0.32em] text-[#173d32]/40'>
               02 / The Experience
             </p>
 
-            <p className='hidden text-[9px] uppercase tracking-[0.3em] text-[#173d32]/30 md:block'>
+            <p className='hidden text-[10px] uppercase tracking-[0.3em] text-[#173d32]/50 md:block'>
               Website / Interaction
             </p>
           </div>
@@ -755,11 +755,11 @@ export default function InAmigos() {
               {...reveal}
               className='flex items-center justify-between'
             >
-              <p className='text-[8px] uppercase tracking-[0.3em] text-[#173d32]/30'>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-[#173d32]/50'>
                 Project Film / InAmigos
               </p>
 
-              <p className='text-[8px] uppercase tracking-[0.3em] text-[#173d32]/30'>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-[#173d32]/50'>
                 00:09 — 00:43
               </p>
             </motion.div>
@@ -786,11 +786,11 @@ export default function InAmigos() {
           </motion.div>
 
           <div className='mx-auto mt-6 flex w-[96%] items-center justify-between md:w-[94%]'>
-            <p className='text-[8px] uppercase tracking-[0.28em] text-[#173d32]/30'>
+            <p className='text-[10px] uppercase tracking-[0.28em] text-[#173d32]/50'>
               Human / Editorial / Responsive
             </p>
 
-            <p className='hidden text-[8px] uppercase tracking-[0.28em] text-[#173d32]/30 md:block'>
+            <p className='hidden text-[10px] uppercase tracking-[0.28em] text-[#173d32]/50 md:block'>
               Digital Experience
             </p>
           </div>
@@ -802,11 +802,11 @@ export default function InAmigos() {
             {...reveal}
             className='mb-9 flex items-center justify-between'
           >
-            <p className='text-[9px] uppercase tracking-[0.3em] text-[#173d32]/35'>
+            <p className='text-[10px] uppercase tracking-[0.3em] text-[#173d32]/50'>
               Design Language
             </p>
 
-            <p className='hidden text-[9px] uppercase tracking-[0.3em] text-[#173d32]/25 md:block'>
+            <p className='hidden text-[10px] uppercase tracking-[0.3em] text-[#173d32]/50 md:block'>
               Three Principles
             </p>
           </motion.div>
@@ -940,7 +940,7 @@ export default function InAmigos() {
                 {...reveal}
                 className='lg:col-span-3'
               >
-                <p className='text-[9px] uppercase tracking-[0.32em] text-[#eee9df]/35'>
+                <p className='text-[10px] uppercase tracking-[0.32em] text-[#eee9df]/50'>
                   03 / Behind the Build
                 </p>
               </motion.div>
@@ -965,7 +965,7 @@ export default function InAmigos() {
                   Purpose,
 
                   <span className='block pb-[0.1em] text-right font-serif normal-case italic text-[#b97868]'>
-                    translated digitally<span className='ml-[0.14em]'>.</span>
+                    translated digitally<span className='ml-[0.05em]'>.</span>
                   </span>
                 </motion.h2>
 
@@ -1036,7 +1036,7 @@ export default function InAmigos() {
                       }}
                       className='col-span-10 md:col-span-5'
                     >
-                      <p className='mb-3 text-[8px] uppercase tracking-[0.3em] opacity-40'>
+                      <p className='mb-3 text-[10px] uppercase tracking-[0.3em] opacity-40'>
                         {item.kicker}
                       </p>
 
@@ -1087,7 +1087,7 @@ export default function InAmigos() {
             </div>
 
             <div className='mt-7 flex flex-col gap-6 pb-2 md:flex-row md:items-end md:justify-between'>
-              <p className='max-w-sm text-[9px] uppercase leading-[1.8] tracking-[0.27em] text-[#eee9df]/30'>
+              <p className='max-w-sm text-[10px] uppercase leading-[1.8] tracking-[0.27em] text-[#eee9df]/50'>
                 Interface design / frontend development / responsive experience
               </p>
 
@@ -1100,7 +1100,7 @@ export default function InAmigos() {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className='text-[9px] uppercase tracking-[0.25em] text-[#eee9df]/45'
+                    className='text-[10px] uppercase tracking-[0.25em] text-[#eee9df]/45'
                   >
                     {skill} ↗
                   </span>
@@ -1121,11 +1121,11 @@ export default function InAmigos() {
               {...reveal}
               className='flex items-center justify-between'
             >
-              <p className='text-[9px] uppercase tracking-[0.32em] text-[#173d32]/40'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-[#173d32]/40'>
                 InAmigos / 2026
               </p>
 
-              <p className='hidden text-[9px] uppercase tracking-[0.32em] text-[#173d32]/30 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.32em] text-[#173d32]/50 md:block'>
                 End of Case Study / 05
               </p>
             </motion.div>
@@ -1167,7 +1167,7 @@ export default function InAmigos() {
                 }}
                 className='pb-[0.12em] text-right font-serif text-[clamp(4rem,9.5vw,10rem)] italic leading-[0.96] tracking-[-0.07em] text-[#b97868]'
               >
-                real impact<span className='ml-[0.14em]'>.</span>
+                real impact<span className='ml-[0.05em]'>.</span>
               </motion.h2>
             </div>
 
@@ -1263,12 +1263,12 @@ export default function InAmigos() {
 
             <div className='relative z-10 flex min-h-[72vh] flex-col px-5 py-10 sm:px-6 md:px-10 lg:px-[5vw] lg:py-14'>
               <div className='flex items-center justify-between border-t border-black/20 pt-6'>
-                <p className='text-[9px] uppercase tracking-[0.32em] text-black/45'>
+                <p className='text-[10px] uppercase tracking-[0.32em] text-black/45'>
                   Next Project / 06
                 </p>
 
                 <div className='flex items-center gap-3'>
-                  <span className='hidden text-[9px] uppercase tracking-[0.28em] text-black/35 md:block'>
+                  <span className='hidden text-[10px] uppercase tracking-[0.28em] text-black/50 md:block'>
                     View Project
                   </span>
 

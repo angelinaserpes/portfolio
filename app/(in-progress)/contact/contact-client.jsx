@@ -33,7 +33,7 @@ function ContactRow({
       <div className='absolute inset-0 origin-bottom scale-y-0 bg-[#8F796C] transition-transform duration-500 ease-[cubic-bezier(.76,0,.24,1)] group-hover:scale-y-100' />
 
       <div className='relative z-10 grid min-h-[145px] grid-cols-[45px_1fr_auto] items-center gap-4 px-1 transition-colors duration-300 group-hover:text-[#F6F0EA] md:min-h-[170px] md:grid-cols-[80px_1fr_260px_auto]'>
-        <span className='text-[9px] tracking-[0.2em] opacity-35'>
+        <span className='text-[10px] tracking-[0.2em] opacity-35'>
           {number}
         </span>
 
@@ -68,13 +68,13 @@ function ContactRow({
 export default function ContactClient() {
   return (
     <Transition>
-      <Navbar />
+      <Navbar tone='dark' />
 
       <main className='overflow-hidden bg-[#F3EDE6] text-[#332C28]'>
         {/* HERO */}
         <section className='relative flex min-h-screen flex-col px-6 pb-8 pt-28 sm:px-10 md:px-[5vw] md:pt-32'>
           <div className='flex items-center justify-between border-b border-[#332C28]/20 pb-5'>
-            <p className='text-[9px] uppercase tracking-[0.27em] opacity-45'>
+            <p className='text-[10px] uppercase tracking-[0.27em] opacity-45'>
               Contact / Angelina Serpes
             </p>
 
@@ -84,7 +84,7 @@ export default function ContactClient() {
                 <span className='relative inline-flex h-2 w-2 rounded-full bg-[#7E8B72]' />
               </span>
 
-              <p className='text-[9px] uppercase tracking-[0.23em] opacity-45'>
+              <p className='text-[10px] uppercase tracking-[0.23em] opacity-45'>
                 Open to opportunities
               </p>
             </div>
@@ -127,11 +127,11 @@ export default function ContactClient() {
               className='max-w-[1200px]'
             >
               <h1 className='text-[clamp(4.8rem,10.5vw,11.5rem)] leading-[0.84] tracking-[-0.08em]'>
-                LET&apos;S
+                LET<span className='mx-[0.04em]'>&rsquo;</span>S
               </h1>
 
               <h1 className='ml-[8vw] font-serif text-[clamp(4.8rem,10.5vw,11.5rem)] italic leading-[0.84] tracking-[-0.075em] text-[#8D786B] md:ml-[12vw]'>
-                talk<span className='ml-[0.14em]'>.</span>
+                talk<span className='ml-[0.05em]'>.</span>
               </h1>
             </motion.div>
           </div>
@@ -165,7 +165,7 @@ export default function ContactClient() {
         <section className='bg-[#D8C8BC] px-6 py-28 sm:px-10 md:px-[5vw] md:py-40'>
           <div className='mb-16 flex items-end justify-between'>
             <div>
-              <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-45'>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-45'>
                 01 / The easiest way
               </p>
 
@@ -190,7 +190,7 @@ export default function ContactClient() {
             <div className='absolute inset-0 origin-left scale-x-0 bg-[#A88F81] transition-transform duration-700 ease-[cubic-bezier(.76,0,.24,1)] group-hover:scale-x-100' />
 
             <div className='relative z-10 transition-colors duration-500 group-hover:text-[#FFF8F2]'>
-              <p className='mb-5 text-[9px] uppercase tracking-[0.25em] opacity-50'>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.25em] opacity-50'>
                 Email me
               </p>
 
@@ -221,11 +221,11 @@ export default function ContactClient() {
           </a>
 
           <div className='mt-5 flex items-center justify-between'>
-            <p className='text-[9px] uppercase tracking-[0.2em] opacity-35'>
+            <p className='text-[10px] uppercase tracking-[0.2em] opacity-50'>
               Say hello
             </p>
 
-            <p className='text-[9px] uppercase tracking-[0.2em] opacity-35'>
+            <p className='text-[10px] uppercase tracking-[0.2em] opacity-50'>
               Click to compose ↗
             </p>
           </div>
@@ -235,7 +235,7 @@ export default function ContactClient() {
         <section className='px-6 py-28 sm:px-10 md:px-[5vw] md:py-40'>
           <div className='mb-20 grid gap-10 md:grid-cols-2'>
             <div>
-              <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-40'>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-40'>
                 02 / Elsewhere
               </p>
 
@@ -244,7 +244,7 @@ export default function ContactClient() {
                 <br />
 
                 <span className='font-serif italic text-[#8D786B]'>
-                  out there<span className='ml-[0.14em]'>.</span>
+                  out there<span className='ml-[0.05em]'>.</span>
                 </span>
               </h2>
             </div>
@@ -289,11 +289,11 @@ export default function ContactClient() {
         <footer className='bg-[#332C28] px-6 py-10 text-[#F3EDE6] sm:px-10 md:px-[5vw]'>
           <div className='flex min-h-[210px] flex-col justify-between gap-14'>
             <div className='flex items-start justify-between border-b border-white/15 pb-5'>
-              <p className='text-[9px] uppercase tracking-[0.24em] opacity-45'>
+              <p className='text-[10px] uppercase tracking-[0.24em] opacity-45'>
                 Angelina Serpes
               </p>
 
-              <p className='text-[9px] uppercase tracking-[0.24em] opacity-45'>
+              <p className='text-[10px] uppercase tracking-[0.24em] opacity-45'>
                 Mumbai / India
               </p>
             </div>
@@ -309,7 +309,7 @@ export default function ContactClient() {
               <div className='flex flex-wrap gap-x-6 gap-y-3'>
                 <a
                   href='mailto:angelinaserpes@gmail.com'
-                  className='text-[9px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
+                  className='text-[10px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
                 >
                   Email ↗
                 </a>
@@ -318,7 +318,7 @@ export default function ContactClient() {
                   href='https://github.com/angelinaserpes'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-[9px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
+                  className='text-[10px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
                 >
                   GitHub ↗
                 </a>
@@ -327,7 +327,7 @@ export default function ContactClient() {
                   href='https://linkedin.com/in/angelina-serpes'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-[9px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
+                  className='text-[10px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
                 >
                   LinkedIn ↗
                 </a>
@@ -336,7 +336,7 @@ export default function ContactClient() {
                   href='/angelina-serpes-resume.pdf'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-[9px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
+                  className='text-[10px] uppercase tracking-[0.2em] opacity-45 transition-opacity hover:opacity-100'
                 >
                   Résumé ↗
                 </a>
@@ -344,11 +344,11 @@ export default function ContactClient() {
             </div>
 
             <div className='flex items-center justify-between border-t border-white/10 pt-5'>
-              <p className='text-[8px] uppercase tracking-[0.2em] opacity-25'>
+              <p className='text-[10px] uppercase tracking-[0.2em] opacity-50'>
                 Computer Engineering / Mumbai
               </p>
 
-              <p className='text-[8px] uppercase tracking-[0.2em] opacity-25'>
+              <p className='text-[10px] uppercase tracking-[0.2em] opacity-50'>
                 © 2026
               </p>
             </div>

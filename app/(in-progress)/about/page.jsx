@@ -37,20 +37,24 @@ const services = [
     title: 'Creative + AI',
     short: 'Experimenting beyond the obvious.',
     description:
-      'Exploring intelligent systems, creative coding and new ways technology can make digital products more useful, playful and interesting.',
-    tags: ['Python', 'AI', 'Creative Technology'],
+      'Python apps, APIs and creative code, from an AQI desktop app to Fit Check, the fashion mini-game hidden on this site.',
+    tags: ['Python', 'AI tools', 'Creative code'],
   },
 ];
 
 const tools = [
   { name: 'React', rotate: -4 },
-  { name: 'Figma', rotate: 3 },
-  { name: 'Python', rotate: 2 },
-  { name: 'Next.js', rotate: -2 },
+  { name: 'Next.js', rotate: 3 },
+  { name: 'TypeScript', rotate: -2 },
   { name: 'JavaScript', rotate: 4 },
-  { name: 'Git', rotate: -3 },
+  { name: 'Tailwind', rotate: -3 },
+  { name: 'Framer Motion', rotate: 2 },
+  { name: 'Python', rotate: -4 },
+  { name: 'SQL / MySQL', rotate: 3 },
+  { name: 'Java', rotate: -2 },
   { name: 'HTML / CSS', rotate: 2 },
-  { name: 'AI', rotate: -5 },
+  { name: 'Figma', rotate: -5 },
+  { name: 'Git', rotate: 3 },
 ];
 
 const thoughts = [
@@ -85,34 +89,13 @@ const thoughts = [
 ];
 
 const projects = [
-  {
-    number: '01',
-    title: 'Aurevo',
-    image: '/images/aurevo.png',
-    href: '/aurevo',
-    type: 'AI / Web Development',
-  },
-  {
-    number: '02',
-    title: 'Phantom',
-    image: '/images/phantom.png',
-    href: '/phantom',
-    type: 'Web Design / Frontend',
-  },
-  {
-    number: '03',
-    title: 'InAmigos',
-    image: '/images/inamigos.png',
-    href: '/inamigos',
-    type: 'Web Design / Development',
-  },
-  {
-    number: '04',
-    title: 'Dakota Coffee',
-    image: '/images/dakota.png',
-    href: '/dakota',
-    type: 'Web Development / E-commerce',
-  },
+  { number: '01', title: 'Aurevo', image: '/images/aurevo.png', href: '/aurevo', type: 'AI / Web' },
+  { number: '02', title: 'AirSense', image: '/images/airsense.png', href: '/airsense', type: 'Python / MySQL' },
+  { number: '03', title: 'Phantom', image: '/images/phantom.png', href: '/phantom', type: 'Web Design / Frontend' },
+  { number: '04', title: 'Evoltic', image: '/images/evoltic.png', href: '/evoltic', type: 'Web App / Hackathon' },
+  { number: '05', title: 'InAmigos', image: '/images/inamigos.png', href: '/inamigos', type: 'Non-profit / Web' },
+  { number: '06', title: 'Revive', image: '/images/revive.png', href: '/revive', type: 'Web + Android' },
+  { number: '07', title: 'Dakota Coffee', image: '/images/dakota.png', href: '/dakota', type: 'Web / E-commerce' },
 ];
 
 export default function About() {
@@ -221,9 +204,10 @@ export default function About() {
                 className='md:col-start-8 md:col-span-5'
               >
                 <p className='max-w-lg text-lg leading-[1.55] opacity-70'>
-                  I&apos;m Angelina, a student and creative technologist
-                  turning ideas into digital experiences that look good,
-                  work well and feel worth remembering.
+                  I&apos;m Angelina, a Computer Engineering student at FCRIT,
+                  Navi Mumbai. I design in Figma, build in React and Python,
+                  and care a lot about type, motion and clothes (there&apos;s a
+                  fit check hidden on this site).
                 </p>
               </motion.div>
 
@@ -567,7 +551,7 @@ export default function About() {
                 </h2>
               </div>
 
-              <p className='hidden text-[10px] uppercase tracking-[0.2em] opacity-35 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.2em] opacity-50 md:block'>
                 Drag them around
               </p>
             </div>
@@ -620,7 +604,7 @@ export default function About() {
 
             </div>
 
-            <p className='mt-5 text-right text-[10px] uppercase tracking-[0.2em] opacity-35 md:hidden'>
+            <p className='mt-5 text-right text-[10px] uppercase tracking-[0.2em] opacity-50 md:hidden'>
               Psst... drag them around
             </p>
 
@@ -830,12 +814,12 @@ export default function About() {
                 />
 
                 <span className='text-xs uppercase tracking-[0.2em]'>
-                  Available for select freelance projects
+                  Open to internships and collaborations
                 </span>
               </div>
 
               <p className='text-xs uppercase tracking-[0.18em] opacity-45'>
-                Web · Frontend · Interactive experiences
+                Web · Frontend · Python
               </p>
 
             </div>
@@ -894,7 +878,7 @@ export default function About() {
                   />
                 </Link>
 
-                <p className='mt-5 text-[10px] uppercase tracking-[0.18em] opacity-35'>
+                <p className='mt-5 text-[10px] uppercase tracking-[0.18em] opacity-50'>
                   No perfectly written brief required.
                 </p>
 

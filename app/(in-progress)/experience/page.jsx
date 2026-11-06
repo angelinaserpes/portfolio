@@ -34,14 +34,14 @@ const experiences = [
     fullCompany: 'InAmigos Foundation',
     role: 'Web Development Intern',
     intro:
-      'Responsive websites, interface thinking and AI-assisted development for web applications and NGO platforms.',
+      'Responsive websites and interface design for web applications and NGO platforms.',
     details: [
-      'Developed responsive websites using AI-assisted web development tools and modern design practices.',
+      'Built responsive website pages with modern layout and design practices.',
       'Designed UI/UX wireframes and prototypes in Figma.',
       'Implemented website layouts, feature proposals and user interface improvements.',
-      'Used prompt engineering and AI development tools to streamline website creation and content generation.',
+      'Used AI tools and prompt engineering to speed up copy and content generation.',
     ],
-    disciplines: ['WEB DEVELOPMENT', 'FIGMA', 'AI-ASSISTED'],
+    disciplines: ['WEB DEVELOPMENT', 'FIGMA', 'UI / UX'],
   },
   {
     number: '02',
@@ -54,7 +54,7 @@ const experiences = [
       'AI-driven workflows, rapid web prototyping and experimentation with tools that turn ideas into working interfaces.',
     details: [
       'Worked on AI-driven workflows involving design automation, content generation and rapid web prototyping.',
-      'Built and refined an AI-powered online store using AI tools, Figma and prompt-based iteration.',
+      'Built Aurevo, a retail design site with a Three.js store designer, using Figma, JavaScript and AI tools.',
       'Used prompt engineering with ChatGPT and Gemini to improve AI-generated content.',
       'Improved UI structure, navigation flow and visual consistency for better usability and branding.',
     ],
@@ -186,7 +186,7 @@ function ExperiencePanel({
       <div className='flex min-h-[650px] flex-col p-6 md:p-9 lg:min-h-[700px]'>
         <div className='flex items-start justify-between'>
           <div>
-            <p className='text-[9px] uppercase tracking-[0.25em] opacity-40'>
+            <p className='text-[10px] uppercase tracking-[0.25em] opacity-40'>
               Experience / {experience.number}
             </p>
 
@@ -214,7 +214,7 @@ function ExperiencePanel({
         </div>
 
         <div className='my-auto py-14'>
-          <p className='mb-4 text-[9px] uppercase tracking-[0.24em] opacity-40'>
+          <p className='mb-4 text-[10px] uppercase tracking-[0.24em] opacity-40'>
             {experience.role}
           </p>
 
@@ -298,11 +298,11 @@ function ExperiencePanel({
                           }}
                           className='grid grid-cols-[35px_1fr] gap-3 border-b border-[#1D1D1B]/15 py-4'
                         >
-                          <span className='pt-[2px] text-[8px] opacity-25'>
+                          <span className='pt-[2px] text-[10px] opacity-40'>
                             0{detailIndex + 1}
                           </span>
 
-                          <p className='text-xs leading-[1.65] opacity-55'>
+                          <p className='text-sm leading-[1.65] opacity-80'>
                             {detail}
                           </p>
                         </motion.div>
@@ -316,7 +316,7 @@ function ExperiencePanel({
                       className='group mt-6 flex items-center justify-between border-b border-[#1D1D1B]/20 pb-4'
                     >
                       <div>
-                        <p className='text-[8px] uppercase tracking-[0.2em] opacity-30'>
+                        <p className='text-[10px] uppercase tracking-[0.2em] opacity-50'>
                           Related project
                         </p>
 
@@ -352,11 +352,28 @@ function ExperiencePanel({
                     duration: 0.28,
                     ease,
                   }}
-                  className='max-w-[280px]'
+                  className='max-w-xl'
                 >
-                  <p className='text-sm leading-[1.7] opacity-35'>
-                    Move here to explore this experience.
+                  <p className='text-base leading-[1.75] opacity-55'>
+                    {experience.intro}
                   </p>
+
+                  <ul className='mt-7 border-t border-[#1D1D1B]/10'>
+                    {experience.details.map((detail, detailIndex) => (
+                      <li
+                        key={detail}
+                        className='grid grid-cols-[35px_1fr] gap-3 border-b border-[#1D1D1B]/10 py-4'
+                      >
+                        <span className='pt-[2px] text-[10px] opacity-35'>
+                          0{detailIndex + 1}
+                        </span>
+
+                        <p className='text-sm leading-[1.65] opacity-55'>
+                          {detail}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -369,7 +386,7 @@ function ExperiencePanel({
               (discipline) => (
                 <span
                   key={discipline}
-                  className='text-[8px] uppercase tracking-[0.18em] opacity-35'
+                  className='text-[10px] uppercase tracking-[0.18em] opacity-50'
                 >
                   {discipline}
                 </span>
@@ -395,7 +412,7 @@ function TechnicalIndex() {
     <section className='bg-[#D8C9BD] px-6 py-28 text-[#302A26] sm:px-10 md:px-[5vw] md:py-40'>
       <div className='mb-20 grid gap-8 lg:grid-cols-2'>
         <div>
-          <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-45'>
+          <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-45'>
             03 / Technical Index
           </p>
 
@@ -404,7 +421,7 @@ function TechnicalIndex() {
             <br />
 
             <span className='font-serif italic text-[#806F65]'>
-              work<span className='ml-[0.14em]'>.</span>
+              work<span className='ml-[0.05em]'>.</span>
             </span>
           </h2>
         </div>
@@ -432,7 +449,7 @@ function TechnicalIndex() {
                   className='flex w-full items-center justify-between border-b border-[#574B44]/15 py-7 text-left last:border-b-0 md:py-9 lg:px-6'
                 >
                   <div className='flex items-center gap-5'>
-                    <span className='text-[8px] opacity-30'>
+                    <span className='text-[10px] opacity-30'>
                       0{index + 1}
                     </span>
 
@@ -459,7 +476,7 @@ function TechnicalIndex() {
                         transition={{
                           duration: 0.3,
                         }}
-                        className='mt-2 text-[8px] uppercase tracking-[0.2em]'
+                        className='mt-2 text-[10px] uppercase tracking-[0.2em]'
                       >
                         {item.caption}
                       </motion.p>
@@ -512,11 +529,11 @@ function TechnicalIndex() {
                 className='relative z-10'
               >
                 <div className='mb-10 flex items-center justify-between'>
-                  <p className='text-[9px] uppercase tracking-[0.24em] opacity-45'>
+                  <p className='text-[10px] uppercase tracking-[0.24em] opacity-45'>
                     {group.caption}
                   </p>
 
-                  <p className='font-mono text-[8px] opacity-35'>
+                  <p className='font-mono text-[10px] opacity-35'>
                     {String(group.skills.length).padStart(2, '0')} ITEMS
                   </p>
                 </div>
@@ -539,7 +556,7 @@ function TechnicalIndex() {
                     className='group flex items-center justify-between border-t border-[#574B44]/15 py-4 md:py-5'
                   >
                     <div className='flex items-baseline gap-5'>
-                      <span className='font-mono text-[8px] opacity-25'>
+                      <span className='font-mono text-[10px] opacity-25'>
                         {String(index + 1).padStart(2, '0')}
                       </span>
 
@@ -581,7 +598,7 @@ function CertificationArchive() {
     <section className='border-t border-[#1D1D1B]/20 px-6 py-28 sm:px-10 md:px-[5vw] md:py-40'>
       <div className='mb-20 flex items-end justify-between'>
         <div>
-          <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-40'>
+          <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-40'>
             05 / Certifications
           </p>
 
@@ -590,7 +607,7 @@ function CertificationArchive() {
             <br />
 
             <span className='font-serif italic text-[#827267]'>
-              along the way<span className='ml-[0.14em]'>.</span>
+              along the way<span className='ml-[0.05em]'>.</span>
             </span>
           </h2>
         </div>
@@ -620,12 +637,12 @@ function CertificationArchive() {
                   className='flex w-full items-center justify-between border-b border-[#1D1D1B]/15 py-8 text-left last:border-b-0 lg:px-7'
                 >
                   <div className='flex items-center gap-5'>
-                    <span className='font-mono text-[9px] opacity-30'>
+                    <span className='font-mono text-[10px] opacity-30'>
                       {item.number}
                     </span>
 
                     <div>
-                      <p className='text-[9px] uppercase tracking-[0.2em] opacity-40'>
+                      <p className='text-[10px] uppercase tracking-[0.2em] opacity-40'>
                         {item.issuer}
                       </p>
 
@@ -687,12 +704,12 @@ function CertificationArchive() {
               className='w-full'
             >
               <div className='flex items-center justify-between border-b border-[#1D1D1B]/20 pb-5'>
-                <p className='text-[9px] uppercase tracking-[0.25em] opacity-40'>
+                <p className='text-[10px] uppercase tracking-[0.25em] opacity-40'>
                   Certification /{' '}
                   {certificate.number}
                 </p>
 
-                <p className='text-[9px] uppercase tracking-[0.25em] opacity-40'>
+                <p className='text-[10px] uppercase tracking-[0.25em] opacity-40'>
                   {certificate.type}
                 </p>
               </div>
@@ -723,7 +740,7 @@ function CertificationArchive() {
                   }}
                   className='border-l border-[#1D1D1B]/20 pl-7'
                 >
-                  <p className='mb-6 text-[9px] uppercase tracking-[0.22em] opacity-35'>
+                  <p className='mb-6 text-[10px] uppercase tracking-[0.22em] opacity-50'>
                     About
                   </p>
 
@@ -732,7 +749,7 @@ function CertificationArchive() {
                   </p>
 
                   <div className='mt-9 border-t border-[#1D1D1B]/15 pt-5'>
-                    <p className='text-[9px] uppercase tracking-[0.2em] opacity-35'>
+                    <p className='text-[10px] uppercase tracking-[0.2em] opacity-50'>
                       Issued by
                     </p>
 
@@ -744,11 +761,11 @@ function CertificationArchive() {
               </div>
 
               <div className='flex items-center justify-between border-t border-[#1D1D1B]/20 pt-5'>
-                <p className='text-[9px] uppercase tracking-[0.22em] opacity-40'>
+                <p className='text-[10px] uppercase tracking-[0.22em] opacity-40'>
                   Professional development
                 </p>
 
-                <span className='font-mono text-[9px] opacity-30'>
+                <span className='font-mono text-[10px] opacity-30'>
                   ANG / CERT /{' '}
                   {certificate.number}
                 </span>
@@ -855,11 +872,11 @@ export default function ExperiencePage() {
         {/* HERO */}
         <section className='relative min-h-screen overflow-hidden px-6 pb-8 pt-28 sm:px-10 md:px-[5vw]'>
           <div className='relative z-20 flex items-center justify-between border-b border-[#1D1D1B]/20 pb-5'>
-            <p className='text-[8px] uppercase tracking-[0.28em] opacity-40'>
+            <p className='text-[10px] uppercase tracking-[0.28em] opacity-40'>
               Experience / Technical Archive
             </p>
 
-            <p className='text-[8px] uppercase tracking-[0.28em] opacity-40'>
+            <p className='text-[10px] uppercase tracking-[0.28em] opacity-40'>
               Mumbai / 2025 — Now
             </p>
           </div>
@@ -869,7 +886,7 @@ export default function ExperiencePage() {
 
               {/* LEFT LABEL AREA */}
               <div className='hidden pt-8 md:block'>
-                <p className='text-[8px] uppercase tracking-[0.24em] opacity-30'>
+                <p className='text-[10px] uppercase tracking-[0.24em] opacity-50'>
                   Move through
                   <br />
                   the field
@@ -920,21 +937,41 @@ export default function ExperiencePage() {
                 <div className='absolute left-0 top-1/2 h-[1px] w-full bg-[#1D1D1B]/10' />
 
                 {/* CORNER LABELS */}
-                <p className='absolute left-5 top-5 z-10 bg-[#F1EEE7] px-2 text-[8px] uppercase tracking-[0.22em] opacity-40'>
+                <p className='absolute left-5 top-5 z-10 bg-[#F1EEE7] px-2 text-[10px] uppercase tracking-[0.22em] opacity-40'>
                   Engineering
                 </p>
 
-                <p className='absolute right-5 top-5 z-10 bg-[#F1EEE7] px-2 text-[8px] uppercase tracking-[0.22em] opacity-40'>
+                <p className='absolute right-5 top-5 z-10 bg-[#F1EEE7] px-2 text-[10px] uppercase tracking-[0.22em] opacity-40'>
                   Design
                 </p>
 
-                <p className='absolute bottom-5 left-5 z-10 bg-[#F1EEE7] px-2 text-[8px] uppercase tracking-[0.22em] opacity-40'>
+                <p className='absolute bottom-5 left-5 z-10 bg-[#F1EEE7] px-2 text-[10px] uppercase tracking-[0.22em] opacity-40'>
                   AI
                 </p>
 
-                <p className='absolute bottom-5 right-5 z-10 bg-[#F1EEE7] px-2 text-[8px] uppercase tracking-[0.22em] opacity-40'>
+                <p className='absolute bottom-5 right-5 z-10 bg-[#F1EEE7] px-2 text-[10px] uppercase tracking-[0.22em] opacity-40'>
                   Web
                 </p>
+
+                {/* QUADRANT CONTENT */}
+                {[
+                  { key: 'ENGINEERING', pos: 'left-0 top-0', title: 'Java + SQL', meta: 'Secure Access System · RBAC · MySQL' },
+                  { key: 'DESIGN', pos: 'right-0 top-0', title: 'Figma + type', meta: 'Interfaces, motion and the small details' },
+                  { key: 'AI', pos: 'bottom-0 left-0', title: 'AI intern', meta: 'VH Consulting · Aurevo · prompt workflows' },
+                  { key: 'WEB', pos: 'bottom-0 right-0', title: 'React + Python', meta: '7 projects · web, desktop and Android' },
+                ].map(q => (
+                  <div
+                    key={q.key}
+                    className={`pointer-events-none absolute ${q.pos} flex h-1/2 w-1/2 flex-col items-center justify-center px-8 text-center transition-opacity duration-300 ${heroFocus === q.key ? 'opacity-100' : 'opacity-30'}`}
+                  >
+                    <p className='text-[clamp(1.6rem,2.6vw,2.6rem)] leading-none tracking-[-0.045em]'>
+                      {q.title}
+                    </p>
+                    <p className='mt-3 text-[11px] uppercase tracking-[0.18em] opacity-60'>
+                      {q.meta}
+                    </p>
+                  </div>
+                ))}
 
                 {/* DIRECT 1:1 CROSSHAIR */}
                 <div
@@ -951,7 +988,7 @@ export default function ExperiencePage() {
 
                   <div className='absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#1D1D1B] bg-[#F1EEE7]' />
 
-                  <div className='absolute left-4 top-4 whitespace-nowrap bg-[#F1EEE7] px-2 py-1 text-[9px] uppercase tracking-[0.2em] opacity-60'>
+                  <div className='absolute left-4 top-4 whitespace-nowrap bg-[#F1EEE7] px-2 py-1 text-[10px] uppercase tracking-[0.2em] opacity-60'>
                     {heroFocus}
                   </div>
                 </div>
@@ -974,7 +1011,7 @@ export default function ExperiencePage() {
               }}
               className='absolute bottom-5 left-0 right-0'
             >
-              <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-35'>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-50'>
                 Different disciplines / same curiosity
               </p>
 
@@ -984,7 +1021,7 @@ export default function ExperiencePage() {
                   <br />
 
                   <span className='font-serif italic text-[#827267]'>
-                    between things<span className='ml-[0.14em]'>.</span>
+                    between things<span className='ml-[0.05em]'>.</span>
                   </span>
                 </h1>
 
@@ -1013,7 +1050,7 @@ export default function ExperiencePage() {
         <section className='px-6 py-28 sm:px-10 md:px-[5vw] md:py-40'>
           <div className='mb-16 flex items-end justify-between'>
             <div>
-              <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-40'>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-40'>
                 01 / Experience
               </p>
 
@@ -1022,7 +1059,7 @@ export default function ExperiencePage() {
                 <br />
 
                 <span className='font-serif italic text-[#827267]'>
-                  worked<span className='ml-[0.14em]'>.</span>
+                  worked<span className='ml-[0.05em]'>.</span>
                 </span>
               </h2>
             </div>
@@ -1064,7 +1101,7 @@ export default function ExperiencePage() {
         <section className='bg-[#191A18] px-6 py-28 text-[#EAE7DF] sm:px-10 md:px-[5vw] md:py-40'>
           <div className='mb-16 flex items-start justify-between'>
             <div>
-              <p className='mb-5 text-[9px] uppercase tracking-[0.28em] opacity-40'>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.28em] opacity-40'>
                 02 / Engineering Archive
               </p>
 
@@ -1073,7 +1110,7 @@ export default function ExperiencePage() {
                 <br />
 
                 <span className='font-serif italic text-[#AAA297]'>
-                  Role-Based Control<span className='ml-[0.14em]'>.</span>
+                  Role-Based Control<span className='ml-[0.05em]'>.</span>
                 </span>
               </h2>
             </div>
@@ -1089,14 +1126,14 @@ export default function ExperiencePage() {
             <div className='flex flex-col justify-between border-b border-white/15 p-7 lg:min-h-[580px] lg:border-b-0 lg:border-r'>
               <div>
                 <div className='mb-12 flex items-center justify-between'>
-                  <span className='text-[8px] uppercase tracking-[0.24em] opacity-35'>
+                  <span className='text-[10px] uppercase tracking-[0.24em] opacity-50'>
                     System / 001
                   </span>
 
                   <div className='flex items-center gap-2'>
                     <span className='h-1.5 w-1.5 animate-pulse rounded-full bg-[#EAE7DF]' />
 
-                    <span className='text-[8px] uppercase tracking-[0.2em] opacity-45'>
+                    <span className='text-[10px] uppercase tracking-[0.2em] opacity-45'>
                       System active
                     </span>
                   </div>
@@ -1121,7 +1158,7 @@ export default function ExperiencePage() {
                       key={label}
                       className='bg-[#191A18] p-5'
                     >
-                      <p className='text-[9px] tracking-[0.2em] opacity-30'>
+                      <p className='text-[10px] tracking-[0.2em] opacity-30'>
                         {label}
                       </p>
 
@@ -1159,7 +1196,7 @@ export default function ExperiencePage() {
                   <span className='h-2 w-2 rounded-full border border-white/40' />
                 </div>
 
-                <p className='font-mono text-[8px] tracking-[0.18em] opacity-30'>
+                <p className='font-mono text-[10px] tracking-[0.18em] opacity-30'>
                   SECURITY_ACTIVITY.LOG
                 </p>
               </div>
@@ -1187,15 +1224,15 @@ export default function ExperiencePage() {
                           : 'opacity-35 hover:opacity-70'
                       }`}
                     >
-                      <span className='text-[9px]'>
+                      <span className='text-[10px]'>
                         {log.time}
                       </span>
 
-                      <span className='text-[8px] tracking-[0.12em]'>
+                      <span className='text-[10px] tracking-[0.12em]'>
                         [{log.status}]
                       </span>
 
-                      <span className='text-[9px]'>
+                      <span className='text-[10px]'>
                         {log.text}
                       </span>
                     </button>
@@ -1225,7 +1262,7 @@ export default function ExperiencePage() {
                       strokeWidth={1.2}
                     />
 
-                    <p className='font-mono text-[9px] uppercase tracking-[0.15em]'>
+                    <p className='font-mono text-[10px] uppercase tracking-[0.15em]'>
                       Session complete / access rules
                       enforced
                     </p>
@@ -1254,7 +1291,7 @@ export default function ExperiencePage() {
 
                 <span className='font-serif italic text-[#827267]'>
                   {' '}
-                  at FCRIT<span className='ml-[0.14em]'>.</span>
+                  at FCRIT<span className='ml-[0.05em]'>.</span>
                 </span>
               </p>
 
@@ -1274,7 +1311,7 @@ export default function ExperiencePage() {
                 2025 — 2029
               </p>
 
-              <p className='mt-3 text-[11px] uppercase tracking-[0.18em] opacity-35'>
+              <p className='mt-3 text-[11px] uppercase tracking-[0.18em] opacity-50'>
                 Undergraduate
               </p>
             </div>

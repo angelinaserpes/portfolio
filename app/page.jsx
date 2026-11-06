@@ -11,9 +11,7 @@ import {
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Angelina Serpes | Portfolio',
-  description:
-    'The personal portfolio of Angelina Serpes — projects, creative work, and digital experiences.',
+  title: { absolute: 'Angelina Serpes | Portfolio' },
 };
 
 export default function Home() {

@@ -80,7 +80,7 @@ export function ProjectSlider({
 
       <div className='pointer-events-none absolute bottom-5 left-5 right-5 flex items-end justify-between text-white'>
         <div>
-          <p className='mb-2 text-[8px] uppercase tracking-[0.25em] opacity-55'>
+          <p className='mb-2 text-[10px] uppercase tracking-[0.25em] opacity-55'>
             Project film
           </p>
 
@@ -89,7 +89,7 @@ export function ProjectSlider({
           </p>
         </div>
 
-        <p className='text-[8px] uppercase tracking-[0.2em] opacity-45'>
+        <p className='text-[10px] uppercase tracking-[0.2em] opacity-45'>
           Preview
         </p>
       </div>

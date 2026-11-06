@@ -197,11 +197,11 @@ export default function Phantom() {
               }}
               className='mt-5 flex items-center justify-between'
             >
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/40'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/40'>
                 Selected Project / 03
               </p>
 
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/40'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/40'>
                 Automotive / Digital Experience
               </p>
             </motion.div>
@@ -226,7 +226,7 @@ export default function Phantom() {
               >
                 <span className='h-[1px] w-8 bg-white/30' />
 
-                <span className='text-[9px] uppercase tracking-[0.35em] text-white/40'>
+                <span className='text-[10px] uppercase tracking-[0.35em] text-white/40'>
                   Digital Showroom
                 </span>
               </motion.div>
@@ -307,7 +307,7 @@ export default function Phantom() {
 
               <div>
 
-                <p className='mb-2 text-[8px] uppercase tracking-[0.32em] text-white/25'>
+                <p className='mb-2 text-[10px] uppercase tracking-[0.32em] text-white/50'>
                   Designed & Developed
                 </p>
 
@@ -331,11 +331,11 @@ export default function Phantom() {
 
                 <div>
 
-                  <span className='block text-[8px] uppercase tracking-[0.25em] text-white/45'>
+                  <span className='block text-[10px] uppercase tracking-[0.25em] text-white/45'>
                     Play
                   </span>
 
-                  <span className='mt-1 block text-[8px] uppercase tracking-[0.25em] text-white/45'>
+                  <span className='mt-1 block text-[10px] uppercase tracking-[0.25em] text-white/45'>
                     Film ↘
                   </span>
 
@@ -360,7 +360,7 @@ export default function Phantom() {
 
             <div>
 
-              <p className='mb-4 text-[9px] uppercase tracking-[0.28em] text-white/35'>
+              <p className='mb-4 text-[10px] uppercase tracking-[0.28em] text-white/50'>
                 Role
               </p>
 
@@ -372,7 +372,7 @@ export default function Phantom() {
 
             <div>
 
-              <p className='mb-4 text-[9px] uppercase tracking-[0.28em] text-white/35'>
+              <p className='mb-4 text-[10px] uppercase tracking-[0.28em] text-white/50'>
                 Focus
               </p>
 
@@ -384,7 +384,7 @@ export default function Phantom() {
 
             <div>
 
-              <p className='mb-4 text-[9px] uppercase tracking-[0.28em] text-white/35'>
+              <p className='mb-4 text-[10px] uppercase tracking-[0.28em] text-white/50'>
                 Type
               </p>
 
@@ -396,7 +396,7 @@ export default function Phantom() {
 
             <div>
 
-              <p className='mb-4 text-[9px] uppercase tracking-[0.28em] text-white/35'>
+              <p className='mb-4 text-[10px] uppercase tracking-[0.28em] text-white/50'>
                 Project
               </p>
 
@@ -422,7 +422,7 @@ export default function Phantom() {
 
             <div>
 
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/35'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/50'>
                 01 / The Concept
               </p>
 
@@ -473,7 +473,7 @@ export default function Phantom() {
 
             <div className='flex items-center justify-between border-t border-white/15 pt-6'>
 
-              <p className='text-[9px] uppercase tracking-[0.3em] text-white/35'>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-white/50'>
                 Phantom / In Motion
               </p>
 
@@ -490,7 +490,7 @@ export default function Phantom() {
                   className='h-1.5 w-1.5 rounded-full bg-white'
                 />
 
-                <span className='text-[9px] uppercase tracking-[0.3em] text-white/35'>
+                <span className='text-[10px] uppercase tracking-[0.3em] text-white/50'>
                   Playing
                 </span>
 
@@ -531,7 +531,7 @@ export default function Phantom() {
 
           <motion.div {...fadeUp}>
 
-            <p className='mb-12 text-[9px] uppercase tracking-[0.32em] text-black/40'>
+            <p className='mb-12 text-[10px] uppercase tracking-[0.32em] text-black/40'>
               Three Concepts / One Experience
             </p>
 
@@ -757,11 +757,11 @@ export default function Phantom() {
 
           <div className='mt-5 hidden items-center justify-between lg:flex'>
 
-            <p className='text-[8px] uppercase tracking-[0.3em] text-black/30'>
+            <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
               Hover to explore
             </p>
 
-            <p className='text-[8px] uppercase tracking-[0.3em] text-black/30'>
+            <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
               03 Models / Phantom
             </p>
 
@@ -786,7 +786,7 @@ export default function Phantom() {
               className='lg:col-span-5'
             >
 
-              <p className='mb-7 text-[9px] uppercase tracking-[0.32em] text-white/35'>
+              <p className='mb-7 text-[10px] uppercase tracking-[0.32em] text-white/50'>
                 02 / Customisation
               </p>
 
@@ -810,7 +810,7 @@ export default function Phantom() {
                   className='text-white/40'
                 />
 
-                <p className='text-[9px] uppercase tracking-[0.28em] text-white/35'>
+                <p className='text-[10px] uppercase tracking-[0.28em] text-white/50'>
                   Interactive Configurator
                 </p>
 
@@ -856,7 +856,7 @@ export default function Phantom() {
 
                 <div className='pointer-events-none absolute bottom-5 left-5'>
 
-                  <p className='text-[8px] uppercase tracking-[0.3em] text-white/50'>
+                  <p className='text-[10px] uppercase tracking-[0.3em] text-white/50'>
                     Phantom / Exterior
                   </p>
 
@@ -875,7 +875,7 @@ export default function Phantom() {
                     className='h-1.5 w-1.5 rounded-full bg-white'
                   />
 
-                  <p className='text-[8px] uppercase tracking-[0.3em] text-white/50'>
+                  <p className='text-[10px] uppercase tracking-[0.3em] text-white/50'>
                     Motion Study
                   </p>
 
@@ -885,11 +885,11 @@ export default function Phantom() {
 
               <div className='mt-5 flex justify-between'>
 
-                <p className='text-[8px] uppercase tracking-[0.25em] text-white/30'>
+                <p className='text-[10px] uppercase tracking-[0.25em] text-white/50'>
                   Phantom
                 </p>
 
-                <p className='text-[8px] uppercase tracking-[0.25em] text-white/30'>
+                <p className='text-[10px] uppercase tracking-[0.25em] text-white/50'>
                   Exterior / Motion
                 </p>
 
@@ -991,7 +991,7 @@ export default function Phantom() {
 
               <div className='lg:col-span-9'>
 
-                <p className='mb-8 text-[9px] uppercase tracking-[0.32em] text-black/35'>
+                <p className='mb-8 text-[10px] uppercase tracking-[0.32em] text-black/50'>
                   03 / Generative Experience
                 </p>
 
@@ -1028,7 +1028,7 @@ export default function Phantom() {
             <div className='mb-8 flex items-start justify-between gap-8'>
 
               <div>
-                <p className='text-[9px] uppercase tracking-[0.3em] text-black/35'>
+                <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
                   01 / Configure
                 </p>
                 <p className='mt-3 max-w-sm text-sm leading-relaxed text-black/45'>
@@ -1037,7 +1037,7 @@ export default function Phantom() {
                 </p>
               </div>
 
-              <p className='hidden text-right text-[9px] uppercase tracking-[0.28em] text-black/30 md:block'>
+              <p className='hidden text-right text-[10px] uppercase tracking-[0.28em] text-black/50 md:block'>
                 Product Interaction / Phantom
               </p>
 
@@ -1058,10 +1058,10 @@ export default function Phantom() {
               <div className='pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10' />
 
               <div className='pointer-events-none absolute bottom-5 left-5 right-5 flex items-end justify-between'>
-                <p className='text-[8px] uppercase tracking-[0.3em] text-white/55'>
+                <p className='text-[10px] uppercase tracking-[0.3em] text-white/55'>
                   Configuration / In Product
                 </p>
-                <p className='hidden text-[8px] uppercase tracking-[0.3em] text-white/40 md:block'>
+                <p className='hidden text-[10px] uppercase tracking-[0.3em] text-white/40 md:block'>
                   Select → Refine → Visualise
                 </p>
               </div>
@@ -1081,7 +1081,7 @@ export default function Phantom() {
               className='lg:col-span-4'
             >
 
-              <p className='text-[9px] uppercase tracking-[0.3em] text-black/35'>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
                 02 / Imagine
               </p>
 
@@ -1109,7 +1109,7 @@ export default function Phantom() {
               >
 
                 <div className='flex items-center justify-between border-b border-white/15 pb-5'>
-                  <p className='text-[8px] uppercase tracking-[0.3em] text-white/35'>
+                  <p className='text-[10px] uppercase tracking-[0.3em] text-white/50'>
                     Specification / Example
                   </p>
                   <div className='flex items-center gap-2'>
@@ -1118,7 +1118,7 @@ export default function Phantom() {
                       transition={{ duration: 1.8, repeat: Infinity }}
                       className='h-1.5 w-1.5 rounded-full bg-white/70'
                     />
-                    <p className='text-[8px] uppercase tracking-[0.28em] text-white/35'>
+                    <p className='text-[10px] uppercase tracking-[0.28em] text-white/50'>
                       Translating
                     </p>
                   </div>
@@ -1137,7 +1137,7 @@ export default function Phantom() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.55, delay: index * 0.12, ease }}
                     >
-                      <p className='text-[8px] uppercase tracking-[0.28em] text-white/30'>
+                      <p className='text-[10px] uppercase tracking-[0.28em] text-white/50'>
                         {label}
                       </p>
                       <p className='mt-3 text-lg uppercase tracking-[-0.02em] text-white/85'>
@@ -1150,7 +1150,7 @@ export default function Phantom() {
                 <div className='py-8'>
                   <div className='mb-5 flex items-center gap-2'>
                     <Sparkles size={13} strokeWidth={1.2} className='text-white/35' />
-                    <p className='text-[8px] uppercase tracking-[0.3em] text-white/35'>
+                    <p className='text-[10px] uppercase tracking-[0.3em] text-white/50'>
                       Generative Prompt
                     </p>
                   </div>
@@ -1195,7 +1195,7 @@ export default function Phantom() {
                 transition={{ duration: 0.75, ease }}
                 className='lg:col-span-7'
               >
-                <p className='text-[9px] uppercase tracking-[0.3em] text-black/35'>
+                <p className='text-[10px] uppercase tracking-[0.3em] text-black/50'>
                   03 / Generate
                 </p>
                 <h3 className='mt-7 text-5xl uppercase leading-[0.88] tracking-[-0.055em] md:text-7xl'>
@@ -1251,21 +1251,21 @@ export default function Phantom() {
               <div className='pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10' />
 
               <div className='pointer-events-none absolute left-5 top-5 z-10 md:left-7 md:top-7'>
-                <p className='text-[8px] uppercase tracking-[0.3em] text-white/45'>
+                <p className='text-[10px] uppercase tracking-[0.3em] text-white/45'>
                   AI / Visual Direction
                 </p>
               </div>
 
               <div className='pointer-events-none absolute bottom-5 left-5 right-5 z-10 flex items-end justify-between md:bottom-7 md:left-7 md:right-7'>
                 <div>
-                  <p className='text-[8px] uppercase tracking-[0.3em] text-white/40'>
+                  <p className='text-[10px] uppercase tracking-[0.3em] text-white/40'>
                     Phantom / Concept Study
                   </p>
                   <p className='mt-2 text-sm uppercase tracking-[0.18em] text-white/75'>
                     Silver / Ivory / Performance
                   </p>
                 </div>
-                <p className='hidden text-[8px] uppercase tracking-[0.3em] text-white/35 md:block'>
+                <p className='hidden text-[10px] uppercase tracking-[0.3em] text-white/50 md:block'>
                   Generated Direction / 01
                 </p>
               </div>
@@ -1273,7 +1273,7 @@ export default function Phantom() {
             </motion.div>
 
             <div className='mt-5 flex flex-col gap-4 border-b border-black/20 pb-6 md:flex-row md:items-center md:justify-between'>
-              <p className='text-[8px] uppercase tracking-[0.28em] text-black/30'>
+              <p className='text-[10px] uppercase tracking-[0.28em] text-black/50'>
                 Prototype generative workflow / Portfolio case study
               </p>
               <p className='max-w-md text-[10px] leading-relaxed text-black/35 md:text-right'>
@@ -1350,7 +1350,7 @@ export default function Phantom() {
             <div className='grid gap-12 lg:grid-cols-12'>
 
               <div className='lg:col-span-3'>
-                <p className='text-[9px] uppercase tracking-[0.32em] text-white/35'>
+                <p className='text-[10px] uppercase tracking-[0.32em] text-white/50'>
                   04 / Behind the Build
                 </p>
               </div>
@@ -1442,7 +1442,7 @@ export default function Phantom() {
                       transition={{ duration: 0.45, ease }}
                       className='col-span-10 md:col-span-5'
                     >
-                      <p className='mb-3 text-[8px] uppercase tracking-[0.3em] opacity-40'>
+                      <p className='mb-3 text-[10px] uppercase tracking-[0.3em] opacity-40'>
                         {item.kicker}
                       </p>
 
@@ -1481,15 +1481,15 @@ export default function Phantom() {
 
             <div className='mt-8 flex flex-col gap-6 border-b border-white/15 pb-8 md:flex-row md:items-end md:justify-between'>
 
-              <p className='max-w-sm text-[9px] uppercase leading-[1.8] tracking-[0.27em] text-white/30'>
+              <p className='max-w-sm text-[10px] uppercase leading-[1.8] tracking-[0.27em] text-white/50'>
                 Frontend development / interaction design / generative systems
               </p>
 
               <div className='flex flex-wrap gap-x-6 gap-y-3'>
-                {['JavaScript', 'Tailwind CSS', 'Framer Motion', 'Generative AI'].map((skill) => (
+                {['JavaScript', 'Tailwind CSS', 'Gemini API', 'CSS Animation'].map((skill) => (
                   <span
                     key={skill}
-                    className='text-[9px] uppercase tracking-[0.25em] text-white/45'
+                    className='text-[10px] uppercase tracking-[0.25em] text-white/45'
                   >
                     {skill} ↗
                   </span>
@@ -1517,11 +1517,11 @@ export default function Phantom() {
           >
 
             <div className='flex items-center justify-between'>
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/35'>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/50'>
                 Phantom / 2026
               </p>
 
-              <p className='hidden text-[9px] uppercase tracking-[0.32em] text-white/25 md:block'>
+              <p className='hidden text-[10px] uppercase tracking-[0.32em] text-white/50 md:block'>
                 End of Case Study / 03
               </p>
             </div>
@@ -1650,12 +1650,12 @@ export default function Phantom() {
             <div className='relative z-10 flex min-h-[72vh] flex-col px-5 py-10 sm:px-6 md:px-10 lg:px-[5vw] lg:py-14'>
 
               <div className='flex items-center justify-between border-t border-black/20 pt-6'>
-                <p className='text-[9px] uppercase tracking-[0.32em] text-black/45'>
+                <p className='text-[10px] uppercase tracking-[0.32em] text-black/45'>
                   Next Project / 04
                 </p>
 
                 <div className='flex items-center gap-3'>
-                  <span className='hidden text-[9px] uppercase tracking-[0.28em] text-black/35 md:block'>
+                  <span className='hidden text-[10px] uppercase tracking-[0.28em] text-black/50 md:block'>
                     View Project
                   </span>
 

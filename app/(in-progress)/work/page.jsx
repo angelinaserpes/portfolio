@@ -18,7 +18,7 @@ const projects = [
     number: '01',
     description:
       'An intelligent retail design platform exploring AI-powered spatial and product experiences.',
-    stack: ['React', 'AI', 'Web Development'],
+    stack: ['JavaScript', 'Three.js', 'Firebase'],
   },
   {
     title: 'AirSense',
@@ -38,7 +38,7 @@ const projects = [
     number: '03',
     description:
       'A cinematic luxury automotive experience built around motion, atmosphere and interaction.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
+    stack: ['HTML', 'Tailwind', 'Gemini API'],
   },
   {
     title: 'Evoltic',
@@ -48,7 +48,7 @@ const projects = [
     number: '04',
     description:
       'An EV charging capacity planner for Mumbai housing societies, built for SPARK-A-THON 2026.',
-    stack: ['React', 'Data', 'Maps'],
+    stack: ['React', 'TypeScript', 'Tailwind'],
   },
   {
     title: 'InAmigos',
@@ -58,7 +58,7 @@ const projects = [
     number: '05',
     description:
       'A digital experience created to communicate the work, purpose and impact of a non-profit organisation.',
-    stack: ['Web Design', 'Frontend', 'UI'],
+    stack: ['React', 'TypeScript', 'Vite'],
   },
   {
     title: 'Revive',
@@ -78,7 +78,7 @@ const projects = [
     number: '07',
     description:
       'A playful coffee storefront combining product discovery with a bright, contemporary interface.',
-    stack: ['Frontend', 'E-commerce', 'UI'],
+    stack: ['React', 'TypeScript', 'Tailwind'],
   },
 ];
 

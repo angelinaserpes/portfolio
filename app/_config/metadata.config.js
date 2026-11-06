@@ -1,6 +1,6 @@
 /** @type {import('next').Metadata} */
 export const rootMetadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://angelinaserpes.vercel.app'),
 
   title: {
     template: '%s | Angelina Serpes',
@@ -8,7 +8,7 @@ export const rootMetadata = {
   },
 
   description:
-    'The personal portfolio of Angelina Serpes — projects, creative work, and digital experiences.',
+    'Angelina Serpes, Computer Engineering student and creative technologist in Mumbai. Seven projects across Python, React and design, plus a hidden fit check.',
 
   generator: 'Next.js',
   applicationName: 'Angelina Serpes',
@@ -28,8 +28,25 @@ export const rootMetadata = {
   creator: 'Angelina Serpes',
   publisher: 'Angelina Serpes',
 
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: 'Angelina Serpes',
+    title: 'Angelina Serpes | Portfolio',
+    description:
+      'Computer Engineering student and creative technologist in Mumbai. Seven projects across Python, React and design.',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Angelina Serpes portfolio' }],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Angelina Serpes | Portfolio',
+    description: 'Computer Engineering student and creative technologist in Mumbai.',
+    images: ['/og.png'],
+  },
+
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };

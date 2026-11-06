@@ -11,4 +11,8 @@ export const socialMedias = [
     href: 'https://www.instagram.com/angelinaserpes/',
     title: 'Instagram',
   },
+  {
+    href: '/angelina-serpes-resume.pdf',
+    title: 'Résumé',
+  },
 ];

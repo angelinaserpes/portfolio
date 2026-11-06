@@ -1,7 +1,7 @@
 import ContactClient from './contact-client.jsx';
 
 export const metadata = {
-  title: 'Contact | Angelina Serpes',
+  title: 'Contact',
   description: 'Get in touch with Angelina Serpes.',
 };
 

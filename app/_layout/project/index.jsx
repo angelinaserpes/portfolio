@@ -29,7 +29,7 @@ export function Project() {
     >
       <div className='container mb-10 flex items-end justify-between'>
         <div>
-          <p className='mb-3 text-[9px] uppercase tracking-[0.28em] opacity-40'>
+          <p className='mb-3 text-[10px] uppercase tracking-[0.28em] opacity-40'>
             Selected project films
           </p>
 
@@ -38,7 +38,7 @@ export function Project() {
           </h2>
         </div>
 
-        <p className='hidden text-[9px] uppercase tracking-[0.22em] opacity-35 md:block'>
+        <p className='hidden text-[10px] uppercase tracking-[0.22em] opacity-50 md:block'>
           04 projects / 04 previews
         </p>
       </div>

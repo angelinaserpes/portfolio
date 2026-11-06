@@ -4,8 +4,8 @@ export const projectOptions = {
       type: 'video',
       source: '/aurevo-demo.mov',
       title: 'Aurevo',
-      start: 2,
-      end: 10,
+      start: 8,
+      end: 20,
     },
     {
       type: 'video',
@@ -25,8 +25,8 @@ export const projectOptions = {
       type: 'video',
       source: '/inamigos-demo.mov',
       title: 'InAmigos',
-      start: 12,
-      end: 21,
+      start: 8,
+      end: 14,
     },
   ],
 };

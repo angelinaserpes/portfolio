@@ -18,10 +18,7 @@ export function Header() {
     >
       {/* portrait */}
       <motion.div
-        className='absolute bottom-0 left-1/2 z-[1] h-[58vh] w-[82vw] md:left-[28%] md:h-[98vh] md:w-[50vw]'
-        style={{
-          transform: 'translateX(-50%)',
-        }}
+        className='absolute bottom-0 left-0 z-[1] h-[74svh] w-full md:left-[28%] md:h-[98vh] md:w-[50vw]'
         initial={{
           opacity: 0,
           y: 40,
@@ -41,7 +38,7 @@ export function Header() {
           alt='Angelina Serpes'
           fill
           priority
-          sizes='(max-width: 767px) 82vw, 50vw'
+          sizes='(max-width: 767px) 100vw, 50vw'
           className='object-contain object-bottom'
         />
       </motion.div>
@@ -124,7 +121,7 @@ export function Header() {
 
       {/* mobile role */}
       <motion.div
-        className='absolute right-6 top-[30%] z-10 md:hidden'
+        className='absolute left-6 top-[12%] z-10 md:hidden'
         initial={{
           opacity: 0,
           y: 20,
@@ -145,7 +142,11 @@ export function Header() {
           />
         </div>
 
-        <h4 className='text-lg leading-tight'>
+        <p className='mb-2 text-[11px] uppercase tracking-[0.25em] opacity-80'>
+          Based in Mumbai, India
+        </p>
+
+        <h4 className='text-xl leading-tight'>
           <span className='block'>
             Student &amp;
           </span>

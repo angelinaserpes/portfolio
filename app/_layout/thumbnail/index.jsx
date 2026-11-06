@@ -62,7 +62,7 @@ export function Thumbnail() {
             </p>
           </div>
 
-          <p className='hidden text-[10px] uppercase tracking-[0.25em] opacity-35 md:block'>
+          <p className='hidden text-[10px] uppercase tracking-[0.25em] opacity-50 md:block'>
             01 — 03
           </p>
 

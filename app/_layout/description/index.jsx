@@ -10,7 +10,7 @@ import { ParallaxFade, ParallaxReveal } from '@/components';
 import { Title, Wrapper } from './index.styled';
 
 const phrase =
-  'I build at the intersection of technology, creativity and design, turning ideas into thoughtful digital experiences.';
+  'I’m a Computer Engineering student who designs and builds the whole thing, from the database to the last hover state.';
 
 const ease = [0.76, 0, 0.24, 1];
 
@@ -28,15 +28,15 @@ export function Description() {
             </Title>
           </div>
 
-          <div className='basis-7/12 lg:basis-3/12'>
+          <div className='basis-full sm:basis-7/12 lg:basis-3/12'>
             <ParallaxFade>
               <Balancer
                 as='p'
                 className='mt-2 text-base lg:text-lg'
               >
-                From software and intelligent systems to visual design, I enjoy
-                experimenting across disciplines and creating things that are
-                functional, intuitive and distinctly human.
+                Seven projects so far: an air-quality app in Python and MySQL,
+                an EV-charging planner, an eco-store on web and Android, and a
+                few websites with more personality than they strictly need.
               </Balancer>
             </ParallaxFade>
           </div>
@@ -101,7 +101,7 @@ export function Description() {
                       color: '#F4EFE8',
                     },
                   }}
-                  className='text-[9px] uppercase tracking-[0.3em] opacity-60'
+                  className='text-[10px] uppercase tracking-[0.3em] opacity-70'
                 >
                   More than the portfolio
                 </motion.p>
@@ -115,7 +115,7 @@ export function Description() {
                       color: '#F4EFE8',
                     },
                   }}
-                  className='hidden text-[9px] uppercase tracking-[0.3em] opacity-60 md:block'
+                  className='hidden text-[10px] uppercase tracking-[0.3em] opacity-60 md:block'
                 >
                   About Angelina
                 </motion.p>

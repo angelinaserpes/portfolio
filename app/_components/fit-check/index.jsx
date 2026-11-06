@@ -86,7 +86,7 @@ export function FitCheck() {
 
   useEffect(() => {
     const show = setTimeout(() => setHint(true), 2500);
-    const hide = setTimeout(() => setHint(false), 14000);
+    const hide = setTimeout(() => setHint(false), 9000);
     return () => {
       clearTimeout(show);
       clearTimeout(hide);
@@ -137,7 +137,7 @@ export function FitCheck() {
   return createPortal(
     <>
       <div className='fc-trigger-wrap'>
-        {hint && !open ? <span className='fc-hint'>psst, check my fit</span> : null}
+        {!open ? <span className={`fc-hint${hint ? ' is-on' : ''}`} aria-hidden='true'>psst, check my fit</span> : null}
         <button
           type='button'
           className='fc-trigger'
