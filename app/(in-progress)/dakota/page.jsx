@@ -421,7 +421,7 @@ export default function Dakota() {
                 }}
                 className='max-w-6xl pb-[0.1em] font-serif text-[clamp(3.6rem,7vw,7.5rem)] leading-[0.96] tracking-[-0.06em]'
               >
-                More than a menu.
+                More than a menu<span className='ml-[0.14em]'>.</span>
               </motion.h2>
 
               <motion.h2
@@ -443,7 +443,7 @@ export default function Dakota() {
                 }}
                 className='pb-[0.1em] text-right font-serif text-[clamp(3.4rem,6.7vw,7.2rem)] italic leading-[1] tracking-[-0.055em] text-[#d98782]'
               >
-                A digital flavour.
+                A digital flavour<span className='ml-[0.14em]'>.</span>
               </motion.h2>
 
               <motion.div
@@ -641,7 +641,7 @@ export default function Dakota() {
               }}
               className='block pb-[0.1em] text-right font-serif normal-case italic text-[#efaaa5]'
             >
-              feel refreshing.
+              feel refreshing<span className='ml-[0.14em]'>.</span>
             </motion.span>
           </motion.h2>
         </section>
@@ -784,7 +784,7 @@ export default function Dakota() {
               </p>
 
               <h2 className='pb-[0.12em] font-serif text-[clamp(3.5rem,6vw,6.7rem)] leading-[0.96] tracking-[-0.055em]'>
-                Built to order.
+                Built to order<span className='ml-[0.14em]'>.</span>
 
                 <span className='block italic text-[#b96f6a]'>
                   Made your way.
@@ -1001,7 +1001,7 @@ export default function Dakota() {
                   Built to
 
                   <span className='block pb-[0.1em] text-right font-serif normal-case italic text-[#efaaa5]'>
-                    feel alive.
+                    feel alive<span className='ml-[0.14em]'>.</span>
                   </span>
                 </motion.h2>
 
@@ -1204,7 +1204,7 @@ export default function Dakota() {
                 }}
                 className='pb-[0.12em] text-right font-serif text-[clamp(4rem,9.5vw,10rem)] italic leading-[0.96] tracking-[-0.07em] text-[#d98782]'
               >
-                design.
+                design<span className='ml-[0.14em]'>.</span>
               </motion.h2>
             </div>
 

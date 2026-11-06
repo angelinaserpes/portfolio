@@ -404,7 +404,7 @@ function TechnicalIndex() {
             <br />
 
             <span className='font-serif italic text-[#806F65]'>
-              work.
+              work<span className='ml-[0.14em]'>.</span>
             </span>
           </h2>
         </div>
@@ -590,7 +590,7 @@ function CertificationArchive() {
             <br />
 
             <span className='font-serif italic text-[#827267]'>
-              along the way.
+              along the way<span className='ml-[0.14em]'>.</span>
             </span>
           </h2>
         </div>
@@ -984,7 +984,7 @@ export default function ExperiencePage() {
                   <br />
 
                   <span className='font-serif italic text-[#827267]'>
-                    between things.
+                    between things<span className='ml-[0.14em]'>.</span>
                   </span>
                 </h1>
 
@@ -1022,7 +1022,7 @@ export default function ExperiencePage() {
                 <br />
 
                 <span className='font-serif italic text-[#827267]'>
-                  worked.
+                  worked<span className='ml-[0.14em]'>.</span>
                 </span>
               </h2>
             </div>
@@ -1073,7 +1073,7 @@ export default function ExperiencePage() {
                 <br />
 
                 <span className='font-serif italic text-[#AAA297]'>
-                  Role-Based Control.
+                  Role-Based Control<span className='ml-[0.14em]'>.</span>
                 </span>
               </h2>
             </div>
@@ -1254,7 +1254,7 @@ export default function ExperiencePage() {
 
                 <span className='font-serif italic text-[#827267]'>
                   {' '}
-                  at FCRIT.
+                  at FCRIT<span className='ml-[0.14em]'>.</span>
                 </span>
               </p>
 

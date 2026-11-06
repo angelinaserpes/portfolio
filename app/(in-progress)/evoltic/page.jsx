@@ -10,8 +10,8 @@ const data = {
   tagline: ['Plan before', 'you plug in.'],
   intro:
     'A neutral planner that reads a housing society’s electricity supply and gives the committee one clear, defensible number before anyone installs a charger.',
-  heroVideo: '/evoltic-hero-loop.mp4',
-  heroPoster: '/images/evoltic-hero-poster.jpg',
+  heroVideo: '/evoltic-hero-loop.mp4?v=2',
+  heroPoster: '/images/evoltic-hero-poster.jpg?v=2',
   info: [
     ['Role', 'Design & Development'],
     ['Focus', 'Data / UX / Sustainability'],

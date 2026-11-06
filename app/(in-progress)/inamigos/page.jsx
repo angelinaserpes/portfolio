@@ -406,7 +406,7 @@ export default function InAmigos() {
                 }}
                 className='mt-1 pb-[0.1em] text-right font-serif text-[clamp(3.2rem,6.7vw,7.2rem)] italic leading-[1] tracking-[-0.055em] text-[#b97868]'
               >
-                So should the experience.
+                So should the experience<span className='ml-[0.14em]'>.</span>
               </motion.p>
 
               <motion.div
@@ -507,7 +507,7 @@ export default function InAmigos() {
                 }}
                 className='block pb-[0.1em] text-right font-serif normal-case italic text-[#b97868]'
               >
-                One purpose.
+                One purpose<span className='ml-[0.14em]'>.</span>
               </motion.span>
             </h2>
           </motion.div>
@@ -965,7 +965,7 @@ export default function InAmigos() {
                   Purpose,
 
                   <span className='block pb-[0.1em] text-right font-serif normal-case italic text-[#b97868]'>
-                    translated digitally.
+                    translated digitally<span className='ml-[0.14em]'>.</span>
                   </span>
                 </motion.h2>
 
@@ -1167,7 +1167,7 @@ export default function InAmigos() {
                 }}
                 className='pb-[0.12em] text-right font-serif text-[clamp(4rem,9.5vw,10rem)] italic leading-[0.96] tracking-[-0.07em] text-[#b97868]'
               >
-                real impact.
+                real impact<span className='ml-[0.14em]'>.</span>
               </motion.h2>
             </div>
 

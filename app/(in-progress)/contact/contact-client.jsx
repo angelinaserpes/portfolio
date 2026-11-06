@@ -131,7 +131,7 @@ export default function ContactClient() {
               </h1>
 
               <h1 className='ml-[8vw] font-serif text-[clamp(4.8rem,10.5vw,11.5rem)] italic leading-[0.84] tracking-[-0.075em] text-[#8D786B] md:ml-[12vw]'>
-                talk.
+                talk<span className='ml-[0.14em]'>.</span>
               </h1>
             </motion.div>
           </div>
@@ -244,7 +244,7 @@ export default function ContactClient() {
                 <br />
 
                 <span className='font-serif italic text-[#8D786B]'>
-                  out there.
+                  out there<span className='ml-[0.14em]'>.</span>
                 </span>
               </h2>
             </div>
