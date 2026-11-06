@@ -2,12 +2,14 @@
 
 import { useRef, useState } from 'react';
 
-import { Center } from '@/components';
+import Link from 'next/link';
 
 export function ProjectSlider({
   type,
   source,
   title,
+  href,
+  category,
   start = 0,
   end,
 }) {
@@ -53,14 +55,10 @@ export function ProjectSlider({
   if (type !== 'video') return null;
 
   return (
-    <Center
-      className='group relative w-1/4 overflow-hidden rounded-[18px] bg-black'
-      style={{
-        minWidth: '220px',
-        height: '20vw',
-        minHeight: '280px',
-        maxHeight: '430px',
-      }}
+    <Link
+      href={href}
+      className='group relative block aspect-[16/10] w-full overflow-hidden rounded-[18px] bg-black'
+      aria-label={`${title} case study`}
     >
       <video
         ref={videoRef}
@@ -71,7 +69,7 @@ export function ProjectSlider({
         preload='metadata'
         onLoadedMetadata={startVideo}
         onTimeUpdate={handleTimeUpdate}
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
+        className={`absolute inset-0 h-full w-full object-cover object-top transition-[opacity,transform] duration-700 group-hover:scale-[1.04] ${
           fading ? 'opacity-0' : 'opacity-100'
         }`}
       />
@@ -80,8 +78,8 @@ export function ProjectSlider({
 
       <div className='pointer-events-none absolute bottom-5 left-5 right-5 flex items-end justify-between text-white'>
         <div>
-          <p className='mb-2 text-[10px] uppercase tracking-[0.25em] opacity-55'>
-            Project film
+          <p className='mb-2 text-[10px] uppercase tracking-[0.25em] opacity-70'>
+            {category}
           </p>
 
           <p className='text-[clamp(1rem,1.3vw,1.3rem)] tracking-[-0.025em]'>
@@ -89,10 +87,10 @@ export function ProjectSlider({
           </p>
         </div>
 
-        <p className='text-[10px] uppercase tracking-[0.2em] opacity-45'>
-          Preview
+        <p className='text-[10px] uppercase tracking-[0.2em] opacity-70 transition-transform duration-300 group-hover:translate-x-1'>
+          View ↗
         </p>
       </div>
-    </Center>
+    </Link>
   );
 }

@@ -1,32 +1,12 @@
 'use client';
 
-import { useRef } from 'react';
-
-import { motion, useScroll, useTransform } from 'framer-motion';
-
 import { projectOptions } from '@/data';
 
 import { ProjectSlider } from './slider';
 
 export function Project() {
-  const container = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start end', 'end start'],
-  });
-
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['5%', '-5%'],
-  );
-
   return (
-    <section
-      ref={container}
-      className='overflow-hidden py-24 md:py-32'
-    >
+    <section className='overflow-hidden py-24 md:py-32'>
       <div className='container mb-10 flex items-end justify-between'>
         <div>
           <p className='mb-3 text-[10px] uppercase tracking-[0.28em] opacity-40'>
@@ -39,21 +19,18 @@ export function Project() {
         </div>
 
         <p className='hidden text-[10px] uppercase tracking-[0.22em] opacity-50 md:block'>
-          04 projects / 04 previews
+          {String(projectOptions.first.length).padStart(2, '0')} project films
         </p>
       </div>
 
-      <motion.div
-        style={{ x }}
-        className='flex w-full gap-4 px-6 md:gap-5'
-      >
+      <div className='grid w-full grid-cols-1 gap-4 px-6 sm:grid-cols-2 md:gap-5 md:px-8 lg:grid-cols-3'>
         {projectOptions.first.map((project) => (
           <ProjectSlider
             key={project.title}
             {...project}
           />
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
