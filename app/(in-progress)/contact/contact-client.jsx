@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import { motion } from 'framer-motion';
 import {
   ArrowDown,
@@ -14,6 +16,32 @@ import Link from 'next/link';
 import { Navbar, Transition } from '@/layout';
 
 const ease = [0.76, 0, 0.24, 1];
+
+function MumbaiTime() {
+  const [time, setTime] = useState('');
+
+  useEffect(() => {
+    const format = () =>
+      new Intl.DateTimeFormat('en-IN', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Kolkata',
+      }).format(new Date());
+    setTime(format());
+    const id = setInterval(() => setTime(format()), 30000);
+    return () => clearInterval(id);
+  }, []);
+
+  return <span suppressHydrationWarning>{time || '—'}</span>;
+}
+
+const quickLinks = [
+  { label: 'Email', href: 'mailto:angelinaserpes@gmail.com', icon: Mail },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/angelina-serpes', icon: Linkedin, external: true },
+  { label: 'GitHub', href: 'https://github.com/angelinaserpes', icon: Github, external: true },
+  { label: 'Résumé', href: '/angelina-serpes-resume.pdf', icon: FileText, external: true },
+];
 
 function ContactRow({
   number,
@@ -90,7 +118,8 @@ export default function ContactClient() {
             </div>
           </div>
 
-          <div className='flex flex-1 flex-col justify-center py-16 md:py-20'>
+          <div className='flex flex-1 flex-col justify-center gap-14 py-16 md:py-20 lg:flex-row lg:items-center lg:justify-between'>
+            <div>
             <motion.p
               initial={{
                 opacity: 0,
@@ -134,12 +163,80 @@ export default function ContactClient() {
                 talk<span className='ml-[0.05em]'>.</span>
               </h1>
             </motion.div>
+            </div>
+
+            <motion.aside
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.9, ease }}
+              className='w-full max-w-[440px] border border-[#332C28]/15 bg-[#F8F4EF] lg:mr-[2vw]'
+            >
+              <div className='grid grid-cols-2 border-b border-[#332C28]/15'>
+                <div className='border-r border-[#332C28]/15 p-6'>
+                  <p className='text-[10px] uppercase tracking-[0.24em] opacity-50'>
+                    Mumbai, now
+                  </p>
+                  <p className='mt-3 text-3xl tracking-[-0.04em]'>
+                    <MumbaiTime />
+                  </p>
+                  <p className='mt-1 text-xs opacity-50'>IST, UTC +5:30</p>
+                </div>
+
+                <div className='p-6'>
+                  <p className='text-[10px] uppercase tracking-[0.24em] opacity-50'>
+                    Currently
+                  </p>
+                  <p className='mt-3 text-lg leading-tight tracking-[-0.02em]'>
+                    B.Tech Computer Engineering
+                  </p>
+                  <p className='mt-1 text-xs opacity-50'>FCRIT · 2025 to 2029</p>
+                </div>
+              </div>
+
+              <div className='border-b border-[#332C28]/15 p-6'>
+                <p className='text-[10px] uppercase tracking-[0.24em] opacity-50'>
+                  Open to
+                </p>
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {['Internships', 'Frontend', 'Design engineering', 'Python projects', 'Collabs'].map((tag) => (
+                    <span
+                      key={tag}
+                      className='rounded-full border border-[#332C28]/20 px-3 py-1.5 text-xs'
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className='grid grid-cols-2'>
+                {quickLinks.map(({ label, href, icon: Icon, external }, index) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                    className={`group flex items-center justify-between p-5 transition-colors duration-300 hover:bg-[#332C28] hover:text-[#F3EDE6] ${index % 2 === 0 ? 'border-r border-[#332C28]/15' : ''} ${index < 2 ? 'border-b border-[#332C28]/15' : ''}`}
+                  >
+                    <span className='flex items-center gap-3 text-sm'>
+                      <Icon size={15} strokeWidth={1.3} />
+                      {label}
+                    </span>
+                    <ArrowUpRight
+                      size={14}
+                      strokeWidth={1.2}
+                      className='transition-transform duration-300 group-hover:rotate-45'
+                    />
+                  </Link>
+                ))}
+              </div>
+            </motion.aside>
           </div>
 
           <div className='flex items-end justify-between border-t border-[#332C28]/20 pt-5'>
-            <p className='max-w-[360px] text-[12px] leading-[1.7] opacity-48'>
-              Computer Engineering student building across
-              software, AI and thoughtful digital experiences.
+            <p className='max-w-[360px] text-[13px] leading-[1.7] opacity-60'>
+              Fastest reply: email. Everything else lives below,
+              plus the usual places to find me.
             </p>
 
             <motion.div
