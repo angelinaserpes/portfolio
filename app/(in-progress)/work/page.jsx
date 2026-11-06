@@ -104,7 +104,7 @@ export default function Work() {
       <main className='min-h-screen bg-[#E8DCCB] text-[#62574F]'>
 
         {/* HERO */}
-        <section className='bg-[#F4EFE8]'>
+        <section className='work-dots bg-[#F4EFE8]'>
           <div className='container flex min-h-[82vh] flex-col justify-end pb-16 pt-32'>
 
             <motion.div
@@ -187,7 +187,7 @@ export default function Work() {
         </section>
 
         {/* PROJECTS */}
-        <section className='bg-[#E8DCCB]'>
+        <section className='work-grid bg-[#E8DCCB]'>
           <div className='container'>
 
             {projects.map((project) => (
@@ -355,7 +355,7 @@ export default function Work() {
         </section>
 
         {/* ABOUT TRANSITION */}
-        <section className='bg-[#F4EFE8]'>
+        <section className='work-dots bg-[#F4EFE8]'>
           <div className='container py-28 md:py-40'>
 
             <motion.div
