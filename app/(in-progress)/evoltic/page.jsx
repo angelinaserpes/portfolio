@@ -275,16 +275,15 @@ export default function Evoltic() {
             }}
             className='group relative overflow-hidden bg-[#111]'
           >
-            <motion.img
-              src='/images/evoltic.png'
-              alt='Evoltic app'
-              whileHover={{
-                scale: 1.025,
-              }}
-              transition={{
-                duration: 1,
-                ease,
-              }}
+            <video
+              src='/evoltic-demo.mp4'
+              poster='/images/evoltic-poster.jpg'
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload='metadata'
+              aria-label='Evoltic demo: landing page and the Check your building planner'
               className='block h-auto w-full object-contain'
             />
 

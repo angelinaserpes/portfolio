@@ -9,6 +9,13 @@ export const projectOptions = {
     },
     {
       type: 'video',
+      source: '/evoltic-demo.mp4',
+      title: 'Evoltic',
+      start: 36,
+      end: 47,
+    },
+    {
+      type: 'video',
       source: '/phantom-demo.mov',
       title: 'Phantom',
       start: 2,
@@ -20,13 +27,6 @@ export const projectOptions = {
       title: 'InAmigos',
       start: 12,
       end: 21,
-    },
-    {
-      type: 'video',
-      source: '/dakota-demo.mov',
-      title: 'Dakota Cafe',
-      start: 4,
-      end: 12,
     },
   ],
 };
