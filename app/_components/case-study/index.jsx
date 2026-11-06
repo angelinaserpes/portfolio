@@ -91,7 +91,7 @@ function RevealRow({ row, index, t }) {
             loading='lazy'
             variants={{ rest: { y: 12 }, hover: { y: -4 } }}
             transition={{ duration: 1, ease }}
-            className='max-h-[84%] w-full rounded-md object-cover object-top shadow-2xl'
+            className={row.fit === 'contain' ? 'h-[88%] w-auto max-w-full rounded-md object-contain shadow-2xl' : 'max-h-[84%] w-full rounded-md object-cover object-top shadow-2xl'}
           />
         </motion.div>
       ) : null}
