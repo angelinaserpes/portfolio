@@ -754,7 +754,7 @@ export default function AirSense() {
                     duration: 0.55,
                     ease,
                   }}
-                  className='text-[16vw] leading-[0.8] tracking-[-0.07em]'
+                  className='pb-[0.16em] text-[16vw] leading-[0.8] tracking-[-0.07em]'
                 >
                   Phantom
                 </motion.h2>
