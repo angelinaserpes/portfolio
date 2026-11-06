@@ -423,6 +423,61 @@ export default function Evoltic() {
           </motion.div>
         </section>
 
+        {/* SCREENS */}
+        <section className='px-6 py-20 md:px-12 lg:px-[11vw] lg:py-32'>
+          <motion.div
+            {...fadeUp}
+            className='mb-12 flex items-end justify-between border-t border-[#1b1b1b]/20 pt-6'
+          >
+            <p className='text-[10px] uppercase tracking-[0.3em] text-[#1b1b1b]/40'>
+              Inside the product
+            </p>
+            <p className='hidden text-[10px] uppercase tracking-[0.3em] text-[#1b1b1b]/40 md:block'>
+              Landing / Call to action
+            </p>
+          </motion.div>
+
+          <motion.figure {...fadeUp} className='group overflow-hidden bg-[#111]'>
+            <img
+              src='/images/evoltic-screen-hero.jpg'
+              alt='Evoltic landing page: know how many EVs your building can safely charge'
+              loading='lazy'
+              className='block h-auto w-full transition-transform duration-1000 group-hover:scale-[1.02]'
+            />
+          </motion.figure>
+          <div className='mt-4 flex justify-between text-[10px] uppercase tracking-[0.25em] text-[#1b1b1b]/45'>
+            <span>01 · The hook</span>
+            <span>One clear number before anyone installs a charger</span>
+          </div>
+
+          <div className='mt-20 grid items-end gap-10 md:mt-28 md:grid-cols-[0.7fr_1.3fr]'>
+            <motion.div {...fadeUp}>
+              <p className='mb-5 text-[10px] uppercase tracking-[0.3em] text-[#1b1b1b]/40'>
+                02 · The close
+              </p>
+              <h3 className='text-4xl leading-[1] tracking-[-0.04em] md:text-6xl'>
+                Plan before
+                <br />
+                you plug in.
+              </h3>
+              <p className='mt-6 max-w-sm text-sm leading-relaxed text-[#1b1b1b]/60'>
+                The page ends where the decision starts: one button to check
+                your building, and a footer that keeps the project honest,
+                built for SPARK-A-THON 2026.
+              </p>
+            </motion.div>
+
+            <motion.figure {...fadeUp} className='group overflow-hidden bg-[#111]'>
+              <img
+                src='/images/evoltic-screen-plan.jpg'
+                alt='Evoltic closing section: plan before you plug in'
+                loading='lazy'
+                className='block h-auto w-full transition-transform duration-1000 group-hover:scale-[1.02]'
+              />
+            </motion.figure>
+          </div>
+        </section>
+
         {/* FEATURES */}
         <section
           ref={designerRef}
