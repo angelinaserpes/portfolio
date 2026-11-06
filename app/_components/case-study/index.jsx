@@ -10,6 +10,11 @@ import { Transition } from '@/layout';
 
 const ease = [0.22, 1, 0.36, 1];
 
+const THEMES = {
+  dark: { bg: '#0d0d0d', bg2: '#151515', fg: '#eeeae2', light: '#eeeae2', ink: '#111111', wipe: '#101010', inkRGB: '17,17,17', fgRGB: '238,234,226' },
+  earth: { bg: '#173d32', bg2: '#1f4a3d', fg: '#eee9df', light: '#eee9df', ink: '#173d32', wipe: '#173d32', inkRGB: '23,61,50', fgRGB: '238,233,223' },
+};
+
 const fadeUp = {
   initial: { opacity: 0, y: 50 },
   whileInView: { opacity: 1, y: 0 },
@@ -58,7 +63,7 @@ function Pulse({ label }) {
 }
 
 /** Hover row that wipes dark and reveals an image, like Phantom's model list. */
-function RevealRow({ row, index }) {
+function RevealRow({ row, index, t }) {
   return (
     <motion.div
       initial='rest'
@@ -72,7 +77,7 @@ function RevealRow({ row, index }) {
       <motion.div
         variants={{ rest: { x: '-101%' }, hover: { x: '0%' } }}
         transition={{ duration: 0.55, ease }}
-        className='pointer-events-none absolute inset-0 z-0 bg-[#101010]'
+        className='pointer-events-none absolute inset-0 z-0 bg-[var(--cs-wipe)]'
       />
       {row.image ? (
         <motion.div
@@ -92,20 +97,20 @@ function RevealRow({ row, index }) {
       ) : null}
       <div className='relative z-20 grid min-h-[150px] grid-cols-12 items-center py-10 md:min-h-[190px] md:py-14'>
         <motion.span
-          variants={{ rest: { color: 'rgba(17,17,17,0.35)' }, hover: { color: 'rgba(238,234,226,0.38)' } }}
+          variants={{ rest: { color: `rgba(${t.inkRGB},0.35)` }, hover: { color: `rgba(${t.fgRGB},0.38)` } }}
           className='col-span-2 text-xs md:col-span-1'
         >
           {String(index + 1).padStart(2, '0')}
         </motion.span>
         <motion.div
-          variants={{ rest: { x: 0, color: '#111111' }, hover: { x: 18, color: '#eeeae2' } }}
+          variants={{ rest: { x: 0, color: t.ink }, hover: { x: 18, color: t.fg } }}
           transition={{ duration: 0.45, ease }}
           className='col-span-10 md:col-span-5'
         >
           <h3 className='text-4xl uppercase leading-none tracking-[-0.055em] md:text-6xl lg:text-7xl'>{row.name}</h3>
         </motion.div>
         <motion.p
-          variants={{ rest: { color: 'rgba(17,17,17,0.45)', opacity: 1 }, hover: { color: 'rgba(238,234,226,0.55)', opacity: 1 } }}
+          variants={{ rest: { color: `rgba(${t.inkRGB},0.45)`, opacity: 1 }, hover: { color: `rgba(${t.fgRGB},0.55)`, opacity: 1 } }}
           className='col-span-10 col-start-3 mt-3 max-w-xs text-sm leading-relaxed md:col-span-4 md:col-start-auto md:mt-0 lg:opacity-100'
         >
           <span className='mb-2 block text-[9px] uppercase tracking-[0.25em] opacity-70'>{row.type}</span>
@@ -116,7 +121,7 @@ function RevealRow({ row, index }) {
   );
 }
 
-function BuildRow({ item, index }) {
+function BuildRow({ item, index, t }) {
   return (
     <motion.div
       initial='rest'
@@ -129,17 +134,17 @@ function BuildRow({ item, index }) {
       <motion.div
         variants={{ rest: { x: '-101%' }, hover: { x: '0%' } }}
         transition={{ duration: 0.55, ease }}
-        className='pointer-events-none absolute inset-0 bg-[#eeeae2]'
+        className='pointer-events-none absolute inset-0 bg-[var(--cs-light)]'
       />
       <div className='relative z-10 grid min-h-[170px] grid-cols-12 items-center gap-y-5 py-9 md:min-h-[190px] md:py-12'>
         <motion.span
-          variants={{ rest: { color: 'rgba(255,255,255,0.28)' }, hover: { color: 'rgba(17,17,17,0.35)' } }}
+          variants={{ rest: { color: 'rgba(255,255,255,0.28)' }, hover: { color: `rgba(${t.inkRGB},0.35)` } }}
           className='col-span-2 text-[10px] md:col-span-1'
         >
           {String(index + 1).padStart(2, '0')}
         </motion.span>
         <motion.div
-          variants={{ rest: { x: 0, color: '#eeeae2' }, hover: { x: 14, color: '#111111' } }}
+          variants={{ rest: { x: 0, color: t.fg }, hover: { x: 14, color: t.ink } }}
           transition={{ duration: 0.45, ease }}
           className='col-span-10 md:col-span-5'
         >
@@ -147,7 +152,7 @@ function BuildRow({ item, index }) {
           <h3 className='text-4xl uppercase leading-none tracking-[-0.055em] md:text-6xl lg:text-7xl'>{item.title}</h3>
         </motion.div>
         <motion.p
-          variants={{ rest: { color: 'rgba(255,255,255,0.36)' }, hover: { color: 'rgba(17,17,17,0.58)' } }}
+          variants={{ rest: { color: 'rgba(255,255,255,0.36)' }, hover: { color: `rgba(${t.inkRGB},0.58)` } }}
           className='col-span-10 col-start-3 max-w-lg text-sm leading-relaxed md:col-span-5 md:col-start-auto'
         >
           {item.description}
@@ -176,17 +181,19 @@ export function CaseStudy({ data, children }) {
   const showY = useTransform(showP, [0, 1], [70, -70]);
 
   const d = data;
+  const T = THEMES[d.theme] || THEMES.dark;
+  const vars = { '--cs-bg': T.bg, '--cs-bg2': T.bg2, '--cs-fg': T.fg, '--cs-light': T.light, '--cs-ink': T.ink, '--cs-wipe': T.wipe };
 
   return (
     <Transition>
-      <main className='overflow-hidden bg-[#0d0d0d] text-[#eeeae2]'>
+      <main className='overflow-hidden bg-[var(--cs-bg)] text-[var(--cs-fg)]' style={vars}>
         {/* HERO */}
-        <section ref={heroRef} className='relative min-h-[100svh] overflow-hidden bg-[#0d0d0d]'>
+        <section ref={heroRef} className='relative min-h-[100svh] overflow-hidden bg-[var(--cs-bg)]'>
           {d.heroImage ? (
             <motion.div style={{ scale: reduce ? 1 : heroVideoScale }} className='absolute inset-0'>
               <img src={d.heroImage} alt='' className='h-full w-full object-cover opacity-45' />
-              <div className='absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/75 to-[#0d0d0d]/20' />
-              <div className='absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/40' />
+              <div className='absolute inset-0' style={{ background: 'linear-gradient(to right, var(--cs-bg), color-mix(in srgb, var(--cs-bg) 75%, transparent), color-mix(in srgb, var(--cs-bg) 20%, transparent))' }} />
+              <div className='absolute inset-0' style={{ background: 'linear-gradient(to top, var(--cs-bg), transparent 55%, color-mix(in srgb, var(--cs-bg) 40%, transparent))' }} />
             </motion.div>
           ) : null}
           {d.heroVideo ? (
@@ -196,8 +203,8 @@ export function CaseStudy({ data, children }) {
                 poster={d.heroPoster}
                 className='h-full w-full object-cover opacity-70'
               />
-              <div className='absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/70 to-[#0d0d0d]/10' />
-              <div className='absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/40' />
+              <div className='absolute inset-0' style={{ background: 'linear-gradient(to right, var(--cs-bg), color-mix(in srgb, var(--cs-bg) 70%, transparent), color-mix(in srgb, var(--cs-bg) 10%, transparent))' }} />
+              <div className='absolute inset-0' style={{ background: 'linear-gradient(to top, var(--cs-bg), transparent 55%, color-mix(in srgb, var(--cs-bg) 40%, transparent))' }} />
             </motion.div>
           ) : !d.heroImage && (
             <div className='pointer-events-none absolute left-1/2 top-1/2 h-[55vw] w-[55vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.035] blur-[120px]' />
@@ -236,7 +243,7 @@ export function CaseStudy({ data, children }) {
                   animate={{ y: '0%' }}
                   transition={{ duration: 1.25, delay: 0.1, ease }}
                   style={{ y: reduce ? 0 : titleY }}
-                  className='whitespace-nowrap text-[15vw] font-medium uppercase leading-[0.8] tracking-[-0.075em] text-[#eeeae2]'
+                  className='whitespace-nowrap text-[15vw] font-medium uppercase leading-[0.8] tracking-[-0.075em] text-[var(--cs-fg)]'
                 >
                   {d.title}
                 </motion.h1>
@@ -269,7 +276,7 @@ export function CaseStudy({ data, children }) {
                 <p className='text-[10px] uppercase tracking-[0.25em] text-white/55'>Angelina Serpes</p>
               </div>
               <motion.a
-                href='#case-film'
+                href={d.film || d.filmImage ? '#case-film' : '#case-explore'}
                 whileHover={{ scale: 1.08, rotate: 4 }}
                 whileTap={{ scale: 0.96 }}
                 className='flex h-24 w-24 items-center justify-center rounded-full border border-white/20 text-center md:h-28 md:w-28'
@@ -315,6 +322,7 @@ export function CaseStudy({ data, children }) {
         </section>
 
         {/* FILM */}
+        {d.film || d.filmImage ? (
         <section id='case-film' ref={filmRef} className='pb-32 pt-12 md:pb-44'>
           <div className='px-6 pb-14 md:px-12 lg:px-[10vw]'>
             <div className='flex items-center justify-between border-t border-white/15 pt-6'>
@@ -336,9 +344,10 @@ export function CaseStudy({ data, children }) {
             <div className='pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10' />
           </motion.div>
         </section>
+        ) : null}
 
         {/* EXPLORE (light) */}
-        <section className='bg-[#eeeae2] px-5 py-20 text-[#111] sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[6vw] lg:py-44'>
+        <section id='case-explore' className='bg-[var(--cs-light)] px-5 py-20 text-[var(--cs-ink)] sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[6vw] lg:py-44'>
           <motion.div {...fadeUp}>
             <p className='mb-12 text-[9px] uppercase tracking-[0.32em] text-black/40'>{d.explore.label}</p>
             <h2 className='text-[clamp(4rem,10vw,10rem)] uppercase leading-[0.8] tracking-[-0.075em]'>
@@ -349,16 +358,16 @@ export function CaseStudy({ data, children }) {
             <p className='mt-10 hidden text-[10px] uppercase tracking-[0.3em] text-black/40 lg:block'>Hover the rows to look inside →</p>
           </motion.div>
         </section>
-        <section className='bg-[#eeeae2] px-5 pb-24 text-[#111] sm:px-6 md:px-12 md:pb-32 lg:px-[8vw] lg:pb-44'>
+        <section className='bg-[var(--cs-light)] px-5 pb-24 text-[var(--cs-ink)] sm:px-6 md:px-12 md:pb-32 lg:px-[8vw] lg:pb-44'>
           <div className='border-t border-black/20'>
             {d.explore.rows.map((row, i) => (
-              <RevealRow key={row.name} row={row} index={i} />
+              <RevealRow key={row.name} row={row} index={i} t={T} />
             ))}
           </div>
         </section>
 
         {/* SHOWCASE */}
-        <section ref={showRef} className='relative bg-[#151515] px-5 py-20 sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[8vw] lg:py-44'>
+        <section ref={showRef} className='relative bg-[var(--cs-bg2)] px-5 py-20 sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[8vw] lg:py-44'>
           <div className='grid gap-20 lg:grid-cols-12'>
             <motion.div style={{ y: reduce ? 0 : showY }} className='lg:col-span-5'>
               <p className='mb-7 text-[9px] uppercase tracking-[0.32em] text-white/35'>02 / {d.showcase.label}</p>
@@ -377,7 +386,11 @@ export function CaseStudy({ data, children }) {
                 transition={{ duration: 1, ease }}
                 className='relative overflow-hidden bg-black'
               >
-                {d.showcase.video ? (
+                {d.showcase.code ? (
+                  <pre className='m-0 overflow-x-auto bg-[#0b0b0b] p-6 font-mono text-[12px] leading-[1.7] text-[#d7d2c6] md:p-8 md:text-[13px]'>
+                    <code>{d.showcase.code}</code>
+                  </pre>
+                ) : d.showcase.video ? (
                   <LoopVideo
                     src={d.showcase.video}
                     start={d.showcase.start}
@@ -429,7 +442,7 @@ export function CaseStudy({ data, children }) {
         {children}
 
         {/* MARQUEE */}
-        <section className='overflow-hidden border-y border-white/10 bg-[#0d0d0d] py-8'>
+        <section className='overflow-hidden border-y border-white/10 bg-[var(--cs-bg)] py-8'>
           <motion.div
             animate={reduce ? { x: '0%' } : { x: ['0%', '-50%'] }}
             transition={reduce ? { duration: 0 } : { duration: 22, repeat: Infinity, ease: 'linear' }}
@@ -467,7 +480,7 @@ export function CaseStudy({ data, children }) {
             </div>
             <div className='mt-16 border-t border-white/15 md:mt-24 lg:mt-32'>
               {d.build.rows.map((item, i) => (
-                <BuildRow key={item.title} item={item} index={i} />
+                <BuildRow key={item.title} item={item} index={i} t={T} />
               ))}
             </div>
             <div className='mt-14 flex flex-wrap gap-x-6 gap-y-3'>
@@ -545,7 +558,7 @@ export function CaseStudy({ data, children }) {
           <motion.section
             initial='rest'
             whileHover='hover'
-            className='group relative min-h-[72vh] cursor-pointer overflow-hidden bg-[#eeeae2] text-[#111]'
+            className='group relative min-h-[72vh] cursor-pointer overflow-hidden bg-[var(--cs-light)] text-[var(--cs-ink)]'
           >
             <motion.div
               variants={{ rest: { opacity: 0, scale: 1.1, filter: 'blur(18px)' }, hover: { opacity: 0.28, scale: 1, filter: 'blur(0px)' } }}

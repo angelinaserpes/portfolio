@@ -3,6 +3,7 @@
 import { CaseStudy } from '@/app/_components/case-study';
 
 const data = {
+  theme: 'earth',
   number: '06',
   title: 'Revive',
   category: 'Sustainability / E-commerce',

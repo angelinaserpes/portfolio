@@ -140,7 +140,6 @@ const data = {
       'It calculates the Indian AQI with the CPCB method, shows trends and comparisons across stations, and highlights the best outdoor window from the forecast.',
     ],
   },
-  filmImage: '/images/airsense.png',
   explore: {
     label: 'Five pages / One dashboard',
     lines: ['Built to', 'be read.'],
@@ -153,11 +152,25 @@ const data = {
     ],
   },
   showcase: {
-    label: 'Three versions',
-    lines: ['Prototype.', 'SQL. Live.'],
-    body: 'Built in three stages: a Tkinter prototype with sample data, a MySQL version with SQL queries for trends and comparisons, and a live version on the OpenAQ and Open-Meteo APIs.',
-    image: '/images/airsense.png',
-    caption: 'AirSense / Air Quality App',
+    label: 'Under the hood',
+    lines: ['The maths.', 'Not magic.'],
+    body: 'Every AQI in AirSense comes from this: a sub-index per pollutant from the CPCB breakpoints, with the highest one becoming the AQI. Built in three stages: a Tkinter prototype, a MySQL version and a live API version.',
+    code: `# airsense_data.py (simplified): the Indian AQI, the CPCB way
+def sub_index(pollutant, concentration):
+    low_c, low_i = 0.0, 0.0
+    for high_c, high_i in BREAKPOINTS[pollutant]:
+        if concentration <= high_c:
+            return round(low_i + (concentration - low_c)
+                         * (high_i - low_i) / (high_c - low_c))
+        low_c, low_i = high_c, high_i
+    return 500
+
+
+def calc_aqi(averages):
+    subs = {p: sub_index(p, v) for p, v in averages.items()}
+    dominant = max(subs, key=subs.get)
+    return subs[dominant], dominant`,
+    caption: 'Data layer / Python',
   },
   marquee: ['Collect', 'Calculate', 'Compare', 'Forecast', 'Breathe'],
   build: {
