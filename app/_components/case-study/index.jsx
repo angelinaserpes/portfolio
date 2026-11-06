@@ -83,7 +83,7 @@ function RevealRow({ row, index, t }) {
         <motion.div
           variants={{ rest: { opacity: 0, x: 100, scale: 0.92 }, hover: { opacity: 1, x: 0, scale: 1 } }}
           transition={{ duration: 0.65, ease }}
-          className='pointer-events-none absolute bottom-0 right-[5%] top-0 z-10 hidden w-[40%] items-center justify-center lg:flex'
+          className='pointer-events-none absolute bottom-0 right-[5%] top-0 z-30 hidden w-[40%] items-center justify-center lg:flex'
         >
           <motion.img
             src={row.image}
@@ -111,7 +111,7 @@ function RevealRow({ row, index, t }) {
         </motion.div>
         <motion.p
           variants={{ rest: { color: `rgba(${t.inkRGB},0.78)` }, hover: { color: `rgba(${t.fgRGB},0.9)` } }}
-          className={`col-span-10 col-start-3 mt-3 max-w-xs text-[15px] leading-relaxed transition-opacity duration-300 md:col-span-4 md:col-start-auto md:mt-0 ${row.image ? 'lg:group-hover:opacity-0' : ''}`}
+          className={`col-span-10 col-start-3 mt-3 max-w-xs text-[15px] leading-relaxed transition-opacity duration-200 md:col-span-4 md:col-start-auto md:mt-0 ${row.image ? 'lg:group-hover:!opacity-0' : ''}`}
         >
           <span className='mb-2 block text-[10px] font-medium uppercase tracking-[0.25em] opacity-80'>{row.type}</span>
           {row.description}
