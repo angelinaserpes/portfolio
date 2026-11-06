@@ -57,7 +57,7 @@ function Pulse({ label }) {
         transition={{ duration: 1.5, repeat: Infinity }}
         className='h-1.5 w-1.5 rounded-full bg-white'
       />
-      <span className='text-[9px] uppercase tracking-[0.3em] text-white/45'>{label}</span>
+      <span className='text-[10px] uppercase tracking-[0.3em] text-white/60'>{label}</span>
     </div>
   );
 }
@@ -97,7 +97,7 @@ function RevealRow({ row, index, t }) {
       ) : null}
       <div className='relative z-20 grid min-h-[150px] grid-cols-12 items-center py-10 md:min-h-[190px] md:py-14'>
         <motion.span
-          variants={{ rest: { color: `rgba(${t.inkRGB},0.35)` }, hover: { color: `rgba(${t.fgRGB},0.38)` } }}
+          variants={{ rest: { color: `rgba(${t.inkRGB},0.6)` }, hover: { color: `rgba(${t.fgRGB},0.7)` } }}
           className='col-span-2 text-xs md:col-span-1'
         >
           {String(index + 1).padStart(2, '0')}
@@ -110,10 +110,10 @@ function RevealRow({ row, index, t }) {
           <h3 className='text-4xl uppercase leading-none tracking-[-0.055em] md:text-6xl lg:text-7xl'>{row.name}</h3>
         </motion.div>
         <motion.p
-          variants={{ rest: { color: `rgba(${t.inkRGB},0.45)`, opacity: 1 }, hover: { color: `rgba(${t.fgRGB},0.55)`, opacity: 1 } }}
-          className='col-span-10 col-start-3 mt-3 max-w-xs text-sm leading-relaxed md:col-span-4 md:col-start-auto md:mt-0 lg:opacity-100'
+          variants={{ rest: { color: `rgba(${t.inkRGB},0.78)` }, hover: { color: `rgba(${t.fgRGB},0.9)` } }}
+          className={`col-span-10 col-start-3 mt-3 max-w-xs text-[15px] leading-relaxed transition-opacity duration-300 md:col-span-4 md:col-start-auto md:mt-0 ${row.image ? 'lg:group-hover:opacity-0' : ''}`}
         >
-          <span className='mb-2 block text-[9px] uppercase tracking-[0.25em] opacity-70'>{row.type}</span>
+          <span className='mb-2 block text-[10px] font-medium uppercase tracking-[0.25em] opacity-80'>{row.type}</span>
           {row.description}
         </motion.p>
       </div>
@@ -138,7 +138,7 @@ function BuildRow({ item, index, t }) {
       />
       <div className='relative z-10 grid min-h-[170px] grid-cols-12 items-center gap-y-5 py-9 md:min-h-[190px] md:py-12'>
         <motion.span
-          variants={{ rest: { color: 'rgba(255,255,255,0.28)' }, hover: { color: `rgba(${t.inkRGB},0.35)` } }}
+          variants={{ rest: { color: 'rgba(255,255,255,0.5)' }, hover: { color: `rgba(${t.inkRGB},0.6)` } }}
           className='col-span-2 text-[10px] md:col-span-1'
         >
           {String(index + 1).padStart(2, '0')}
@@ -148,11 +148,11 @@ function BuildRow({ item, index, t }) {
           transition={{ duration: 0.45, ease }}
           className='col-span-10 md:col-span-5'
         >
-          <p className='mb-3 text-[8px] uppercase tracking-[0.3em] opacity-40'>{item.kicker}</p>
+          <p className='mb-3 text-[10px] uppercase tracking-[0.3em] opacity-40'>{item.kicker}</p>
           <h3 className='text-4xl uppercase leading-none tracking-[-0.055em] md:text-6xl lg:text-7xl'>{item.title}</h3>
         </motion.div>
         <motion.p
-          variants={{ rest: { color: 'rgba(255,255,255,0.36)' }, hover: { color: `rgba(${t.inkRGB},0.58)` } }}
+          variants={{ rest: { color: 'rgba(255,255,255,0.68)' }, hover: { color: `rgba(${t.inkRGB},0.8)` } }}
           className='col-span-10 col-start-3 max-w-lg text-sm leading-relaxed md:col-span-5 md:col-start-auto'
         >
           {item.description}
@@ -223,8 +223,8 @@ export function CaseStudy({ data, children }) {
               transition={{ duration: 0.8, delay: 0.6 }}
               className='mt-5 flex items-center justify-between'
             >
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/40'>Selected Project / {d.number}</p>
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/40'>{d.category}</p>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/40'>Selected Project / {d.number}</p>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/40'>{d.category}</p>
             </motion.div>
 
             <div className='flex flex-1 flex-col justify-center py-12 sm:py-16'>
@@ -235,7 +235,7 @@ export function CaseStudy({ data, children }) {
                 className='mb-5 flex items-center gap-3'
               >
                 <span className='h-[1px] w-8 bg-white/30' />
-                <span className='text-[9px] uppercase tracking-[0.35em] text-white/45'>{d.kicker}</span>
+                <span className='text-[10px] uppercase tracking-[0.35em] text-white/60'>{d.kicker}</span>
               </motion.div>
               <div className='overflow-hidden pb-[0.12em]'>
                 <motion.h1
@@ -272,7 +272,7 @@ export function CaseStudy({ data, children }) {
               className='flex items-end justify-between border-t border-white/15 pt-6'
             >
               <div>
-                <p className='mb-2 text-[8px] uppercase tracking-[0.32em] text-white/30'>Designed & Developed</p>
+                <p className='mb-2 text-[10px] uppercase tracking-[0.32em] text-white/55'>Designed & Developed</p>
                 <p className='text-[10px] uppercase tracking-[0.25em] text-white/55'>Angelina Serpes</p>
               </div>
               <motion.a
@@ -282,8 +282,8 @@ export function CaseStudy({ data, children }) {
                 className='flex h-24 w-24 items-center justify-center rounded-full border border-white/20 text-center md:h-28 md:w-28'
               >
                 <div>
-                  <span className='block text-[8px] uppercase tracking-[0.25em] text-white/50'>{d.film ? 'Play' : 'Explore'}</span>
-                  <span className='mt-1 block text-[8px] uppercase tracking-[0.25em] text-white/50'>{d.film ? 'Film ↘' : 'Project ↘'}</span>
+                  <span className='block text-[10px] uppercase tracking-[0.25em] text-white/50'>{d.film ? 'Play' : 'Explore'}</span>
+                  <span className='mt-1 block text-[10px] uppercase tracking-[0.25em] text-white/50'>{d.film ? 'Film ↘' : 'Project ↘'}</span>
                 </div>
               </motion.a>
             </motion.div>
@@ -295,7 +295,7 @@ export function CaseStudy({ data, children }) {
           <motion.div {...fadeUp} className='grid gap-12 border-t border-white/15 pt-8 md:grid-cols-4'>
             {d.info.map(([k, v]) => (
               <div key={k}>
-                <p className='mb-4 text-[9px] uppercase tracking-[0.28em] text-white/35'>{k}</p>
+                <p className='mb-4 text-[10px] uppercase tracking-[0.28em] text-white/55'>{k}</p>
                 <p className='text-sm text-white/80'>{v}</p>
               </div>
             ))}
@@ -305,17 +305,17 @@ export function CaseStudy({ data, children }) {
         {/* CONCEPT */}
         <section className='px-5 py-20 sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[10vw] lg:py-44'>
           <motion.div {...fadeUp} className='grid gap-14 lg:grid-cols-[0.55fr_1.45fr]'>
-            <p className='text-[9px] uppercase tracking-[0.32em] text-white/35'>01 / The Concept</p>
+            <p className='text-[10px] uppercase tracking-[0.32em] text-white/55'>01 / The Concept</p>
             <div>
               <h2 className='max-w-6xl text-5xl leading-[0.92] tracking-[-0.06em] md:text-7xl lg:text-[6.6vw]'>
                 {d.concept.headline}
               </h2>
-              <p className='mt-6 pr-[0.1em] text-right text-5xl italic leading-[0.92] tracking-[-0.06em] text-white/30 md:text-7xl lg:text-[6.6vw]'>
+              <p className='mt-6 pr-[0.1em] text-right text-5xl italic leading-[0.92] tracking-[-0.06em] text-white/45 md:text-7xl lg:text-[6.6vw]'>
                 {d.concept.italic}
               </p>
               <div className='mt-16 grid gap-8 md:grid-cols-2'>
                 <p className='max-w-md text-base leading-relaxed text-white/55'>{d.concept.body[0]}</p>
-                <p className='max-w-md text-base leading-relaxed text-white/35'>{d.concept.body[1]}</p>
+                <p className='max-w-md text-base leading-relaxed text-white/70'>{d.concept.body[1]}</p>
               </div>
             </div>
           </motion.div>
@@ -326,7 +326,7 @@ export function CaseStudy({ data, children }) {
         <section id='case-film' ref={filmRef} className='pb-32 pt-12 md:pb-44'>
           <div className='px-6 pb-14 md:px-12 lg:px-[10vw]'>
             <div className='flex items-center justify-between border-t border-white/15 pt-6'>
-              <p className='text-[9px] uppercase tracking-[0.3em] text-white/35'>{d.title} / In Motion</p>
+              <p className='text-[10px] uppercase tracking-[0.3em] text-white/55'>{d.title} / {d.film ? 'In Motion' : 'The App'}</p>
               <div className='hidden md:block'>
                 <Pulse label={d.film ? 'Playing' : 'Preview'} />
               </div>
@@ -349,13 +349,13 @@ export function CaseStudy({ data, children }) {
         {/* EXPLORE (light) */}
         <section id='case-explore' className='bg-[var(--cs-light)] px-5 py-20 text-[var(--cs-ink)] sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[6vw] lg:py-44'>
           <motion.div {...fadeUp}>
-            <p className='mb-12 text-[9px] uppercase tracking-[0.32em] text-black/40'>{d.explore.label}</p>
+            <p className='mb-12 text-[10px] uppercase tracking-[0.32em] text-black/60'>{d.explore.label}</p>
             <h2 className='text-[clamp(4rem,10vw,10rem)] uppercase leading-[0.8] tracking-[-0.075em]'>
               <span className='block'>{d.explore.lines[0]}</span>
               <span className='block pr-[0.06em] text-right'>{d.explore.lines[1]}</span>
             </h2>
-            <p className='mt-10 text-[10px] uppercase tracking-[0.3em] text-black/40 lg:hidden'>Tap through the rows</p>
-            <p className='mt-10 hidden text-[10px] uppercase tracking-[0.3em] text-black/40 lg:block'>Hover the rows to look inside →</p>
+            <p className='mt-10 text-[10px] uppercase tracking-[0.3em] text-black/60 lg:hidden'>Tap through the rows</p>
+            <p className='mt-10 hidden text-[10px] uppercase tracking-[0.3em] text-black/60 lg:block'>Hover the rows to look inside →</p>
           </motion.div>
         </section>
         <section className='bg-[var(--cs-light)] px-5 pb-24 text-[var(--cs-ink)] sm:px-6 md:px-12 md:pb-32 lg:px-[8vw] lg:pb-44'>
@@ -370,13 +370,13 @@ export function CaseStudy({ data, children }) {
         <section ref={showRef} className='relative bg-[var(--cs-bg2)] px-5 py-20 sm:px-6 sm:py-24 md:px-12 md:py-28 lg:px-[8vw] lg:py-44'>
           <div className='grid gap-20 lg:grid-cols-12'>
             <motion.div style={{ y: reduce ? 0 : showY }} className='lg:col-span-5'>
-              <p className='mb-7 text-[9px] uppercase tracking-[0.32em] text-white/35'>02 / {d.showcase.label}</p>
+              <p className='mb-7 text-[10px] uppercase tracking-[0.32em] text-white/55'>02 / {d.showcase.label}</p>
               <h2 className='text-6xl uppercase leading-[0.86] tracking-[-0.06em] md:text-8xl'>
                 {d.showcase.lines[0]}
                 <br />
                 {d.showcase.lines[1]}
               </h2>
-              <p className='mt-10 max-w-md text-base leading-relaxed text-white/45'>{d.showcase.body}</p>
+              <p className='mt-10 max-w-md text-base leading-relaxed text-white/70'>{d.showcase.body}</p>
             </motion.div>
             <div className='lg:col-span-7'>
               <motion.div
@@ -405,7 +405,7 @@ export function CaseStudy({ data, children }) {
                   <Pulse label='Motion Study' />
                 </div>
               </motion.div>
-              <div className='mt-5 flex justify-between text-[8px] uppercase tracking-[0.25em] text-white/30'>
+              <div className='mt-5 flex justify-between text-[10px] uppercase tracking-[0.25em] text-white/55'>
                 <span>{d.title}</span>
                 <span>{d.showcase.caption}</span>
               </div>
@@ -428,7 +428,7 @@ export function CaseStudy({ data, children }) {
                       className='block h-auto w-full transition-transform duration-1000 group-hover:scale-[1.03]'
                     />
                   </div>
-                  <figcaption className='mt-4 flex justify-between text-[8px] uppercase tracking-[0.25em] text-white/35'>
+                  <figcaption className='mt-4 flex justify-between text-[10px] uppercase tracking-[0.25em] text-white/55'>
                     <span>{String(i + 1).padStart(2, '0')}</span>
                     <span>{s.caption}</span>
                   </figcaption>
@@ -468,14 +468,14 @@ export function CaseStudy({ data, children }) {
           </div>
           <motion.div {...fadeUp} className='relative z-10'>
             <div className='grid gap-12 lg:grid-cols-12'>
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/35 lg:col-span-3'>03 / Behind the Build</p>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/55 lg:col-span-3'>03 / Behind the Build</p>
               <div className='lg:col-span-9'>
                 <h2 className='max-w-6xl text-[clamp(3.6rem,8vw,8.5rem)] uppercase leading-[0.82] tracking-[-0.075em]'>
                   {d.build.lines[0]}
                   <br />
-                  <span className='ml-[8vw] pr-[0.08em] italic text-white/30'>{d.build.lines[1]}</span>
+                  <span className='ml-[8vw] pr-[0.08em] italic text-white/45'>{d.build.lines[1]}</span>
                 </h2>
-                <p className='ml-auto mt-12 max-w-md text-base leading-relaxed text-white/45'>{d.build.body}</p>
+                <p className='ml-auto mt-12 max-w-md text-base leading-relaxed text-white/70'>{d.build.body}</p>
               </div>
             </div>
             <div className='mt-16 border-t border-white/15 md:mt-24 lg:mt-32'>
@@ -485,7 +485,7 @@ export function CaseStudy({ data, children }) {
             </div>
             <div className='mt-14 flex flex-wrap gap-x-6 gap-y-3'>
               {d.stack.map(s => (
-                <span key={s} className='text-[9px] uppercase tracking-[0.25em] text-white/45'>
+                <span key={s} className='text-[10px] uppercase tracking-[0.25em] text-white/60'>
                   {s} ↗
                 </span>
               ))}
@@ -500,8 +500,8 @@ export function CaseStudy({ data, children }) {
           </div>
           <motion.div {...fadeUp} className='relative z-10 border-t border-white/15 pt-7'>
             <div className='flex items-center justify-between'>
-              <p className='text-[9px] uppercase tracking-[0.32em] text-white/35'>{d.title} / 2026</p>
-              <p className='hidden text-[9px] uppercase tracking-[0.32em] text-white/25 md:block'>End of Case Study / {d.number}</p>
+              <p className='text-[10px] uppercase tracking-[0.32em] text-white/55'>{d.title} / 2026</p>
+              <p className='hidden text-[10px] uppercase tracking-[0.32em] text-white/25 md:block'>End of Case Study / {d.number}</p>
             </div>
             <div className='pb-20 pt-20 md:pb-28 md:pt-28 lg:pb-36'>
               <motion.div className='overflow-hidden' initial='hidden' whileInView='show' viewport={{ once: true, amount: 0.1 }}>
@@ -524,7 +524,7 @@ export function CaseStudy({ data, children }) {
               </motion.div>
             </div>
             <div className='grid gap-12 border-t border-white/15 pt-8 md:grid-cols-2'>
-              <p className='max-w-md text-base leading-relaxed text-white/45'>{d.summary}</p>
+              <p className='max-w-md text-base leading-relaxed text-white/70'>{d.summary}</p>
               <div className='flex flex-wrap items-end gap-x-10 gap-y-5 md:justify-end'>
                 {d.links.map(l => (
                   <motion.a
@@ -568,7 +568,7 @@ export function CaseStudy({ data, children }) {
             />
             <div className='relative z-10 flex min-h-[72vh] flex-col px-5 py-10 sm:px-6 md:px-10 lg:px-[5vw] lg:py-14'>
               <div className='flex items-center justify-between border-t border-black/20 pt-6'>
-                <p className='text-[9px] uppercase tracking-[0.32em] text-black/45'>Next Project / {d.next.number}</p>
+                <p className='text-[10px] uppercase tracking-[0.32em] text-black/45'>Next Project / {d.next.number}</p>
                 <motion.div variants={{ rest: { x: 0 }, hover: { x: 10 } }} transition={{ duration: 0.45, ease }}>
                   <MoveRight size={30} strokeWidth={1} />
                 </motion.div>
@@ -588,7 +588,7 @@ export function CaseStudy({ data, children }) {
                     className='mt-8 flex items-center justify-between border-t border-black/20 pt-6'
                   >
                     <p className='max-w-sm text-sm leading-relaxed text-black/50'>Continue into the next selected project.</p>
-                    <span className='text-[9px] uppercase tracking-[0.3em] text-black/45'>View Project</span>
+                    <span className='text-[10px] uppercase tracking-[0.3em] text-black/45'>View Project</span>
                   </motion.div>
                 </div>
               </div>

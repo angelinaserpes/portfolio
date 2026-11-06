@@ -49,13 +49,13 @@ function AqiCalculator() {
     <section className='bg-[#eeeae2] px-5 py-24 text-[#111] sm:px-6 md:px-12 md:py-32 lg:px-[8vw] lg:py-40'>
       <div className='grid gap-16 lg:grid-cols-12'>
         <div className='lg:col-span-5'>
-          <p className='mb-7 text-[9px] uppercase tracking-[0.32em] text-black/40'>Try it / The AQI maths</p>
+          <p className='mb-7 text-[10px] uppercase tracking-[0.32em] text-black/60'>Try it / The AQI maths</p>
           <h2 className='text-6xl uppercase leading-[0.86] tracking-[-0.06em] md:text-8xl'>
             Move the
             <br />
             <span className='italic text-black/35'>pollution.</span>
           </h2>
-          <p className='mt-10 max-w-md text-base leading-relaxed text-black/55'>
+          <p className='mt-10 max-w-md text-base leading-relaxed text-black/75'>
             This is the same CPCB calculation AirSense runs on live station data: each pollutant gets a sub-index, and the
             highest one becomes the AQI. Drag the sliders to see it react.
           </p>
@@ -65,7 +65,7 @@ function AqiCalculator() {
           <div className='border border-black/15 bg-white/50 p-6 md:p-10'>
             <div className='flex flex-wrap items-end justify-between gap-6 border-b border-black/15 pb-8'>
               <div>
-                <p className='mb-2 text-[9px] uppercase tracking-[0.3em] text-black/40'>Indian AQI</p>
+                <p className='mb-2 text-[10px] uppercase tracking-[0.3em] text-black/60'>Indian AQI</p>
                 <motion.p
                   key={aqi}
                   initial={{ opacity: 0.4, y: 6 }}
@@ -80,7 +80,7 @@ function AqiCalculator() {
                 <p className='text-3xl tracking-[-0.03em] md:text-4xl' style={{ color: colour }}>
                   {name}
                 </p>
-                <p className='mt-2 text-[10px] uppercase tracking-[0.25em] text-black/45'>Driven by {LABELS[dominant]}</p>
+                <p className='mt-2 text-[10px] uppercase tracking-[0.25em] text-black/60'>Driven by {LABELS[dominant]}</p>
               </div>
             </div>
 
@@ -93,7 +93,7 @@ function AqiCalculator() {
             <div className='mt-10 grid gap-8'>
               {Object.keys(values).map(k => (
                 <label key={k} className='block'>
-                  <div className='mb-3 flex justify-between text-[10px] uppercase tracking-[0.25em] text-black/55'>
+                  <div className='mb-3 flex justify-between text-[10px] uppercase tracking-[0.25em] text-black/65'>
                     <span>
                       {LABELS[k]} · {values[k]} µg/m³
                     </span>
@@ -120,6 +120,7 @@ function AqiCalculator() {
 
 const data = {
   number: '02',
+  filmImage: '/images/airsense.png',
   title: 'AirSense',
   category: 'Data / Desktop App',
   kicker: 'Air quality intelligence',
