@@ -46,9 +46,9 @@ const data = {
       },
       {
         name: 'Headroom',
-        type: 'Your supply, visualised',
-        description: 'Sanctioned supply, safe planning limit and peak use drawn as one picture everyone understands.',
-        image: '/images/case/evoltic-f3.jpg',
+        type: 'Tonight, simulated',
+        description: 'The night simulated every 15 minutes against the safe limit. Add EVs and compare charging on arrival with smart scheduling.',
+        image: '/images/case/evoltic-tonight.jpg',
       },
       {
         name: 'Safety',
